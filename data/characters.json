@@ -1,0 +1,56 @@
+[
+  {
+    "id": "vin",
+    "name": "Vin",
+    "aliases": ["Valette Renoux"],
+    "homeworld": "scadrial",
+    "firstAppearance": "mistborn-1",
+    "species": ["human"],
+    "investiture": ["allomancy"],
+    "investitureDetail": ["Mistborn"],
+    "coppermindUrl": "https://coppermind.net/wiki/Vin"
+  },
+  {
+    "id": "sazed",
+    "name": "Sazed",
+    "aliases": ["Saze"],
+    "homeworld": "scadrial",
+    "firstAppearance": "mistborn-1",
+    "species": ["human"],
+    "investiture": ["feruchemy"],
+    "coppermindUrl": "https://coppermind.net/wiki/Sazed"
+  },
+  {
+    "id": "kaladin",
+    "name": "Kaladin",
+    "aliases": ["Kal", "Kaladin Stormblessed"],
+    "homeworld": "roshar",
+    "firstAppearance": "stormlight-1",
+    "species": ["human"],
+    "investiture": ["surgebinding"],
+    "investitureDetail": ["Windrunner"],
+    "coppermindUrl": "https://coppermind.net/wiki/Kaladin",
+    "i18n": { "es": { "aliases": ["Kaladin Bendito por la Tormenta"] } }
+  },
+  {
+    "id": "wax",
+    "name": "Wax",
+    "aliases": ["Waxillium Ladrian"],
+    "homeworld": "scadrial",
+    "firstAppearance": "mistborn-4",
+    "species": ["human"],
+    "investiture": ["allomancy", "feruchemy"],
+    "investitureDetail": ["Twinborn"],
+    "coppermindUrl": "https://coppermind.net/wiki/Waxillium_Ladrian"
+  },
+  {
+    "id": "sarene",
+    "name": "Sarene",
+    "aliases": [],
+    "homeworld": "sel",
+    "firstAppearance": "elantris",
+    "species": ["human"],
+    "investiture": ["none"],
+    "coppermindUrl": "https://coppermind.net/wiki/Sarene"
+  }
+]

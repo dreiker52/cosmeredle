@@ -1,0 +1,16 @@
+{
+  "app.tagline": "Adivina el personaje del Cosmere del día",
+  "header.help": "Cómo jugar",
+  "header.stats": "Estadísticas",
+  "lang.switchTo": "Cambiar a inglés",
+  "columns.name": "Nombre",
+  "columns.homeworld": "Mundo de origen",
+  "columns.firstAppearance": "Primera aparición",
+  "columns.species": "Especie",
+  "columns.investiture": "Poderes / Investidura",
+  "game.comingSoon": "El juego está en construcción. ¡Vuelve pronto!",
+  "game.nextIn": "Siguiente personaje en",
+  "footer.disclaimer": "Proyecto de fans no oficial. No está afiliado ni respaldado por Brandon Sanderson ni Dragonsteel Entertainment. El Cosmere y todos sus personajes son propiedad de sus respectivos dueños.",
+  "footer.data": "Datos basados en la Coppermind.",
+  "footer.privacy": "Tu progreso solo se guarda en tu navegador."
+}

@@ -1,0 +1,16 @@
+{
+  "app.tagline": "Guess the daily Cosmere character",
+  "header.help": "How to play",
+  "header.stats": "Statistics",
+  "lang.switchTo": "Switch to Spanish",
+  "columns.name": "Name",
+  "columns.homeworld": "Homeworld",
+  "columns.firstAppearance": "First appearance",
+  "columns.species": "Species",
+  "columns.investiture": "Powers / Investiture",
+  "game.comingSoon": "The game is under construction. Come back soon!",
+  "game.nextIn": "Next character in",
+  "footer.disclaimer": "Unofficial fan project. Not affiliated with or endorsed by Brandon Sanderson or Dragonsteel Entertainment. The Cosmere and all its characters belong to their respective owners.",
+  "footer.data": "Data based on the Coppermind.",
+  "footer.privacy": "Your progress is only stored in your browser."
+}

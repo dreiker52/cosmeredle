@@ -1,0 +1,16 @@
+[
+  { "id": "elantris", "order": 1, "year": 2005, "series": "elantris",
+    "title": { "es": "Elantris", "en": "Elantris" } },
+  { "id": "mistborn-1", "order": 2, "year": 2006, "series": "mistborn",
+    "title": { "es": "El Imperio Final", "en": "The Final Empire" } },
+  { "id": "mistborn-2", "order": 3, "year": 2007, "series": "mistborn",
+    "title": { "es": "El Pozo de la Ascensión", "en": "The Well of Ascension" } },
+  { "id": "mistborn-3", "order": 4, "year": 2008, "series": "mistborn",
+    "title": { "es": "El Héroe de las Eras", "en": "The Hero of Ages" } },
+  { "id": "warbreaker", "order": 5, "year": 2009, "series": "warbreaker",
+    "title": { "es": "El aliento de los dioses", "en": "Warbreaker" } },
+  { "id": "stormlight-1", "order": 6, "year": 2010, "series": "stormlight",
+    "title": { "es": "El Camino de los Reyes", "en": "The Way of Kings" } },
+  { "id": "mistborn-4", "order": 7, "year": 2011, "series": "mistborn",
+    "title": { "es": "Aleación de Ley", "en": "The Alloy of Law" } }
+]

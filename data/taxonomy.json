@@ -1,0 +1,38 @@
+{
+  "worlds": {
+    "roshar": { "es": "Roshar", "en": "Roshar" },
+    "scadrial": { "es": "Scadrial", "en": "Scadrial" },
+    "sel": { "es": "Sel", "en": "Sel" },
+    "nalthis": { "es": "Nalthis", "en": "Nalthis" },
+    "taldain": { "es": "Taldain", "en": "Taldain" },
+    "threnody": { "es": "Threnodia", "en": "Threnody" },
+    "lumar": { "es": "Lumar", "en": "Lumar" },
+    "yolen": { "es": "Yolen", "en": "Yolen" },
+    "unknown": { "es": "Desconocido", "en": "Unknown" }
+  },
+  "species": {
+    "human": { "es": "Humano", "en": "Human" },
+    "singer": { "es": "Cantor", "en": "Singer" },
+    "spren": { "es": "Spren", "en": "Spren" },
+    "kandra": { "es": "Kandra", "en": "Kandra" },
+    "koloss": { "es": "Koloss", "en": "Koloss" },
+    "returned": { "es": "Retornado", "en": "Returned" },
+    "unknown": { "es": "Desconocido", "en": "Unknown" }
+  },
+  "investiture": {
+    "allomancy": { "es": "Alomancia", "en": "Allomancy" },
+    "feruchemy": { "es": "Feruquimia", "en": "Feruchemy" },
+    "hemalurgy": { "es": "Hemalurgia", "en": "Hemalurgy" },
+    "surgebinding": { "es": "Potenciación", "en": "Surgebinding" },
+    "aondor": { "es": "AonDor", "en": "AonDor" },
+    "awakening": { "es": "Despertar", "en": "Awakening" },
+    "none": { "es": "Ninguno", "en": "None" },
+    "unknown": { "es": "Desconocido", "en": "Unknown" }
+  },
+  "series": {
+    "elantris": { "es": "Elantris", "en": "Elantris" },
+    "mistborn": { "es": "Nacidos de la Bruma", "en": "Mistborn" },
+    "warbreaker": { "es": "El aliento de los dioses", "en": "Warbreaker" },
+    "stormlight": { "es": "El Archivo de las Tormentas", "en": "The Stormlight Archive" }
+  }
+}
