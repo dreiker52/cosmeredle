@@ -5,9 +5,14 @@
     "sel": { "es": "Sel", "en": "Sel" },
     "nalthis": { "es": "Nalthis", "en": "Nalthis" },
     "taldain": { "es": "Taldain", "en": "Taldain" },
-    "threnody": { "es": "Threnodia", "en": "Threnody" },
+    "threnody": { "es": "Treno", "en": "Threnody" },
+    "first-of-the-sun": { "es": "Primero del Sol", "en": "First of the Sun" },
     "lumar": { "es": "Lumar", "en": "Lumar" },
+    "komashi": { "es": "Komashi", "en": "Komashi" },
+    "canticle": { "es": "Cántico", "en": "Canticle" },
     "yolen": { "es": "Yolen", "en": "Yolen" },
+    "braize": { "es": "Braize", "en": "Braize" },
+    "ashyn": { "es": "Ashyn", "en": "Ashyn" },
     "unknown": { "es": "Desconocido", "en": "Unknown" }
   },
   "species": {
@@ -16,7 +21,20 @@
     "spren": { "es": "Spren", "en": "Spren" },
     "kandra": { "es": "Kandra", "en": "Kandra" },
     "koloss": { "es": "Koloss", "en": "Koloss" },
+    "seon": { "es": "Seon", "en": "Seon" },
     "returned": { "es": "Retornado", "en": "Returned" },
+    "lifeless": { "es": "Sin Vida", "en": "Lifeless" },
+    "aimian": { "es": "Aimiano", "en": "Aimian" },
+    "dragon": { "es": "Dragón", "en": "Dragon" },
+    "sleepless": { "es": "Insomne", "en": "Sleepless" },
+    "sho-del": { "es": "Sho del", "en": "Sho Del" },
+    "shade": { "es": "Umbra", "en": "Shade" },
+    "nightmare": { "es": "Pesadilla", "en": "Nightmare" },
+    "kitsen": { "es": "Kitsen", "en": "Kitsen" },
+    "aviar": { "es": "Aviar", "en": "Aviar" },
+    "ryshadium": { "es": "Ryshadium", "en": "Ryshadium" },
+    "larkin": { "es": "Larkin", "en": "Larkin" },
+    "animal": { "es": "Animal", "en": "Animal" },
     "unknown": { "es": "Desconocido", "en": "Unknown" }
   },
   "investiture": {
@@ -24,8 +42,16 @@
     "feruchemy": { "es": "Feruquimia", "en": "Feruchemy" },
     "hemalurgy": { "es": "Hemalurgia", "en": "Hemalurgy" },
     "surgebinding": { "es": "Potenciación", "en": "Surgebinding" },
+    "voidbinding": { "es": "Vinculación del Vacío", "en": "Voidbinding" },
+    "shardbearer": { "es": "Portador de esquirlada", "en": "Shardbearer" },
+    "old-magic": { "es": "Antigua Magia", "en": "Old Magic" },
     "aondor": { "es": "AonDor", "en": "AonDor" },
+    "forgery": { "es": "Falsificación", "en": "Forgery" },
+    "bloodsealing": { "es": "Sellado de sangre", "en": "Bloodsealing" },
     "awakening": { "es": "Despertar", "en": "Awakening" },
+    "sand-mastery": { "es": "Maestría de la arena", "en": "Sand mastery" },
+    "aether": { "es": "Éter", "en": "Aether" },
+    "yoki-hijo": { "es": "Yoki-hijo", "en": "Yoki-hijo" },
     "none": { "es": "Ninguno", "en": "None" },
     "unknown": { "es": "Desconocido", "en": "Unknown" }
   },
@@ -33,6 +59,13 @@
     "elantris": { "es": "Elantris", "en": "Elantris" },
     "mistborn": { "es": "Nacidos de la Bruma", "en": "Mistborn" },
     "warbreaker": { "es": "El aliento de los dioses", "en": "Warbreaker" },
-    "stormlight": { "es": "El Archivo de las Tormentas", "en": "The Stormlight Archive" }
+    "stormlight": { "es": "El Archivo de las Tormentas", "en": "The Stormlight Archive" },
+    "emperors-soul": { "es": "El alma del emperador", "en": "The Emperor's Soul" },
+    "shadows-for-silence": { "es": "Sombras por Silencio", "en": "Shadows for Silence" },
+    "sixth-of-the-dusk": { "es": "Sexto del Ocaso", "en": "Sixth of the Dusk" },
+    "white-sand": { "es": "Arena blanca", "en": "White Sand" },
+    "tress": { "es": "Trenza del mar Esmeralda", "en": "Tress of the Emerald Sea" },
+    "yumi": { "es": "Yumi y el pintor de pesadillas", "en": "Yumi and the Nightmare Painter" },
+    "sunlit-man": { "es": "El hombre iluminado", "en": "The Sunlit Man" }
   }
 }

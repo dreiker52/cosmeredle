@@ -8,6 +8,7 @@ export const Book = z.object({
   year: z.number().int(),
   series: z.string().min(1), // id de taxonomy.series
   title: Localized,
+  coppermindPage: z.string().optional(), // título de la página del libro en la Coppermind
 });
 
 export const Taxonomy = z.object({

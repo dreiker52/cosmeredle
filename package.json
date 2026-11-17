@@ -10,7 +10,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "validate-data": "tsx scripts/validate.ts"
+    "validate-data": "tsx scripts/validate.ts",
+    "data:fetch": "tsx scripts/coppermind/fetch-dump.ts",
+    "data:build": "tsx scripts/coppermind/build.ts"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",

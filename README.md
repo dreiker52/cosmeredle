@@ -17,6 +17,8 @@ npm install          # instalar dependencias (genera package-lock.json)
 npm run dev          # servidor de desarrollo en http://localhost:5173/cosmeredle/
 npm test             # tests (Vitest)
 npm run validate-data
+npm run data:fetch   # descarga el volcado de la Coppermind (archive.org) a data/raw/
+npm run data:build   # regenera data/characters.json y data/report.md
 npm run build        # build de producción en dist/
 npm run preview      # previsualizar el build
 ```
@@ -25,7 +27,9 @@ npm run preview      # previsualizar el build
 
 ```
 data/            taxonomy.json, books.json, characters.json (datos del juego)
-scripts/         scripts de datos (validación, y más adelante extracción de la Coppermind)
+                 characters.generated.json (extraído automáticamente), overrides.json (correcciones manuales),
+                 report.md (informe de huecos y descartes)
+scripts/         validación de datos y extracción de la Coppermind (scripts/coppermind/)
 src/data/        esquema Zod y validación
 src/game/        lógica del juego (comparación de atributos)
 src/lib/         personaje del día, PRNG, localStorage
@@ -44,4 +48,4 @@ Si el repositorio tiene otro nombre o se usa un dominio propio, cambiar `base` e
 
 ## Licencia
 
-Código bajo licencia MIT. Los datos derivados de la Coppermind están sujetos a la licencia de la wiki.
+Código bajo licencia MIT. Los datos de personajes se extraen de la [Coppermind](https://coppermind.net) (CC BY-NC-ND 4.0); solo se usan datos factuales, no el texto de la wiki.

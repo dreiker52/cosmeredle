@@ -1,10 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { compareBook, compareCharacters, compareMulti, compareSingle } from "../src/game/compare";
+import { compareBook, compareCharacters, compareMulti, compareSingle, type Comparable } from "../src/game/compare";
 import books from "../data/books.json";
-import characters from "../data/characters.json";
 
 const bookMap = new Map(books.map((b) => [b.id, b]));
-const byId = (id: string) => characters.find((c) => c.id === id)!;
+
+// Personajes de prueba fijos (no dependen de data/characters.json, que se regenera).
+const vin: Comparable = { id: "vin", homeworld: "scadrial", firstAppearance: "mistborn-1", species: ["human"], investiture: ["allomancy"] };
+const kaladin: Comparable = { id: "kaladin", homeworld: "roshar", firstAppearance: "stormlight-1", species: ["human"], investiture: ["surgebinding"] };
+const wax: Comparable = { id: "wax", homeworld: "scadrial", firstAppearance: "mistborn-4", species: ["human"], investiture: ["allomancy", "feruchemy"] };
 
 describe("compareSingle", () => {
   it("verde si es igual, rojo si no", () => {
@@ -46,9 +49,8 @@ describe("compareBook", () => {
 });
 
 describe("compareCharacters (ejemplos del PLAN, objetivo Vin)", () => {
-  const vin = byId("vin");
   it("Kaladin", () => {
-    expect(compareCharacters(byId("kaladin"), vin, bookMap)).toEqual({
+    expect(compareCharacters(kaladin, vin, bookMap)).toEqual({
       name: "wrong",
       homeworld: "wrong",
       book: { color: "wrong", arrow: "down" },
@@ -57,7 +59,7 @@ describe("compareCharacters (ejemplos del PLAN, objetivo Vin)", () => {
     });
   });
   it("Wax", () => {
-    expect(compareCharacters(byId("wax"), vin, bookMap)).toEqual({
+    expect(compareCharacters(wax, vin, bookMap)).toEqual({
       name: "wrong",
       homeworld: "correct",
       book: { color: "partial", arrow: "down" },
@@ -66,10 +68,13 @@ describe("compareCharacters (ejemplos del PLAN, objetivo Vin)", () => {
     });
   });
   it("Vin", () => {
-    const r = compareCharacters(vin, vin, bookMap);
-    expect(Object.values(r).every((v) => v === "correct" || (typeof v === "object" && v.color === "correct"))).toBe(
-      true,
-    );
+    expect(compareCharacters(vin, vin, bookMap)).toEqual({
+      name: "correct",
+      homeworld: "correct",
+      book: { color: "correct", arrow: null },
+      species: "correct",
+      investiture: "correct",
+    });
   });
   it("lanza si el libro no existe", () => {
     expect(() => compareCharacters({ ...vin, firstAppearance: "nope" }, vin, bookMap)).toThrow();

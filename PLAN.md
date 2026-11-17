@@ -106,6 +106,9 @@ Al incluir **todos** los personajes, no se puede garantizar un personaje del dí
 ## 4. Datos: fuente, esquema y curación
 
 ### 4.1 Fuente
+
+> **Actualización (Fase 1):** la web y la API de la Coppermind están detrás de una protección anti-bots de Cloudflare, así que no se consultan directamente. Se usa el **volcado público de WikiTeam en archive.org** (`wiki-coppermind.net_w-20250225`), que contiene la última revisión de todas las páginas a fecha 25-02-2025. Los títulos en español salen de los enlaces interidioma `[[es:...]]` de cada página y, si no los hay, de las ediciones de Nova. La licencia de la Coppermind es **CC BY-NC-ND 4.0**: solo se extraen datos factuales (mundo, libro, especie, sistema de magia, nombres) y nunca se copia el texto de la wiki; el volcado se queda en `data/raw/` (fuera de git).
+
 - **[Coppermind](https://coppermind.net)**: la wiki de referencia del Cosmere. Tiene páginas de personajes con infoboxes (mundo, especie, habilidades, libros) y categorías de personajes.
   - Usar la **API de MediaWiki** (`/w/api.php`) para listar los personajes por categoría y descargar el wikitexto de cada página. No hace falta hacer scraping del HTML.
   - Revisar la licencia de su contenido (indicada en el pie de la wiki) y **citarla en el footer**. No copiar textos largos.
@@ -565,12 +568,15 @@ Estimación con ~5–8 h/semana.
 - [x] Adelantado de la Fase 2: `rng.ts`, `daily.ts`, `compare.ts`, `storage.ts` con tests; toggle ES/EN.
 
 ### Fase 1 — Datos (3–4 semanas) ← *la parte más laboriosa*
-- [ ] `books.json` con la bibliografía completa del Cosmere, orden de publicación y títulos ES/EN.
-- [ ] `taxonomy.json` (mundos, especies, poderes, sagas) con traducciones.
-- [ ] `fetch-coppermind.ts`: listar personajes y descargar el wikitexto (con caché).
-- [ ] `normalize.ts` + informe de huecos.
-- [ ] `overrides.json` + `merge.ts`; curar el primer lote (novelas principales).
-- [ ] `validate.ts` en el CI.
+- [x] `books.json` con la bibliografía completa del Cosmere (28 obras), orden de publicación y títulos ES/EN.
+- [x] `taxonomy.json` (mundos, especies, poderes, sagas) con traducciones.
+- [x] `scripts/coppermind/fetch-dump.ts`: la API de la Coppermind está protegida contra bots, así que se usa el volcado público de WikiTeam en archive.org (25-02-2025).
+- [x] `scripts/coppermind/build.ts`: extracción + normalización + `overrides.json` + informe de huecos (`data/report.md`).
+- [x] Primer lote de correcciones manuales (nombres comunes y spoilers de los personajes principales).
+- [x] `validate.ts` en el CI.
+- [ ] Revisar las 474 primeras apariciones deducidas y más spoilers de poderes (ver `data/report.md`).
+- [ ] Verificar las traducciones de la taxonomía marcadas como dudosas y añadir nombres en español de personajes.
+- [ ] Personajes de *Islas de la Ascuaoscura* (posteriores al volcado).
 
 ### Fase 2 — Juego (2 semanas)
 - [ ] `rng.ts`, `daily.ts`, `build-schedule.ts` con tests.

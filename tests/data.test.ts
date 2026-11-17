@@ -22,7 +22,7 @@ describe("datos", () => {
     expect(errors.some((e) => e.includes('mundo desconocido "marte"'))).toBe(true);
     expect(errors.some((e) => e.includes('libro desconocido "libro-x"'))).toBe(true);
     expect(errors.some((e) => e.includes('especie desconocida "elfo"'))).toBe(true);
-    expect(errors.some((e) => e.includes('ya lo usa "vin"'))).toBe(true);
+    expect(errors.some((e) => e.includes(`ya lo usa "${characters[0].id}"`))).toBe(true);
   });
 });
 
