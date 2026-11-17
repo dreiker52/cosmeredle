@@ -11,6 +11,7 @@ import {
 } from "../scripts/coppermind/wikitext";
 import { bookCodes, resolveTitle, type Page } from "../scripts/coppermind/dump";
 import { applyOverrides, extractCharacters, firstNameAlias } from "../scripts/coppermind/build";
+import { inboundLinks, isRelevant, relevanceOf } from "../scripts/coppermind/relevance";
 import type { Book } from "../src/data/schema";
 
 const page = (title: string, text: string, ns = 0): [string, Page] => [title, { title, ns, text }];
@@ -73,7 +74,7 @@ describe("extracción de personajes (volcado sintético)", () => {
     expect(bookCodes(pages).get("tfe")).toBe("Mistborn: The Final Empire");
   });
 
-  const { characters, report } = extractCharacters(pages, books);
+  const { characters, report } = extractCharacters(pages, books, { filterRelevance: false });
   const byId = new Map(characters.map((c) => [c.id, c]));
 
   it("extrae y normaliza los campos", () => {
@@ -109,5 +110,41 @@ describe("extracción de personajes (volcado sintético)", () => {
     expect(out.find((c) => c.id === "vin")?.investiture).toEqual(["allomancy", "hemalurgy"]);
     expect(out.find((c) => c.id === "vin")?.name).toBe("Vin");
     expect(out.some((c) => c.id === "tensoon")).toBe(false);
+  });
+
+  it("ignora overrides de personajes que no existen", () => {
+    const orphans: string[] = [];
+    const out = applyOverrides(characters, { fantasma: { name: "X" } }, orphans);
+    expect(out).toHaveLength(characters.length);
+    expect(orphans).toEqual(["fantasma"]);
+  });
+
+  it("filtra por relevancia salvo los incluidos a mano", () => {
+    const filtered = extractCharacters(pages, books, { include: new Set(["vin"]) });
+    expect(filtered.characters.map((c) => c.id)).toEqual(["vin"]);
+    expect(filtered.report.forcedIncludes).toEqual(["vin"]);
+    expect(filtered.report.irrelevant.length).toBeGreaterThan(0);
+  });
+});
+
+describe("relevancia", () => {
+  it("regla de umbrales", () => {
+    expect(isRelevant({ inbound: 20, chapters: 0, length: 0 })).toBe(true);
+    expect(isRelevant({ inbound: 10, chapters: 10, length: 0 })).toBe(true);
+    expect(isRelevant({ inbound: 10, chapters: 0, length: 10_000 })).toBe(true);
+    expect(isRelevant({ inbound: 9, chapters: 50, length: 50_000 })).toBe(false);
+    expect(isRelevant({ inbound: 15, chapters: 3, length: 2000 })).toBe(false);
+  });
+
+  it("cuenta enlaces entrantes (con redirecciones, sin duplicados ni autoenlaces) y capítulos distintos", () => {
+    const pages = new Map<string, Page>([
+      page("Vin", "Soy [[Vin]]. {{book ref|mb1|1}} {{book ref|mb1|1}} {{book ref|mb1|2}}"),
+      page("Valette", "#REDIRECT [[Vin]]"),
+      page("Kelsier", "Conoce a [[Vin]] y a [[Valette|la noble]]. [[Category:Vin]]"),
+      page("Elend", "Ama a [[vin]]."),
+    ]);
+    const inbound = inboundLinks(pages, new Set(["Vin"]));
+    expect(inbound.get("Vin")).toBe(2);
+    expect(relevanceOf(pages.get("Vin")!, inbound)).toMatchObject({ inbound: 2, chapters: 2 });
   });
 });

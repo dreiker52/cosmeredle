@@ -1,74 +1,76 @@
 # Informe de datos (generado por `npm run data:build`)
 
-- Personajes finales: **1793**
+- Personajes finales: **272**
 - Descartados por no ser del Cosmere: 592
 - Excluidos: 118
-- Primera aparición deducida de las citas (revisar): 474
-- Alias eliminados por duplicados: 51
+- Primera aparición deducida de las citas (revisar): 13
+- Alias eliminados por duplicados: 9
+- Descartados por poca relevancia: 1521 (incluidos a mano: 8)
+- Overrides sin personaje (ignorados): ninguno
+
+Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cita ≥ 10 capítulos o su página tiene ≥ 10000 caracteres. Para rescatar a alguien: `"id": { "include": true }` en overrides.json.
 
 ## Por mundo
 
-- roshar: 961
-- scadrial: 447
-- sel: 101
-- nalthis: 64
-- taldain: 57
-- lumar: 42
-- komashi: 29
-- threnody: 18
-- yolen: 17
-- canticle: 16
-- unknown: 14
-- first-of-the-sun: 14
-- ashyn: 11
-- braize: 2
+- roshar: 133
+- scadrial: 54
+- sel: 19
+- nalthis: 15
+- taldain: 9
+- ashyn: 9
+- lumar: 8
+- yolen: 8
+- komashi: 5
+- threnody: 4
+- canticle: 3
+- unknown: 2
+- first-of-the-sun: 2
+- braize: 1
 
 ## Por libro de primera aparición
 
-- El camino de los reyes: 310
-- Juramentada: 226
-- Palabras radiantes: 163
-- El ritmo de la guerra: 142
-- Viento y verdad: 120
-- El Imperio Final: 93
-- El metal perdido: 82
-- Elantris: 79
-- Sombras de identidad: 69
-- El aliento de los dioses: 64
-- Arena blanca: 55
-- Aleación de ley: 54
-- El Pozo de la Ascensión: 53
-- Brazales de duelo: 52
-- Trenza del mar Esmeralda: 44
-- El Héroe de las Eras: 43
-- Yumi y el pintor de pesadillas: 30
-- Esquirla del amanecer: 27
-- El hombre iluminado: 20
-- Sombras por Silencio en los bosques del infierno: 14
-- Danzante del filo: 13
-- Sexto del Ocaso: 11
-- El alma del emperador: 9
-- La esperanza de Elantris: 7
-- Nacidos de la bruma: historia secreta: 6
-- Alomante Jak y los Pozos de Eltania: 5
-- El undécimo metal: 2
+- El camino de los reyes: 76
+- Palabras radiantes: 31
+- Juramentada: 30
+- El Imperio Final: 25
+- Elantris: 16
+- El aliento de los dioses: 15
+- Aleación de ley: 10
+- Trenza del mar Esmeralda: 9
+- Arena blanca: 7
+- El ritmo de la guerra: 7
+- El Pozo de la Ascensión: 6
+- El metal perdido: 6
+- Yumi y el pintor de pesadillas: 5
+- Brazales de duelo: 5
+- Sombras de identidad: 4
+- El alma del emperador: 3
+- Sombras por Silencio en los bosques del infierno: 3
+- El hombre iluminado: 3
+- Viento y verdad: 2
+- El Héroe de las Eras: 2
+- Danzante del filo: 2
+- Sexto del Ocaso: 2
+- Alomante Jak y los Pozos de Eltania: 1
+- Esquirla del amanecer: 1
+- Nacidos de la bruma: historia secreta: 1
 
 ## Por Investidura
 
-- none: 1464
-- surgebinding: 95
-- shardbearer: 93
-- allomancy: 44
-- aondor: 32
-- awakening: 31
-- voidbinding: 20
-- feruchemy: 18
-- hemalurgy: 14
-- sand-mastery: 14
-- old-magic: 4
-- aether: 3
-- yoki-hijo: 3
+- none: 146
+- shardbearer: 50
+- surgebinding: 38
+- allomancy: 25
+- awakening: 13
+- hemalurgy: 8
+- feruchemy: 8
+- aondor: 5
+- voidbinding: 4
+- sand-mastery: 3
+- old-magic: 3
+- aether: 2
 - forgery: 1
+- yoki-hijo: 1
 
 ## Mundos no reconocidos → unknown (4)
 
@@ -85,6 +87,71 @@
 ## Etiquetas de habilidad sin clasificar (ignoradas) (0)
 
 _Ninguno._
+
+## Descartados por relevancia más cercanos al corte (top 60)
+
+| id | nombre | primera aparición | enlaces | capítulos | longitud |
+|---|---|---|---|---|---|
+| peet | Peet | El camino de los reyes | 9 | 31 | 10300 |
+| testament | Testament | Palabras radiantes | 19 | 9 | 3635 |
+| el | El | El ritmo de la guerra | 18 | 6 | 7483 |
+| quellion | Quellion | El Héroe de las Eras | 17 | 8 | 5030 |
+| charlies-father | Charlie's father | Trenza del mar Esmeralda | 18 | 5 | 2662 |
+| tumi | Tumi | El ritmo de la guerra | 16 | 9 | 6984 |
+| adien | Adien | Elantris | 16 | 8 | 6696 |
+| arsteel | Arsteel | El aliento de los dioses | 16 | 8 | 5735 |
+| hanavanar | Hanavanar | El camino de los reyes | 17 | 6 | 3361 |
+| raagent | Raagent | Arena blanca | 16 | 8 | 4305 |
+| riino | Riino | Elantris | 18 | 4 | 5950 |
+| tindwyl-ladrian | Tindwyl Ladrian | El metal perdido | 18 | 4 | 1389 |
+| vey | Vey | Arena blanca | 17 | 6 | 6857 |
+| vendell | VenDell | Brazales de duelo | 16 | 7 | 7617 |
+| allriandre-durkel | Allriandre Durkel | Sombras de identidad | 17 | 4 | 3858 |
+| elit-ruthar | Elit Ruthar | Palabras radiantes | 16 | 6 | 4594 |
+| rebeke-salvage | Rebeke Salvage | El hombre iluminado | 18 | 2 | 461 |
+| teven-renoux | Teven Renoux | El Imperio Final | 18 | 2 | 902 |
+| thude | Thude | Palabras radiantes | 18 | 2 | 1382 |
+| bethab | Bethab | Palabras radiantes | 14 | 9 | 3537 |
+| reluur | ReLuur | Brazales de duelo | 18 | 1 | 1203 |
+| sah | Sah | Juramentada | 14 | 9 | 7773 |
+| vahr | Vahr | El aliento de los dioses | 14 | 9 | 7397 |
+| elorin | Elorin | Arena blanca | 15 | 6 | 6166 |
+| ico | Ico | Juramentada | 16 | 4 | 3552 |
+| eondel | Eondel | Elantris | 14 | 7 | 1855 |
+| heelis | Heelis | Arena blanca | 15 | 5 | 2826 |
+| ki | Ki | Juramentada | 14 | 7 | 6661 |
+| relu-na | Relu-na | Palabras radiantes | 15 | 5 | 4618 |
+| tillaume | Tillaume | Aleación de ley | 13 | 9 | 9354 |
+| abrobadar | Abrobadar | Palabras radiantes | 15 | 4 | 1144 |
+| ahan | Ahan | Elantris | 13 | 8 | 2604 |
+| aona | Aona | Viento y verdad | 16 | 2 | 2358 |
+| gift | Gift | Juramentada | 14 | 6 | 2461 |
+| janala-lustow | Janala Lustow | El camino de los reyes | 15 | 4 | 3367 |
+| mercystar | Mercystar | El aliento de los dioses | 13 | 8 | 4032 |
+| sheler | Sheler | Juramentada | 15 | 4 | 3122 |
+| stone | Stone | Viento y verdad | 13 | 8 | 3814 |
+| arclomedarian | Arclomedarian | Danzante del filo | 14 | 5 | 3962 |
+| izumakamo | Izumakamo | Yumi y el pintor de pesadillas | 13 | 7 | 4495 |
+| kanpaar | KanPaar | El Héroe de las Eras | 14 | 5 | 4423 |
+| malise-gevelmar | Malise Gevelmar | Palabras radiantes | 13 | 7 | 4849 |
+| masaka | Masaka | Yumi y el pintor de pesadillas | 12 | 9 | 7565 |
+| noromin | Noromin | Juramentada | 13 | 7 | 3913 |
+| vedekar-perel | Vedekar Perel | Juramentada | 13 | 7 | 2861 |
+| grund | Grund | Juramentada | 13 | 6 | 4498 |
+| hashal | Hashal | El camino de los reyes | 9 | 14 | 7015 |
+| dai-gonarthis | Dai-Gonarthis | El camino de los reyes | 13 | 5 | 3820 |
+| daora | Daora | Elantris | 11 | 9 | 4087 |
+| frost | Frost | Viento y verdad | 15 | 1 | 6739 |
+| jordis | Jordis | Brazales de duelo | 12 | 7 | 9799 |
+| lemex | Lemex | El aliento de los dioses | 13 | 5 | 5732 |
+| shaor | Shaor | Elantris | 14 | 3 | 1501 |
+| tevidian-tekiel | Tevidian Tekiel | El Imperio Final | 14 | 3 | 4431 |
+| daorn | Daorn | Elantris | 12 | 6 | 8452 |
+| kaza | Kaza | Juramentada | 14 | 2 | 7558 |
+| kdralk | Kdralk | Juramentada | 12 | 6 | 4189 |
+| kefha | Kef'ha | El camino de los reyes | 14 | 2 | 1741 |
+| reen | Reen | El Imperio Final | 13 | 4 | 2707 |
+| rillir-roshone | Rillir Roshone | El camino de los reyes | 12 | 6 | 5054 |
 
 ## Excluidos (118)
 
@@ -214,541 +281,38 @@ _Ninguno._
 
 </details>
 
-## Primera aparición deducida (474)
+## Primera aparición deducida (13)
 
 <details><summary>Lista</summary>
 
-- aeo: La esperanza de Elantris
-- alakavish: El camino de los reyes
-- alazansi: El camino de los reyes
 - alendi: El Imperio Final
-- ali-daughter-hasweth: El camino de los reyes
-- alim: El camino de los reyes
-- allri-innate: Sombras de identidad
-- amark: El camino de los reyes
-- ana: Palabras radiantes
-- anesa: El ritmo de la guerra
-- annarel: Aleación de ley
-- aona: Viento y verdad
-- ape-manton: Aleación de ley
-- aqqu: Juramentada
-- arafik: El camino de los reyes
-- aramine: Aleación de ley
-- arbitan: Aleación de ley
-- ardous-geffenry: El Imperio Final
-- arik: El camino de los reyes
-- arintol: Aleación de ley
-- ashelem: El camino de los reyes
-- ashgress: Elantris
-- ashno: El camino de los reyes
-- ati-seon: Elantris
-- au-lam: Juramentada
-- audil-lekal: El Pozo de la Ascensión
-- augustin-tekiel: Aleación de ley
-- aunt-glorf: Trenza del mar Esmeralda
-- avado: El camino de los reyes
 - ba-ado-mishram: El camino de los reyes
-- barl: Aleación de ley
-- barlesha-lhan: El camino de los reyes
-- barmest: El camino de los reyes
-- bastien-severington: Brazales de duelo
-- bavamar: Juramentada
-- beal: Palabras radiantes
-- bek: Trenza del mar Esmeralda
-- ben-oldson: El metal perdido
-- bendthel: Juramentada
-- bennitson: El Héroe de las Eras
-- beznk: Palabras radiantes
-- bidlel: Danzante del filo
-- bilmy: Brazales de duelo
-- bleaker: El metal perdido
-- blinker: El metal perdido
-- bloody-kent: Sombras por Silencio en los bosques del infierno
-- boriar: El camino de los reyes
-- boris-junior: Sombras de identidad
-- boris-the-third: Sombras de identidad
-- braches: El Imperio Final
-- brighthue: El aliento de los dioses
-- brightlord-morakotha: El camino de los reyes
-- brightlord-seveks: El camino de los reyes
-- bru: Juramentada
-- burl-character: Brazales de duelo
-- burlow: Aleación de ley
-- cabe: El Imperio Final
-- cabine: El camino de los reyes
-- caeb: Palabras radiantes
-- cali-hatthew: El metal perdido
-- calinam: Palabras radiantes
-- caller-of-springs: El ritmo de la guerra
-- callins-geffenry: El Imperio Final
-- cassileux: El metal perdido
-- caull: El camino de los reyes
-- chanada: Juramentada
-- chanasha-hasareh: El ritmo de la guerra
-- chemoarish: El camino de los reyes
-- chilinko: Palabras radiantes
-- chip-hunter: Brazales de duelo
-- cimines: Brazales de duelo
-- cled: El Pozo de la Ascensión
-- coldwin: Palabras radiantes
-- condwish: Juramentada
-- copper-strangler: Aleación de ley
-- cormshen: El camino de los reyes
-- corvana: El camino de los reyes
-- crenda: El Pozo de la Ascensión
-- crews-geffenry: El Imperio Final
-- da: Palabras radiantes
-- daius: Aleación de ley
-- dali: El ritmo de la guerra
-- dandos-heraldin: El camino de los reyes
-- dashir-boys: Sombras de identidad
-- daughnin: Sombras de identidad
-- dean: El metal perdido
-- deeli: El camino de los reyes
-- delgo: El ritmo de la guerra
-- delp: El camino de los reyes
-- delph: Trenza del mar Esmeralda
-- deluse-couvre: El Imperio Final
-- demmy: El metal perdido
-- den: El ritmo de la guerra
-- deral: Arena blanca
-- dereth: Elantris
-- derethil: El camino de los reyes
-- devinshae: El Imperio Final
-- dialectur: Palabras radiantes
-- diggen: Trenza del mar Esmeralda
-- dilid: Juramentada
-- dilisteni: El Imperio Final
-- diolen: Elantris
-- dirge: El hombre iluminado
-- donal: Aleación de ley
-- donny: Brazales de duelo
-- dorolin: El ritmo de la guerra
-- douglas-venture: Sombras de identidad
-- dovcanti: El camino de los reyes
-- dreder: Palabras radiantes
-- drummer-brothers: Juramentada
-- dug: El metal perdido
-- durk: El camino de los reyes
-- durkel: Aleación de ley
-- durton: El Héroe de las Eras
-- dwookim: Yumi y el pintor de pesadillas
-- edip: Sombras de identidad
-- eleseth: Palabras radiantes
-- eliza-marin: Brazales de duelo
-- eoden: Elantris
-- eoldess: Elantris
-- epinar: Palabras radiantes
-- eshu: Palabras radiantes
-- estnatil: Juramentada
-- eusto: Sexto del Ocaso
-- evenstrom-tekiel: Aleación de ley
-- evinor: Palabras radiantes
-- evod-markmaker: El camino de los reyes
-- extes: El camino de los reyes
-- fabrisan: El camino de los reyes
-- fedik: El Imperio Final
-- fedre: El Héroe de las Eras
-- fedren-aime: El Imperio Final
-- fiksin: Juramentada
-- first-of-the-sky: Sexto del Ocaso
-- flavine: El Imperio Final
-- fleet: Palabras radiantes
-- fleeta: Esquirla del amanecer
-- flen: El Imperio Final
-- flend: Esquirla del amanecer
-- franis: El metal perdido
-- frost: Viento y verdad
-- gabrathin: El camino de los reyes
-- galan: El camino de los reyes
-- galid: Juramentada
-- galladons-father: Elantris
-- gallam: Palabras radiantes
-- gallingskaw: El Héroe de las Eras
-- ganlos-riera: El ritmo de la guerra
-- gavam: El ritmo de la guerra
-- gavarah: El camino de los reyes
-- geormin: Aleación de ley
-- gevelmar: Palabras radiantes
-- giftbeacon: El aliento de los dioses
-- golombi: Juramentada
-- gom: El camino de los reyes
-- gord: El metal perdido
-- goshel: El camino de los reyes
-- graeo: Elantris
-- great-grandmother-glorf: Trenza del mar Esmeralda
-- gregorh: El camino de los reyes
-- grondkest: Elantris
-- gub: El ritmo de la guerra
-- gulastis: El ritmo de la guerra
-- guri: Yumi y el pintor de pesadillas
-- habrin: El camino de los reyes
-- habsant: El camino de los reyes
-- halad: Juramentada
-- hallaw: El camino de los reyes
-- hamadin: Juramentada
-- hamaradin: Juramentada
-- hammie: El camino de los reyes
-- handerwym: Alomante Jak y los Pozos de Eltania
-- hanlanaze: Sombras de identidad
-- hardren: El Héroe de las Eras
-- harel: El ritmo de la guerra
-- haridan: El hombre iluminado
-- harkaylain: El camino de los reyes
-- harold: Sombras por Silencio en los bosques del infierno
-- harrisel-hard: Aleación de ley
-- harth: Juramentada
-- harvo: El ritmo de la guerra
-- hasavah: Palabras radiantes
-- hasheh: El camino de los reyes
-- heberen: El Imperio Final
-- helenntion: El Pozo de la Ascensión
-- hem: El ritmo de la guerra
-- hema-dak: Juramentada
-- hennin: Arena blanca
-- herve: Brazales de duelo
 - hessi: Juramentada
-- hinston-ladrian: Aleación de ley
-- hmalka: Juramentada
-- holmes: Trenza del mar Esmeralda
-- icy-ben-oldson: El metal perdido
-- idani: El ritmo de la guerra
-- idolir: El camino de los reyes
-- ikonora: Yumi y el pintor de pesadillas
-- inabar: El ritmo de la guerra
-- inis-julien: Brazales de duelo
-- innia: El camino de los reyes
-- insah: Juramentada
-- isan: Palabras radiantes
-- ito: Yumi y el pintor de pesadillas
-- ivanar-ruthar: Juramentada
-- ixil: El camino de los reyes
-- iyalid: El ritmo de la guerra
-- jadendwyl: El Pozo de la Ascensión
-- jal-mala: Palabras radiantes
-- jam-hearthstone: El camino de los reyes
-- jam-caravaneer: El camino de los reyes
-- jarel: El camino de los reyes
-- jaston: El Héroe de las Eras
-- jedan: Arena blanca
-- jeffy: El metal perdido
-- jell: El Pozo de la Ascensión
-- jendellah: El Pozo de la Ascensión
-- jennid: El metal perdido
-- johnst: Sombras de identidad
-- jom: Juramentada
-- jone: Sombras de identidad
-- jorna: El camino de los reyes
-- joshor: El camino de los reyes
-- jub-hending: El metal perdido
-- kalana: El camino de los reyes
-- kale-tekiel: El Imperio Final
-- kalikalin: El camino de los reyes
-- kalishor: Palabras radiantes
-- kaplan: Trenza del mar Esmeralda
-- karm: El camino de los reyes
-- karmat: Arena blanca
-- kasimarlix: Juramentada
-- katarotam: El camino de los reyes
-- kaves-kholin: Juramentada
-- kefha: El camino de los reyes
-- kerzt: Arena blanca
-- keseg: Elantris
-- keshdel: Arena blanca
-- khem: Juramentada
-- kinaler: El Pozo de la Ascensión
-- kindwinds: El aliento de los dioses
-- koen: Palabras radiantes
-- kusiri: El camino de los reyes
 - kwaan: El Imperio Final
-- lady-farthing: Brazales de duelo
-- lady-faula: El metal perdido
-- lady-lentin: Sombras de identidad
-- lady-zobell: Sombras de identidad
-- lakin: El ritmo de la guerra
-- lalai: El camino de los reyes
-- lanacin: El camino de los reyes
-- landre: Brazales de duelo
-- lani: Juramentada
-- leemar: El metal perdido
-- leef: El camino de los reyes
-- levrin: Palabras radiantes
-- lieutenant-ahlstrom: Sombras de identidad
-- lili: Trenza del mar Esmeralda
-- linji: Trenza del mar Esmeralda
-- litima: El camino de los reyes
-- loats: El camino de los reyes
-- lond: Esquirla del amanecer
-- longbrow: Esquirla del amanecer
-- longshadow: El camino de los reyes
-- lord-barrington: Sombras de identidad
-- lord-steming: Brazales de duelo
-- lossa: Arena blanca
-- lotari: Trenza del mar Esmeralda
-- lustow: El camino de los reyes
-- lyndip: Alomante Jak y los Pozos de Eltania
-- lyon: El ritmo de la guerra
-- ma: Juramentada
-- mabrow-pigherder: El camino de los reyes
-- makepeace-hapshire: Sombras por Silencio en los bosques del infierno
-- malchin: Palabras radiantes
-- mallory: Trenza del mar Esmeralda
-- manaline: El camino de los reyes
-- mara-roshar: Juramentada
-- maraya: El metal perdido
 - mare: El Imperio Final
-- marf: El camino de los reyes
-- mari-hammondess: El metal perdido
-- marni: El ritmo de la guerra
-- marple: Trenza del mar Esmeralda
-- masha-daughter-shaliv: Juramentada
-- masly: El camino de los reyes
-- mastrell-rile: Arena blanca
-- maurin: Brazales de duelo
-- mederia: El camino de los reyes
-- meleran-khal: Juramentada
 - melishi: Palabras radiantes
-- mikaff: Alomante Jak y los Pozos de Eltania
-- miliv: El camino de los reyes
-- milp: El camino de los reyes
-- ministara: Palabras radiantes
-- mirabell: Sombras de identidad
-- mirthgiver: El aliento de los dioses
-- misra: Sombras de identidad
-- modicarm: Aleación de ley
 - moelach: El camino de los reyes
-- mrs-hutchen: Brazales de duelo
-- mrs-nock: El metal perdido
-- mrs-shinja: Yumi y el pintor de pesadillas
-- mungam: El camino de los reyes
-- mura: Esquirla del amanecer
-- murnbru: Aleación de ley
-- myalmr: El camino de los reyes
-- nafti: El camino de los reyes
-- nakal: Palabras radiantes
-- naladan: Palabras radiantes
-- nalanar: Juramentada
-- nalma: El camino de los reyes
-- namar: Palabras radiantes
-- nanhar: Juramentada
-- nankhet: Juramentada
-- nashan: El camino de los reyes
-- natata-ved: Juramentada
-- ned: Juramentada
-- nenefra: El aliento de los dioses
-- neoden: Elantris
-- neshan: El ritmo de la guerra
-- neteb: El camino de los reyes
-- niali: El camino de los reyes
-- night-known: El ritmo de la guerra
-- nistar: El ritmo de la guerra
-- nlan: Esquirla del amanecer
-- norby: El camino de los reyes
-- oolelen: Palabras radiantes
-- pars: Aleación de ley
-- patji-being: Sexto del Ocaso
-- peaceyearning: El aliento de los dioses
-- pedin: Palabras radiantes
-- peret: Aleación de ley
-- placini: El camino de los reyes
-- pleadix: Esquirla del amanecer
-- poloni: Trenza del mar Esmeralda
-- ral: El camino de los reyes
-- raninor: Palabras radiantes
-- reluur: Brazales de duelo
-- redalevin: El Imperio Final
-- redd: El Imperio Final
-- redeen: Elantris
-- reen: El Imperio Final
-- relador: Juramentada
-- rem: Juramentada
-- remala: El ritmo de la guerra
-- rembrinor: Juramentada
-- remmingtel-tarcsel: Sombras de identidad
-- rencalt: El camino de los reyes
 - replar-innate: Sombras de identidad
-- reral-makoram: El camino de los reyes
-- reven: Arena blanca
-- reya: Palabras radiantes
-- riah: El ritmo de la guerra
-- rick-stranger: El Pozo de la Ascensión
-- ridger: El aliento de los dioses
-- rindel: El Pozo de la Ascensión
-- rine-hatham: El ritmo de la guerra
-- ron: El ritmo de la guerra
-- ruddy: El Imperio Final
-- rusko: Sombras de identidad
 - sadees: El camino de los reyes
-- sakin: Juramentada
-- salmen-tekiel: El Imperio Final
-- samjae: Yumi y el pintor de pesadillas
-- screech: Esquirla del amanecer
-- seala: Elantris
-- sebasinar: El ritmo de la guerra
-- senator-vindel: El metal perdido
-- seor: Elantris
-- shauka-daughter-hasweth: El camino de los reyes
-- she-who-dreams: El ritmo de la guerra
-- shishi-komashi: Yumi y el pintor de pesadillas
-- shoren: Palabras radiantes
-- shubalai: Palabras radiantes
-- shubreth-son-mashalan: Juramentada
-- si: Palabras radiantes
-- sinakua: El camino de los reyes
-- sinbian: Juramentada
-- skai: Viento y verdad
-- skathan: Arena blanca
-- skiff: El Héroe de las Eras
-- snoxil: Juramentada
-- sot: Juramentada
-- stagin: Aleación de ley
-- stanton: Aleación de ley
-- staxles: El Imperio Final
-- stine: Palabras radiantes
-- sudi-valam: Palabras radiantes
-- suna: El metal perdido
-- sur-kamar: El camino de los reyes
-- susebron-the-fourth: El aliento de los dioses
-- svel: Brazales de duelo
-- syasikk: El camino de los reyes
-- taff: El aliento de los dioses
-- tai: Juramentada
-- takanda: Yumi y el pintor de pesadillas
-- talanah: El ritmo de la guerra
-- talanan: El ritmo de la guerra
-- talanor: Palabras radiantes
-- talata: El camino de los reyes
-- talatin: El camino de los reyes
-- taleb: El camino de los reyes
-- tallan: Juramentada
-- tarkavv: El Héroe de las Eras
-- taraco: Aleación de ley
-- tark-vestingdow: El metal perdido
-- tarn-roshar: El camino de los reyes
-- tashlin: El camino de los reyes
-- tathed: Brazales de duelo
-- tegas: El Imperio Final
-- temadre: El Imperio Final
-- ten: Palabras radiantes
-- tenathar: Juramentada
-- teorn: Elantris
-- terion: El Pozo de la Ascensión
-- terri: Sombras de identidad
-- teven-renoux: El Imperio Final
-- thomton-delacour: Brazales de duelo
-- three-tooth-dag: El metal perdido
-- tifandor: El camino de los reyes
-- tifi: El camino de los reyes
-- tim-vashin: Sombras de identidad
-- tinalar: Palabras radiantes
-- tobal-copper: El metal perdido
-- trap: El Imperio Final
-- treff: El camino de los reyes
-- tren-pedri-delouse: El Imperio Final
-- trendalan: El Héroe de las Eras
-- trentison: El Héroe de las Eras
-- troubeld: El Pozo de la Ascensión
-- tsa: Juramentada
-- tshadr: Juramentada
-- uli-da: Viento y verdad
-- urdree: El Héroe de las Eras
-- urialin: El ritmo de la guerra
-- urimil: Juramentada
-- usasha: Yumi y el pintor de pesadillas
-- uscri: Juramentada
-- valette-entrone: Aleación de ley
-- varala: Juramentada
-- varas: El camino de los reyes
-- vathe: El camino de los reyes
 - vedel: El camino de los reyes
-- vedzan: El Pozo de la Ascensión
-- velalant: Juramentada
-- velinar: El ritmo de la guerra
-- vennis-hasting: El metal perdido
-- vent-scadrial: El Imperio Final
 - verdant-king: Trenza del mar Esmeralda
-- vevanara: El ritmo de la guerra
-- vishwadhar: El metal perdido
-- vratim: El ritmo de la guerra
-- wednegon: El Pozo de la Ascensión
-- weev: Trenza del mar Esmeralda
-- wells: Sombras de identidad
-- westweather-cett: Brazales de duelo
-- wilheln: Arena blanca
-- william-montane: Sombras por Silencio en los bosques del infierno
-- winnow-roshar: Juramentada
 - wistiow: El camino de los reyes
-- word-of-deeds: El ritmo de la guerra
-- wulfden-the-first: Elantris
 - wulfden-the-fourth: Elantris
-- wyrn-character: Elantris
-- yaalani: Sexto del Ocaso
-- yara: El ritmo de la guerra
-- yenev: Palabras radiantes
-- ytves: El Pozo de la Ascensión
-- yuinshi: Yumi y el pintor de pesadillas
-- yulip: El metal perdido
-- yustara: El camino de los reyes
-- zandiel: El ritmo de la guerra
-- zen-daughter-vath: Palabras radiantes
-- zetah: Juramentada
 
 </details>
 
-## Alias eliminados (51)
+## Alias eliminados (9)
 
 <details><summary>Lista</summary>
 
-- admiral-daal: "Admiral" (es el nombre de otro personaje)
 - bavadin: "Sand Lord" (es el nombre de otro personaje)
-- bavadin: "Patji" (es el nombre de otro personaje)
-- bavadin: "Trell" (compartido con otro personaje)
-- ben-oldson: "Icy Ben Oldson" (es el nombre de otro personaje)
-- bloody-kent: "Bloody" (compartido con otro personaje)
-- bloody-tan: "Bloody" (compartido con otro personaje)
-- boris-junior: "Boris" (compartido con otro personaje)
-- boris-the-third: "Boris" (compartido con otro personaje)
-- brightlord-morakotha: "Brightlord" (compartido con otro personaje)
-- brightlord-seveks: "Brightlord" (compartido con otro personaje)
-- cali-hatthew: "Cali" (es el nombre de otro personaje)
-- callins-geffenry: "Callins" (es el nombre de otro personaje)
-- general-habrinar: "General" (compartido con otro personaje)
-- general-khal: "General" (compartido con otro personaje)
-- icy-ben-oldson: "Icy" (compartido con otro personaje)
-- icy-tongue: "Icy" (compartido con otro personaje)
-- isasik-shulin: "Isasik" (es el nombre de otro personaje)
+- bavadin: "Trell" (es el nombre de otro personaje)
 - jezrien: "Jezerezeh" (compartido con otro personaje)
-- jon-acron: "Jon" (compartido con otro personaje)
-- jon-deadfinger: "Jon" (compartido con otro personaje)
 - kalak: "Kelek" (compartido con otro personaje)
-- kelesina-shores: "Kelesina" (compartido con otro personaje)
-- kelesina-shoress-steward: "Kelesina" (compartido con otro personaje)
-- lin-davar: "Lin" (compartido con otro personaje)
-- lotari: "Linji" (nombre en español compartido)
-- lunamor: "Rock" (es el nombre de otro personaje)
-- mrs-hutchen: "Mrs." (compartido con otro personaje)
-- mrs-nock: "Mrs." (compartido con otro personaje)
-- mrs-shinja: "Mrs." (compartido con otro personaje)
-- night-known: "Night" (es el nombre de otro personaje)
 - paalm: "Replar Innate" (es el nombre de otro personaje)
-- philen-frandeu: "Lin" (compartido con otro personaje)
-- rian-strobe: "Rian" (es el nombre de otro personaje)
-- rine-hatham: "Rine" (es el nombre de otro personaje)
-- shallan-davar: "Chanasha Hasareh" (es el nombre de otro personaje)
-- shan-elariel: "Shan" (compartido con otro personaje)
-- shan-elariels-steward: "Shan" (compartido con otro personaje)
-- sigzil: "Zellion" (es el nombre de otro personaje)
-- spook: "Jedal" (es el nombre de otro personaje)
 - stormfather: "Jezerezeh" (compartido con otro personaje)
 - stormfather: "Kelek" (compartido con otro personaje)
-- susebron-the-fourth: "Susebron" (es el nombre de otro personaje)
-- telsin-ladrian: "Trell" (compartido con otro personaje)
+- telsin-ladrian: "Trell" (es el nombre de otro personaje)
 - tensoon: "OreSeur" (es el nombre de otro personaje)
-- tensoon: "Gorglen" (es el nombre de otro personaje)
-- tindwyl-ladrian: "Tindwyl" (es el nombre de otro personaje)
-- william-ann-montane: "William" (compartido con otro personaje)
-- william-montane: "William" (compartido con otro personaje)
-- wulfden-the-first: "Wulfden" (compartido con otro personaje)
-- wulfden-the-fourth: "Wulfden" (compartido con otro personaje)
 
 </details>

@@ -27,11 +27,12 @@ import {
   unlink,
 } from "./wikitext";
 import { ABILITIES, ABILITY_SPECIES, IGNORED_ABILITIES, SPECIES, WORLDS } from "./mappings";
+import { RELEVANCE, inboundLinks, isRelevant, relevanceOf, type Relevance } from "./relevance";
 
 export const DUMP_PATH = process.env.COPPERMIND_DUMP ?? "data/raw/coppermind-20250225/current.xml";
 const DATA = (f: string) => new URL(`../../data/${f}`, import.meta.url);
 
-type Draft = Character & { _title: string; _inferredBook: boolean };
+type Draft = Character & { _title: string; _inferredBook: boolean; _relevance: Relevance };
 
 export interface BuildReport {
   nonCosmere: number;
@@ -41,11 +42,25 @@ export interface BuildReport {
   unknownSpecies: Map<string, string[]>;
   unknownAbilities: Map<string, string[]>;
   droppedAliases: { id: string; alias: string; reason: string }[];
+  irrelevant: { id: string; name: string; book: string; relevance: Relevance }[];
+  forcedIncludes: string[];
+  orphanOverrides: string[];
 }
 
 const push = (m: Map<string, string[]>, k: string, v: string) => m.set(k, [...(m.get(k) ?? []), v]);
 
-export function extractCharacters(pages: Map<string, Page>, books: Book[]): { characters: Character[]; report: BuildReport } {
+export interface ExtractOptions {
+  /** ids que se incluyen aunque no pasen el filtro de relevancia. */
+  include?: Set<string>;
+  /** false = no filtrar por relevancia (útil en tests). */
+  filterRelevance?: boolean;
+}
+
+export function extractCharacters(
+  pages: Map<string, Page>,
+  books: Book[],
+  { include = new Set(), filterRelevance = true }: ExtractOptions = {},
+): { characters: Character[]; report: BuildReport } {
   const report: BuildReport = {
     nonCosmere: 0,
     excluded: [],
@@ -54,6 +69,9 @@ export function extractCharacters(pages: Map<string, Page>, books: Book[]): { ch
     unknownSpecies: new Map(),
     unknownAbilities: new Map(),
     droppedAliases: [],
+    irrelevant: [],
+    forcedIncludes: [],
+    orphanOverrides: [],
   };
 
   const pageToBook = new Map(books.map((b) => [resolveTitle(pages, b.coppermindPage ?? b.title.en), b]));
@@ -63,11 +81,14 @@ export function extractCharacters(pages: Map<string, Page>, books: Book[]): { ch
     if (b) codeToBook.set(code, b);
   }
 
+  const characterPages = [...pages.values()].filter(
+    (p) => p.ns === 0 && !redirectTarget(p.text) && findTemplate(p.text, "character"),
+  );
+  const inbound = inboundLinks(pages, new Set(characterPages.map((p) => p.title)));
+
   const drafts: Draft[] = [];
-  for (const page of pages.values()) {
-    if (page.ns !== 0 || redirectTarget(page.text)) continue;
-    const tpl = findTemplate(page.text, "character");
-    if (!tpl) continue;
+  for (const page of characterPages) {
+    const tpl = findTemplate(page.text, "character")!;
     const f = templateFields(tpl);
 
     const universe = unlink(stripNoise(f.universe ?? "")).toLowerCase();
@@ -138,6 +159,7 @@ export function extractCharacters(pages: Map<string, Page>, books: Book[]): { ch
     drafts.push({
       _title: page.title,
       _inferredBook: inferred,
+      _relevance: relevanceOf(page, inbound),
       id: slugify(page.title),
       name,
       aliases,
@@ -150,12 +172,23 @@ export function extractCharacters(pages: Map<string, Page>, books: Book[]): { ch
     });
   }
 
+  // Filtro de relevancia (antes de desambiguar, para que los descartados no "roben" nombres ni alias).
+  const kept = drafts.filter((d) => {
+    const relevant = !filterRelevance || isRelevant(d._relevance);
+    if (!relevant && include.has(d.id)) report.forcedIncludes.push(d.id);
+    else if (!relevant)
+      report.irrelevant.push({ id: d.id, name: d.name, book: d.firstAppearance, relevance: d._relevance });
+    return relevant || include.has(d.id);
+  });
+  drafts.length = 0;
+  drafts.push(...kept);
+
   disambiguate(drafts);
   dedupeAliases(drafts, report);
 
   for (const d of drafts) if (d._inferredBook) report.inferredBook.push({ id: d.id, book: d.firstAppearance });
   const characters = drafts
-    .map(({ _title, _inferredBook, ...c }) => c)
+    .map(({ _title, _inferredBook, _relevance, ...c }) => c)
     .sort((a, b) => a.id.localeCompare(b.id));
   return { characters, report };
 }
@@ -210,19 +243,29 @@ function dedupeAliases(drafts: Draft[], report: BuildReport) {
   }
 }
 
-const Override = Character.partial().extend({ exclude: z.boolean().optional() });
+const Override = Character.partial().extend({ exclude: z.boolean().optional(), include: z.boolean().optional() });
 /** Claves que empiezan por "_" son comentarios y se ignoran. */
 const Overrides = z
   .record(z.string(), z.unknown())
   .transform((o) => Object.fromEntries(Object.entries(o).filter(([k]) => !k.startsWith("_"))))
   .pipe(z.record(z.string(), Override));
 
-export function applyOverrides(characters: Character[], overrides: z.infer<typeof Overrides>): Character[] {
+/** Aplica las correcciones. Las que apuntan a un id que no existe (p. ej. descartado por relevancia) se ignoran. */
+export function applyOverrides(
+  characters: Character[],
+  overrides: z.infer<typeof Overrides>,
+  orphans: string[] = [],
+): Character[] {
   const byId = new Map(characters.map((c) => [c.id, c]));
   for (const [id, o] of Object.entries(overrides)) {
-    const { exclude, ...patch } = o;
+    const { exclude, include: _include, ...patch } = o;
+    const base = byId.get(id);
+    if (!base) {
+      if (!exclude) orphans.push(id);
+      continue;
+    }
     if (exclude) byId.delete(id);
-    else byId.set(id, { ...(byId.get(id) ?? ({} as Character)), ...patch, id } as Character);
+    else byId.set(id, { ...base, ...patch, id });
   }
   return [...byId.values()].sort((a, b) => a.id.localeCompare(b.id));
 }
@@ -243,6 +286,10 @@ function renderReport(r: BuildReport, final: Character[], books: Book[]): string
     `- Excluidos: ${r.excluded.length}`,
     `- Primera aparición deducida de las citas (revisar): ${r.inferredBook.length}`,
     `- Alias eliminados por duplicados: ${r.droppedAliases.length}`,
+    `- Descartados por poca relevancia: ${r.irrelevant.length} (incluidos a mano: ${r.forcedIncludes.length})`,
+    `- Overrides sin personaje (ignorados): ${r.orphanOverrides.length ? r.orphanOverrides.join(", ") : "ninguno"}`,
+    "",
+    `Regla de relevancia: lo enlazan ≥ ${RELEVANCE.minInbound} páginas, o ≥ ${RELEVANCE.minInboundWithSupport} páginas y además cita ≥ ${RELEVANCE.minChapters} capítulos o su página tiene ≥ ${RELEVANCE.minLength} caracteres. Para rescatar a alguien: \`"id": { "include": true }\` en overrides.json.`,
     "",
     "## Por mundo",
     "",
@@ -259,6 +306,14 @@ function renderReport(r: BuildReport, final: Character[], books: Book[]): string
     mapSection("Mundos no reconocidos → unknown", r.unknownWorlds),
     mapSection("Especies no reconocidas → unknown", r.unknownSpecies),
     mapSection("Etiquetas de habilidad sin clasificar (ignoradas)", r.unknownAbilities),
+    `## Descartados por relevancia más cercanos al corte (top 60)\n`,
+    "| id | nombre | primera aparición | enlaces | capítulos | longitud |",
+    "|---|---|---|---|---|---|",
+    ...[...r.irrelevant]
+      .sort((a, b) => b.relevance.inbound * 2 + b.relevance.chapters - (a.relevance.inbound * 2 + a.relevance.chapters))
+      .slice(0, 60)
+      .map((x) => `| ${x.id} | ${x.name} | ${title(x.book)} | ${x.relevance.inbound} | ${x.relevance.chapters} | ${x.relevance.length} |`),
+    "",
     `## Excluidos (${r.excluded.length})\n`,
     ...count(r.excluded, (e) => e.reason).map(([k, n]) => `- ${k}: ${n}`),
     "",
@@ -281,8 +336,9 @@ function main() {
 
   console.log("Leyendo volcado…");
   const pages = readDump(DUMP_PATH);
-  const { characters, report } = extractCharacters(pages, books);
-  const final = applyOverrides(characters, overrides);
+  const include = new Set(Object.entries(overrides).filter(([, o]) => o.include).map(([id]) => id));
+  const { characters, report } = extractCharacters(pages, books, { include });
+  const final = applyOverrides(characters, overrides, report.orphanOverrides);
 
   const json = (x: unknown) => JSON.stringify(x, null, 2) + "\n";
   writeFileSync(DATA("characters.generated.json"), json(characters));

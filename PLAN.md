@@ -29,7 +29,7 @@
 
 ### Alcance
 - **Solo el modo clásico.** No hay otros modos de juego por ahora.
-- **Todos los personajes del Cosmere**, no solo los protagonistas. Los secundarios y los personajes menores también pueden salir como personaje del día.
+- **Personajes relevantes del Cosmere**: protagonistas y secundarios memorables (~270). Los terciarios, que salen una o dos veces, se descartan porque harían el juego imposible (ver 4.2).
 
 ### Mecánica
 - Cada día hay **un personaje secreto**, el mismo para todos los jugadores.
@@ -38,7 +38,7 @@
   - 🟨 **Amarillo**: coincidencia parcial (p. ej. comparten uno de varios poderes, o el libro es de la misma saga).
   - 🟥 **Rojo**: no coincide.
   - ⬆️⬇️ **Flechas**: en el libro de primera aparición, indican si el objetivo apareció en un libro publicado antes o después.
-- **Intentos ilimitados.** El número de intentos se muestra en el resultado compartido. Con todos los personajes en juego, limitarlos haría el juego demasiado difícil.
+- **Intentos ilimitados.** El número de intentos se muestra en el resultado compartido. Con ~270 personajes en juego, limitarlos haría el juego demasiado difícil.
 - Al acertar se muestra la tarjeta del personaje (atributos + enlace a la Coppermind), una cuenta atrás hasta el siguiente y el botón **Compartir**.
 
 ### Objetivos
@@ -90,7 +90,7 @@ Objetivo: **Vin**
 
 ## 3. Spoilers
 
-Al incluir **todos** los personajes, no se puede garantizar un personaje del día libre de spoilers para quien no haya leído todo. La estrategia es **minimizarlos y avisar**:
+Al incluir personajes de todas las sagas, no se puede garantizar un personaje del día libre de spoilers para quien no haya leído todo. La estrategia es **minimizarlos y avisar**:
 
 1. **Aviso visible** en la primera visita y en "Cómo jugar": *"El juego incluye personajes de todos los libros del Cosmere y puede contener spoilers."*
 2. **Atributos poco reveladores**:
@@ -114,13 +114,14 @@ Al incluir **todos** los personajes, no se puede garantizar un personaje del dí
   - Revisar la licencia de su contenido (indicada en el pie de la wiki) y **citarla en el footer**. No copiar textos largos.
   - Ser respetuoso: pausas entre peticiones, User-Agent genérico que identifique el proyecto, descarga ocasional y caché local del resultado.
 
-### 4.2 Volumen
-Como entran todos los personajes, la extracción automática pasa a ser **imprescindible**:
-
-- La Coppermind tiene **cientos de personajes con página propia**. Rellenarlos a mano no es viable.
-- **MVP**: los personajes de todas las novelas principales que tengan infobox razonablemente completo (unos cientos).
-- **Después**: novelas cortas, relatos y personajes menores, por lotes.
-- Con varios cientos de personajes, el calendario cubre más de un año sin repetir.
+### 4.2 Volumen y filtro de relevancia
+- El volcado tiene ~1 800 personajes del Cosmere con ficha; la mitad citan dos capítulos o menos. Se filtran con señales de la propia wiki (`scripts/coppermind/relevance.ts`):
+  - **Enlaces entrantes**: cuántos artículos de la Coppermind enlazan al personaje.
+  - **Capítulos citados**: capítulos distintos referenciados en su página.
+  - **Longitud** de su página.
+- **Regla**: se queda quien tenga ≥ 20 enlaces entrantes, o ≥ 10 enlaces y además ≥ 10 capítulos citados o una página de ≥ 10 000 caracteres. Resultado: ~264 personajes.
+- **Ajuste manual**: `"include": true` en `overrides.json` rescata a personajes memorables que la regla deja fuera (Camon, Ashe, William Ann...); `"exclude": true` quita a alguien. `data/report.md` lista los descartados más cercanos al corte.
+- Con ~270 personajes, el calendario cubre unos 9 meses sin repetir.
 
 ### 4.3 Pipeline de datos
 ```
@@ -574,7 +575,8 @@ Estimación con ~5–8 h/semana.
 - [x] `scripts/coppermind/build.ts`: extracción + normalización + `overrides.json` + informe de huecos (`data/report.md`).
 - [x] Primer lote de correcciones manuales (nombres comunes y spoilers de los personajes principales).
 - [x] `validate.ts` en el CI.
-- [ ] Revisar las 474 primeras apariciones deducidas y más spoilers de poderes (ver `data/report.md`).
+- [x] Filtro de relevancia: de ~1 800 a ~270 personajes, con inclusiones manuales.
+- [ ] Revisar las 13 primeras apariciones deducidas y más spoilers de poderes (ver `data/report.md`).
 - [ ] Verificar las traducciones de la taxonomía marcadas como dudosas y añadir nombres en español de personajes.
 - [ ] Personajes de *Islas de la Ascuaoscura* (posteriores al volcado).
 
@@ -608,8 +610,8 @@ Estimación con ~5–8 h/semana.
 
 | Riesgo | Impacto | Mitigación |
 |---|---|---|
-| Personajes menores muy difíciles de adivinar | Medio | Intentos ilimitados; tooltips con información útil; el libro con flechas y saga orienta rápido. Si resulta frustrante, se podría añadir una pista tras N fallos (decisión futura). |
-| Spoilers al incluir todos los personajes | Alto | Aviso explícito, atributos poco reveladores, detalles ocultos en la tarjeta final, sin columna de estado |
+| Personajes menores muy difíciles de adivinar | Medio | Filtro de relevancia (~270 personajes); intentos ilimitados; tooltips con información útil; el libro con flechas y saga orienta rápido. Si resulta frustrante, se podría añadir una pista tras N fallos (decisión futura). |
+| Spoilers al incluir personajes de todas las sagas | Alto | Aviso explícito, atributos poco reveladores, detalles ocultos en la tarjeta final, sin columna de estado |
 | Datos incorrectos o inconsistentes (infoboxes heterogéneos) | Alto | Informe de huecos, `overrides.json`, validación en el CI, enlace para reportar errores (issues de GitHub) |
 | Añadir personajes rompe el calendario | Medio | `schedule.json` append-only, comprobado en el CI |
 | Nuevos libros cambian lo que se sabe de un personaje | Medio | Valores fijados según la primera aparición; los cambios nunca afectan a días pasados |
