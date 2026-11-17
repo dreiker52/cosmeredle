@@ -557,11 +557,12 @@ Un test comprueba que `es.json` y `en.json` tienen exactamente las mismas claves
 Estimación con ~5–8 h/semana.
 
 ### Fase 0 — Preparación (1 semana)
-- [ ] `git init`, repositorio público `cosmeredle` en GitHub, licencia MIT.
-- [ ] Vite + React + TS + Tailwind; ESLint, Prettier, Vitest.
-- [ ] Workflow de deploy a GitHub Pages con una página "Hola mundo" para comprobar que la URL funciona.
+- [x] `git init`, repositorio público `cosmeredle` en GitHub, licencia MIT.
+- [x] Vite + React + TS + Tailwind, Vitest. (ESLint y Prettier pendientes.)
+- [x] Workflow de deploy a GitHub Pages; la URL https://dreiker52.github.io/cosmeredle/ funciona.
 - [ ] Leer la política de fans de Dragonsteel y la licencia de la Coppermind.
-- [ ] Fijar la zona horaria de reinicio.
+- [x] Fijar la zona horaria de reinicio: Europe/Madrid.
+- [x] Adelantado de la Fase 2: `rng.ts`, `daily.ts`, `compare.ts`, `storage.ts` con tests; toggle ES/EN.
 
 ### Fase 1 — Datos (3–4 semanas) ← *la parte más laboriosa*
 - [ ] `books.json` con la bibliografía completa del Cosmere, orden de publicación y títulos ES/EN.
