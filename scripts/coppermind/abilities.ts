@@ -7,25 +7,22 @@ import { ABILITY_LINKS, ABILITY_TAGS, ABILITY_TEXT, IGNORED_TAGS, SHARDS } from 
 export interface ParsedAbilities {
   /** ids de poder, en el orden de la ficha y sin repetir. */
   ids: string[];
-  /** ids marcados como "(formerly)". */
-  former: string[];
   /** Etiquetas o enlaces que no se han reconocido (para el informe). */
   unknown: string[];
 }
 
-const FORMER = "\u0001"; // marca interna de "(formerly)"
-
-/** Quita las referencias y deja solo las marcas de "(formerly)" de los `<small>`. */
+/**
+ * Quita las referencias y los `<small>`. Un poder que ya no tiene ("(formerly)") cuenta como si lo
+ * tuviera; si el `<small>` contiene etiquetas ("({{tag+|Savant}}, formerly)"), se conservan.
+ */
 function preprocess(text: string): string {
   let t = text.replace(/\{\{\s*(?:book|wob|cite|ref)[^{}]*\}\}/gi, "").replace(/<ref[^>]*\/>|<ref[\s\S]*?<\/ref>/gi, "");
   t = t.replace(/\{\{\s*nosnippet\s*\|/gi, "{{nosnippet|");
-  // <small>(formerly)</small> -> marca; <small>(... {{tag|X}}, formerly)</small> -> X + marca; resto fuera.
-  t = t.replace(/<small>([\s\S]*?)<\/small>/gi, (_, inner: string) => {
+  return t.replace(/<small>([\s\S]*?)<\/small>/gi, (_, inner: string) => {
     if (!/formerly/i.test(inner)) return "";
     const tags = [...inner.matchAll(/\{\{\s*tag\+?\s*\|[^}]*\}\}/gi)].map((m) => m[0]);
-    return tags.length ? ", " + tags.map((x) => x + FORMER).join(", ") : FORMER;
+    return tags.length ? ", " + tags.join(", ") : "";
   });
-  return t.replace(/\(\s*formerly\s*\)/gi, FORMER);
 }
 
 interface Token {
@@ -67,14 +64,11 @@ export function parseAbilities(text: string): ParsedAbilities {
   const t = preprocess(text);
   const tokens = tokenize(t);
   const ids: string[] = [];
-  const former = new Set<string>();
   const unknown: string[] = [];
   const consumed = new Set<number>(); // enlaces usados como nombre de Esquirla
 
   tokens.forEach((tok, i) => {
     if (consumed.has(tok.start)) return;
-    const next = tokens[i + 1];
-    const between = t.slice(tok.end, next ? next.start : t.length);
     let found: string[] = [];
 
     if (tok.kind === "tag") {
@@ -107,13 +101,9 @@ export function parseAbilities(text: string): ParsedAbilities {
       } else return;
     }
 
-    const isFormer = between.includes(FORMER);
-    for (const id of found) {
-      if (!ids.includes(id)) ids.push(id);
-      if (isFormer) former.add(id);
-    }
+    for (const id of found) if (!ids.includes(id)) ids.push(id);
   });
 
   for (const [re, id] of ABILITY_TEXT) if (re.test(t) && !ids.includes(id)) ids.push(id);
-  return { ids, former: ids.filter((id) => former.has(id)), unknown };
+  return { ids, unknown };
 }

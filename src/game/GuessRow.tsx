@@ -26,10 +26,25 @@ interface CellProps {
   animate: boolean;
   tooltip?: string;
   arrow?: Arrow;
+  /** Letra algo más pequeña para celdas con mucho texto (varios poderes). */
+  dense?: boolean;
   children: ReactNode;
 }
 
-function Cell({ color, column, index, animate, tooltip, arrow, children }: CellProps) {
+/** Valores de una celda multivalor, uno por línea. */
+function Lines({ values }: { values: string[] }) {
+  return (
+    <>
+      {values.map((v) => (
+        <span key={v} className="block">
+          {v}
+        </span>
+      ))}
+    </>
+  );
+}
+
+function Cell({ color, column, index, animate, tooltip, arrow, dense, children }: CellProps) {
   const { t } = useI18n();
   const arrowText = arrow === "up" ? t("cell.later") : arrow === "down" ? t("cell.earlier") : "";
   const status = t(`cell.${color}`);
@@ -40,7 +55,8 @@ function Cell({ color, column, index, animate, tooltip, arrow, children }: CellP
       aria-label={`${t(column)}: ${tooltip ?? ""} (${status})${arrowText ? `. ${arrowText}` : ""}`}
       style={animate ? { animationDelay: `${index * 250}ms` } : undefined}
       className={
-        "relative flex min-h-16 flex-col items-center justify-center rounded-md border-2 p-1 text-center text-[11px] font-medium leading-tight sm:text-sm " +
+        "relative flex min-h-16 flex-col items-center justify-center rounded-md border-2 px-1 py-1.5 text-center font-medium leading-tight " +
+        (dense ? "text-[10px] sm:text-xs " : "text-[11px] sm:text-sm ") +
         COLOR_CLASS[color] +
         (animate ? " animate-flip" : "")
       }
@@ -48,7 +64,7 @@ function Cell({ color, column, index, animate, tooltip, arrow, children }: CellP
       <span aria-hidden className="absolute right-1 top-0.5 text-[10px] opacity-80">
         {ICON[color]}
       </span>
-      <span aria-hidden className="line-clamp-3 break-words">
+      <span aria-hidden className="w-full hyphens-auto break-words [overflow-wrap:anywhere]">
         {children}
       </span>
       {arrow && (
@@ -72,8 +88,8 @@ export function GuessRow({ guess, target, animate }: Props) {
   const book = bookById.get(guess.firstAppearance)!;
   const name = displayName(guess, lang);
   const aliases = displayAliases(guess, lang);
-  const species = guess.species.map((id) => speciesLabel(id, lang)).join(", ");
-  const powers = investitureLabels(guess, lang).join(", ");
+  const species = guess.species.map((id) => speciesLabel(id, lang));
+  const powers = investitureLabels(guess, lang);
   const bookTitle = book.title[lang];
 
   return (
@@ -88,8 +104,8 @@ export function GuessRow({ guess, target, animate }: Props) {
         {bookTitle}
         <span className="block text-[10px] opacity-80">{book.year}</span>
       </Cell>
-      <Cell color={r.species} column={COLUMNS[3]} index={3} animate={animate} tooltip={species}>
-        {species}
+      <Cell color={r.species} column={COLUMNS[3]} index={3} animate={animate} tooltip={species.join(", ")} dense={species.length > 1}>
+        <Lines values={species} />
       </Cell>
       <Cell
         color={r.investiture}
@@ -97,8 +113,9 @@ export function GuessRow({ guess, target, animate }: Props) {
         index={4}
         animate={animate}
         tooltip={investitureLabelsWithSystem(guess, lang).join("\n")}
+        dense={powers.length > 3}
       >
-        {powers}
+        <Lines values={powers} />
       </Cell>
     </div>
   );

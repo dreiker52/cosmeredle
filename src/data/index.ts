@@ -34,11 +34,9 @@ export function speciesLabel(id: string, lang: Lang): string {
   return group ? `${label("species", group, lang)} (${label("species", id, lang)})` : label("species", id, lang);
 }
 
-const FORMER_LABEL: Record<Lang, string> = { es: "antes", en: "formerly" };
-
-/** Poderes en el orden de la ficha: "Nacido de la bruma (antes), Astilla de Honor". */
+/** Poderes en el orden de la ficha: "Nacido de la bruma, Astilla de Honor". */
 export function investitureLabels(c: Character, lang: Lang): string[] {
-  return c.investiture.map((id) => label("investiture", id, lang) + (c.former?.includes(id) ? ` (${FORMER_LABEL[lang]})` : ""));
+  return c.investiture.map((id) => label("investiture", id, lang));
 }
 
 /** Como investitureLabels, añadiendo el sistema cuando es distinto: "Nacido de la bruma — Alomancia". */

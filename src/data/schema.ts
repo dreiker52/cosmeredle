@@ -36,7 +36,6 @@ export const Character = z.object({
   firstAppearance: z.string().min(1), // id de books.json
   species: z.array(z.string()).min(1), // ids de taxonomy.species; ["unknown"] si no se sabe
   investiture: z.array(z.string()).min(1), // ids de taxonomy.investiture; ["none"] / ["unknown"]
-  former: z.array(z.string()).optional(), // poderes de `investiture` que ya no tiene ("antes")
   coppermindUrl: z.string().url(),
   i18n: z.object({ es: LocalizedNames.optional(), en: LocalizedNames.optional() }).optional(),
   spoilerNotes: z.string().optional(), // interno, nunca se muestra

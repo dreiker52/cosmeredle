@@ -659,10 +659,6 @@
       "vessel-honor",
       "sliver"
     ],
-    "former": [
-      "shardbearer",
-      "vessel-honor"
-    ],
     "coppermindUrl": "https://coppermind.net/wiki/Dalinar_Kholin"
   },
   {
@@ -1399,9 +1395,6 @@
       "worldhopping",
       "dawnshard"
     ],
-    "former": [
-      "dawnshard"
-    ],
     "coppermindUrl": "https://coppermind.net/wiki/Hoid",
     "spoilerNotes": "Quitado el alias basura 'others'."
   },
@@ -1592,9 +1585,6 @@
     "investiture": [
       "shardbearer"
     ],
-    "former": [
-      "shardbearer"
-    ],
     "coppermindUrl": "https://coppermind.net/wiki/Jakamav"
   },
   {
@@ -1660,9 +1650,6 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
-    ],
-    "former": [
       "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Jezrien"
@@ -1826,10 +1813,6 @@
       "cognitive-shadow",
       "vessel-preservation",
       "hemalurgist"
-    ],
-    "former": [
-      "mistborn",
-      "vessel-preservation"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kelsier"
   },
@@ -2333,6 +2316,7 @@
     ],
     "investiture": [
       "worldhopping",
+      "shapeshifter",
       "blessing"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/MeLaan"
@@ -2572,9 +2556,6 @@
     "investiture": [
       "cognitive-shadow"
     ],
-    "former": [
-      "cognitive-shadow"
-    ],
     "coppermindUrl": "https://coppermind.net/wiki/Nikaro"
   },
   {
@@ -2650,7 +2631,8 @@
       "kandra"
     ],
     "investiture": [
-      "blessing-of-potency"
+      "blessing-of-potency",
+      "shapeshifter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/OreSeur"
   },
@@ -2681,7 +2663,8 @@
       "kandra"
     ],
     "investiture": [
-      "hemalurgist"
+      "hemalurgist",
+      "shapeshifter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Paalm"
   },
@@ -2926,9 +2909,6 @@
       "human"
     ],
     "investiture": [
-      "shardbearer"
-    ],
-    "former": [
       "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Relis_Ruthar"
@@ -3246,9 +3226,6 @@
       "shardbearer",
       "royal-locks"
     ],
-    "former": [
-      "shardbearer"
-    ],
     "coppermindUrl": "https://coppermind.net/wiki/Shashara"
   },
   {
@@ -3285,11 +3262,6 @@
       "dawnshard",
       "shardbearer",
       "worldhopping"
-    ],
-    "former": [
-      "windrunner",
-      "skybreaker",
-      "dawnshard"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sigzil",
     "spoilerNotes": "Alias 'Nomad'/'Sunlit' revelan El hombre iluminado."
@@ -3417,9 +3389,6 @@
       "mistborn",
       "hemalurgist"
     ],
-    "former": [
-      "savant"
-    ],
     "coppermindUrl": "https://coppermind.net/wiki/Spook",
     "i18n": {
       "es": {
@@ -3530,9 +3499,6 @@
       "skybreaker",
       "shardbearer"
     ],
-    "former": [
-      "skybreaker"
-    ],
     "coppermindUrl": "https://coppermind.net/wiki/Szeth"
   },
   {
@@ -3589,9 +3555,6 @@
       "vessel-honor",
       "sliver"
     ],
-    "former": [
-      "vessel-honor"
-    ],
     "coppermindUrl": "https://coppermind.net/wiki/Tanavast"
   },
   {
@@ -3609,9 +3572,6 @@
       "old-magic",
       "vessel-odium",
       "vessel-retribution"
-    ],
-    "former": [
-      "vessel-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Taravangian"
   },
@@ -3689,7 +3649,8 @@
     ],
     "investiture": [
       "blessing-of-presence",
-      "blessing-of-potency"
+      "blessing-of-potency",
+      "shapeshifter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/TenSoon"
   },
@@ -3936,6 +3897,7 @@
     ],
     "investiture": [
       "worldhopping",
+      "shapeshifter",
       "blessing"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ulaam"
@@ -3987,9 +3949,6 @@
       "awakener",
       "worldhopping",
       "cognitive-shadow",
-      "shardbearer"
-    ],
-    "former": [
       "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vasher"

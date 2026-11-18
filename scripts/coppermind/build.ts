@@ -32,6 +32,7 @@ import {
   NATIONS,
   ORDER_SPREN,
   SPECIES,
+  SPECIES_ABILITIES,
   SPECIES_INVESTITURE,
   WORLDS,
 } from "./mappings";
@@ -180,6 +181,7 @@ export function extractCharacters(
         species.add(subtype);
       }
     }
+    for (const s of species) SPECIES_ABILITIES[s]?.forEach((i) => investiture.includes(i) || investiture.push(i));
     for (const s of species) {
       const implied = SPECIES_INVESTITURE[s];
       if (implied && !investiture.some((i) => i === implied || systemOf(i) === systemOf(implied))) investiture.push(implied);
@@ -203,7 +205,6 @@ export function extractCharacters(
       firstAppearance: book.id,
       species: [...species].sort(),
       investiture: investiture.length ? investiture : ["none"],
-      ...(abilities.former.length ? { former: abilities.former } : {}),
       coppermindUrl: `https://coppermind.net/wiki/${encodeURI(page.title.replace(/ /g, "_"))}`,
       ...(esName && normName(esName) !== normName(name) ? { i18n: { es: { name: esName } } } : {}),
     });

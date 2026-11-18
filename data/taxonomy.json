@@ -119,6 +119,7 @@
     "seer": { "es": "Vidente", "en": "Seer", "verify": true },
     "sighted": { "es": "Visión de spren", "en": "Sighted", "verify": true },
     "charred": { "es": "Calcinado", "en": "Charred", "verify": true },
+    "shapeshifter": { "es": "Cambiaformas", "en": "Shapeshifter" },
     "precognition": { "es": "Precognición", "en": "Precognition" },
     "mistborn": { "es": "Nacido de la bruma", "en": "Mistborn", "system": "allomancy" },
     "misting": { "es": "Brumoso", "en": "Misting", "system": "allomancy" },

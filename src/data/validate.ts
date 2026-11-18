@@ -47,9 +47,6 @@ export function validateData(raw: { taxonomy: unknown; books: unknown; character
     c.investiture
       .filter((s) => !t.investiture[s])
       .forEach((s) => errors.push(`${c.id}: investidura desconocida "${s}"`));
-    (c.former ?? [])
-      .filter((s) => !c.investiture.includes(s))
-      .forEach((s) => errors.push(`${c.id}: "former" incluye "${s}", que no está en investiture`));
     if (c.investiture.length > 1 && c.investiture.some((s) => s === "none" || s === "unknown")) {
       errors.push(`${c.id}: "none"/"unknown" no se pueden combinar con otros poderes`);
     }

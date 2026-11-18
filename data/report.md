@@ -75,6 +75,7 @@ Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cit
 - sliver: 6
 - royal-locks: 5
 - elantrian: 5
+- shapeshifter: 5
 - fused: 4
 - truthwatcher: 4
 - skybreaker: 4

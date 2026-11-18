@@ -93,7 +93,10 @@ describe("extracción de personajes (volcado sintético)", () => {
       coppermindUrl: "https://coppermind.net/wiki/Vin",
     });
     expect(byId.get("vin")?.i18n).toBeUndefined(); // mismo nombre en español
-    expect(byId.get("tensoon")).toMatchObject({ species: ["kandra"], investiture: ["blessing-of-presence", "blessing-of-potency"] });
+    expect(byId.get("tensoon")).toMatchObject({
+      species: ["kandra"],
+      investiture: ["blessing-of-presence", "blessing-of-potency", "shapeshifter"],
+    });
   });
 
   it("deduce la Investidura de enlaces, especies y casos especiales", () => {
@@ -162,12 +165,11 @@ describe("relevancia", () => {
 });
 
 describe("parseAbilities", () => {
-  it("lee etiquetas, parámetros de Esquirla y (formerly) como en la ficha de Kelsier", () => {
+  it("lee etiquetas y parámetros de Esquirla; lo que tuvo (formerly) cuenta como actual (Kelsier)", () => {
     const r = parseAbilities(
       "{{tag+|Mistborn}} <small>(formerly)</small>{{nosnippet|, {{tag+|Sliver}}, {{tag+|Cognitive Shadow}}, {{tag+|shard|Preservation}} <small>(formerly)</small>}}, {{tag+|Hemalurgist}}",
     );
     expect(r.ids).toEqual(["mistborn", "sliver", "cognitive-shadow", "vessel-preservation", "hemalurgist"]);
-    expect(r.former).toEqual(["mistborn", "vessel-preservation"]);
     expect(r.unknown).toEqual([]);
   });
   it("lee enlaces y astillas con su Esquirla, sin contar la Esquirla como poder", () => {
@@ -178,10 +180,9 @@ describe("parseAbilities", () => {
     ]);
     expect(parseAbilities("[[Splinter]] of Honor and Cultivation").ids).toEqual(["splinter-honor", "splinter-cultivation"]);
   });
-  it("(formerly) dentro de un <small> con etiquetas marca esas etiquetas, y quita los calificativos", () => {
+  it("conserva las etiquetas de un <small> con (formerly) y quita los calificativos", () => {
     const r = parseAbilities("{{tag+|Tineye}} <small>({{tag+|Savant}}, formerly)</small>, {{tag+|Fused}} <small>([[Shanay-im]])</small>");
     expect(r.ids).toEqual(["tineye", "savant", "fused"]);
-    expect(r.former).toEqual(["savant"]);
   });
   it("ignora referencias y avisa de lo desconocido", () => {
     const r = parseAbilities("{{tag+|Windrunner}}{{book ref|sa1|3}}, [[Cosa rara]], Avatar of [[Autonomy]]");

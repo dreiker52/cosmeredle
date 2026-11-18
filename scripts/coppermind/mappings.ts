@@ -279,6 +279,11 @@ export const ABILITY_SPECIES: Record<string, string> = {
   nightmare: "nightmare",
 };
 
+/** Poderes propios de una especie que se añaden siempre. */
+export const SPECIES_ABILITIES: Record<string, string[]> = {
+  kandra: ["shapeshifter"],
+};
+
 /** Especies cuya naturaleza implica un poder, si la ficha no indica ninguno de ese sistema. */
 export const SPECIES_INVESTITURE: Record<string, string> = {
   kandra: "blessing", // las Bendiciones son clavos hemalúrgicos
