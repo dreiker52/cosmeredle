@@ -158,3 +158,48 @@ export const IGNORED_ABILITIES = new Set([
   "lifeless",
   "nightmare",
 ]);
+
+/**
+ * Enlaces de wiki (`[[X]]` o `[[X|texto]]`, destino en minúsculas) en el campo de habilidades
+ * que indican un sistema de Investidura. Muchas fichas usan enlaces en vez de `{{tag}}`.
+ */
+export const ABILITY_LINKS: Record<string, string[]> = {
+  "blessing of presence": ["hemalurgy"],
+  "blessing of potency": ["hemalurgy"],
+  "blessing of awareness": ["hemalurgy"],
+  "blessing of stability": ["hemalurgy"],
+  shardbearer: ["shardbearer"],
+  dakhor: ["dakhor"],
+  "nahel bond": ["surgebinding"], // spren vinculados: otorgan la Potenciación
+  dawnshard: ["dawnshard"],
+  allomancy: ["allomancy"],
+  feruchemy: ["feruchemy"],
+  hemalurgy: ["hemalurgy"],
+  awakening: ["awakening"],
+  aondor: ["aondor"],
+  forgery: ["forgery"],
+};
+
+/** Especies cuya naturaleza implica un sistema de Investidura. */
+export const SPECIES_INVESTITURE: Record<string, string[]> = {
+  kandra: ["hemalurgy"], // las Bendiciones son clavos hemalúrgicos
+  koloss: ["hemalurgy"],
+};
+
+/**
+ * Heraldos (título de página). La etiqueta "cognitive shadow" no se puede usar en general porque en
+ * otros personajes es spoiler; en los Heraldos es su naturaleza conocida desde el primer libro.
+ * Sus Hojas de Honor les dan Potenciación.
+ */
+export const HERALDS = new Set([
+  "Jezrien",
+  "Nale",
+  "Chanarach",
+  "Vedel",
+  "Pralla",
+  "Shalash",
+  "Battar",
+  "Kalak",
+  "Talenel",
+  "Ishar",
+]);

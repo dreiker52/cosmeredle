@@ -66,7 +66,11 @@ describe("extracción de personajes (volcado sintético)", () => {
     page("Cob (Stormlight)", "{{character\n|world=Roshar\n|universe=[[Cosmere]]\n|introduced=[[The Well of Ascension]]\n}}"),
     page("Rig", "{{character\n|world=Detritus\n|universe=[[Cytoverse]]\n}}"),
     page("Vin's mother", "{{character\n|unnamed=yes\n|world=Scadrial\n|universe=[[Cosmere]]\n}}"),
-    page("TenSoon", "{{character\n|species=kandra\n|world=Scadrial\n|universe=[[Cosmere]]\n|introduced=[[The Well of Ascension]]\n}}"),
+    page("TenSoon", "{{character\n|species=kandra\n|abilities=[[Blessing of Presence]], [[Blessing of Potency]]\n|world=Scadrial\n|universe=[[Cosmere]]\n|introduced=[[The Well of Ascension]]\n}}"),
+    page("Shalash", "{{character\n|abilities={{tag+|Cognitive Shadow}}, {{tag+|Shardbearer}}\n|world=Roshar\n|universe=[[Cosmere]]\n|introduced=[[The Well of Ascension]]\n}}"),
+    page("Syl", "{{character\n|species=Honorspren\n|abilities=[[Nahel bond]], [[Windrunner]] magic, {{tag+|Splinter}} of [[Honor]]\n|world=Roshar\n|universe=[[Cosmere]]\n|introduced=[[The Well of Ascension]]\n}}"),
+    page("Yelig-nar", "{{character\n|species=spren\n|abilities={{tag+|Splinter}} of [[Odium]]\n|world=Roshar\n|universe=[[Cosmere]]\n|introduced=[[The Well of Ascension]]\n}}"),
+    page("Leras", "{{character\n|abilities={{tag+|Shard|Preservation}}\n|world=Scadrial\n|universe=[[Cosmere]]\n|introduced=[[The Well of Ascension]]\n}}"),
   ]);
 
   it("resuelve redirecciones y códigos de libro", () => {
@@ -88,7 +92,15 @@ describe("extracción de personajes (volcado sintético)", () => {
       coppermindUrl: "https://coppermind.net/wiki/Vin",
     });
     expect(byId.get("vin")?.i18n).toBeUndefined(); // mismo nombre en español
-    expect(byId.get("tensoon")).toMatchObject({ species: ["kandra"], investiture: ["none"] });
+    expect(byId.get("tensoon")).toMatchObject({ species: ["kandra"], investiture: ["hemalurgy"] });
+  });
+
+  it("deduce la Investidura de enlaces, especies y casos especiales", () => {
+    expect(byId.get("shalash")).toMatchObject({ species: ["cognitive-shadow"], investiture: ["shardbearer", "surgebinding"] });
+    expect(byId.get("syl")).toMatchObject({ species: ["spren"], investiture: ["surgebinding"] });
+    expect(byId.get("yelig-nar")?.investiture).toEqual(["voidbinding"]);
+    expect(byId.get("leras")?.investiture).toEqual(["vessel"]); // solo si es su único poder
+    expect(byId.get("vin")?.investiture).toEqual(["allomancy"]);
   });
 
   it("deduce la primera aparición del libro más antiguo citado", () => {

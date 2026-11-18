@@ -253,7 +253,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "voidbinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ashertmarn"
   },
@@ -299,7 +299,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "vessel"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ati"
   },
@@ -316,7 +316,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Auxiliary"
   },
@@ -344,7 +344,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "voidbinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ba-Ado-Mishram"
   },
@@ -392,10 +392,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Battar"
   },
@@ -411,7 +412,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "vessel"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Bavadin"
   },
@@ -473,10 +474,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Chanarach"
   },
@@ -735,7 +737,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Design",
     "i18n": {
@@ -770,7 +772,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "dakhor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Dilaf"
   },
@@ -1132,7 +1134,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Gavinor_Kholin"
   },
@@ -1193,7 +1195,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Glys"
   },
@@ -1360,6 +1362,7 @@
       "allomancy",
       "aondor",
       "awakening",
+      "dawnshard",
       "shardbearer",
       "surgebinding"
     ],
@@ -1375,7 +1378,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "dakhor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Hrathen"
   },
@@ -1437,10 +1440,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ishar"
   },
@@ -1483,7 +1487,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ivory",
     "i18n": {
@@ -1609,10 +1613,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Jezrien"
   },
@@ -1706,10 +1711,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kalak"
   },
@@ -1844,7 +1850,7 @@
       "dragon"
     ],
     "investiture": [
-      "none"
+      "vessel"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Koravellium_Avast"
   },
@@ -1907,7 +1913,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "vessel"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Leras"
   },
@@ -2246,7 +2252,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Mayalaran"
   },
@@ -2262,7 +2268,7 @@
       "kandra"
     ],
     "investiture": [
-      "none"
+      "hemalurgy"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/MeLaan"
   },
@@ -2339,7 +2345,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "voidbinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Moelach"
   },
@@ -2372,7 +2378,7 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
       "shardbearer",
@@ -2425,7 +2431,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "voidbinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nergaoul"
   },
@@ -2474,7 +2480,8 @@
       "spren"
     ],
     "investiture": [
-      "old-magic"
+      "old-magic",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nightwatcher"
   },
@@ -2567,7 +2574,7 @@
       "kandra"
     ],
     "investiture": [
-      "none"
+      "hemalurgy"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/OreSeur"
   },
@@ -2626,7 +2633,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Pattern",
     "i18n": {
@@ -2645,7 +2652,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Phendorana"
   },
@@ -2659,10 +2666,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Pralla",
     "i18n": {
@@ -2768,7 +2776,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "vessel"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Rayse"
   },
@@ -2782,7 +2790,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "voidbinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Re-Shephir"
   },
@@ -2934,7 +2942,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Rua"
   },
@@ -2978,7 +2986,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "dawnshard"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Rysn_Ftori"
   },
@@ -3072,10 +3080,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Shalash"
   },
@@ -3145,7 +3154,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sibling"
   },
@@ -3164,6 +3173,7 @@
       "human"
     ],
     "investiture": [
+      "dawnshard",
       "shardbearer",
       "surgebinding"
     ],
@@ -3238,7 +3248,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "voidbinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sja-anat"
   },
@@ -3266,7 +3276,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Spark"
   },
@@ -3319,7 +3329,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Stormfather"
   },
@@ -3363,7 +3373,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sylphrena"
   },
@@ -3402,10 +3412,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Talenel"
   },
@@ -3437,7 +3448,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "vessel"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Tanavast"
   },
@@ -3529,7 +3540,7 @@
       "kandra"
     ],
     "investiture": [
-      "none"
+      "hemalurgy"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/TenSoon"
   },
@@ -3587,7 +3598,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Timbre"
   },
@@ -3772,7 +3783,7 @@
       "kandra"
     ],
     "investiture": [
-      "none"
+      "hemalurgy"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ulaam"
   },
@@ -3786,7 +3797,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "voidbinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ulim"
   },
@@ -3862,10 +3873,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "cognitive-shadow"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vedel"
   },
@@ -3914,7 +3926,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vienta"
   },
@@ -4084,7 +4096,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Wind"
   },
@@ -4144,7 +4156,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "surgebinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Wyndle"
   },
@@ -4223,7 +4235,7 @@
       "spren"
     ],
     "investiture": [
-      "none"
+      "voidbinding"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Yelig-nar"
   },

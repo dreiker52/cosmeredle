@@ -57,18 +57,21 @@ Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cit
 
 ## Por Investidura
 
-- none: 146
-- shardbearer: 50
-- surgebinding: 38
+- none: 108
+- surgebinding: 63
+- shardbearer: 51
 - allomancy: 25
 - awakening: 13
-- hemalurgy: 8
+- voidbinding: 12
+- hemalurgy: 12
 - feruchemy: 8
+- vessel: 6
 - aondor: 5
-- voidbinding: 4
 - sand-mastery: 3
 - old-magic: 3
 - aether: 2
+- dakhor: 2
+- dawnshard: 1
 - forgery: 1
 - yoki-hijo: 1
 

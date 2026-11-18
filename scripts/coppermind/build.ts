@@ -22,11 +22,21 @@ import {
   splitList,
   stripDisambiguation,
   stripNoise,
+  linkTargets,
   tags,
   templateFields,
   unlink,
 } from "./wikitext";
-import { ABILITIES, ABILITY_SPECIES, IGNORED_ABILITIES, SPECIES, WORLDS } from "./mappings";
+import {
+  ABILITIES,
+  ABILITY_LINKS,
+  ABILITY_SPECIES,
+  HERALDS,
+  IGNORED_ABILITIES,
+  SPECIES,
+  SPECIES_INVESTITURE,
+  WORLDS,
+} from "./mappings";
 import { RELEVANCE, inboundLinks, isRelevant, relevanceOf, type Relevance } from "./relevance";
 
 export const DUMP_PATH = process.env.COPPERMIND_DUMP ?? "data/raw/coppermind-20250225/current.xml";
@@ -132,11 +142,18 @@ export function extractCharacters(
     // Poderes / Investidura y especies implícitas
     const investiture = new Set<string>();
     const species = new Set<string>();
-    for (const tag of tags(`${f.abilities ?? ""} ${f.powers ?? ""}`)) {
+    const abilitiesText = `${f.abilities ?? ""} ${f.powers ?? ""}`;
+    const abilityTags = tags(abilitiesText);
+    for (const tag of abilityTags) {
       if (ABILITY_SPECIES[tag]) species.add(ABILITY_SPECIES[tag]);
       if (ABILITIES[tag]) ABILITIES[tag].forEach((i) => investiture.add(i));
       else if (!IGNORED_ABILITIES.has(tag)) push(report.unknownAbilities, tag, page.title);
     }
+    for (const link of linkTargets(abilitiesText)) ABILITY_LINKS[link]?.forEach((i) => investiture.add(i));
+    // Los Deshechos y demás astillas de Odium usan su Vacío.
+    if (/splinter\s*\}?\}?\s*of\s*\[\[\s*odium/i.test(abilitiesText)) investiture.add("voidbinding");
+    // Recipientes de Esquirla: solo si es su único poder (en otros, como Vin, es un giro de trama).
+    if (abilityTags.includes("shard") && investiture.size === 0) investiture.add("vessel");
 
     // Especie
     for (const raw of splitList(f.species ?? "")) {
@@ -148,6 +165,12 @@ export function extractCharacters(
       }
     }
     if (species.size === 0) species.add("human");
+    if (HERALDS.has(page.title)) {
+      species.clear();
+      species.add("cognitive-shadow");
+      investiture.add("surgebinding");
+    }
+    for (const s of species) SPECIES_INVESTITURE[s]?.forEach((i) => investiture.add(i));
 
     const name = stripDisambiguation(page.title);
     const es = spanishTitle(page.text);

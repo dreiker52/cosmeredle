@@ -35,6 +35,7 @@
     "ryshadium": { "es": "Ryshadium", "en": "Ryshadium" },
     "larkin": { "es": "Larkin", "en": "Larkin" },
     "animal": { "es": "Animal", "en": "Animal" },
+    "cognitive-shadow": { "es": "Sombra cognitiva", "en": "Cognitive Shadow" },
     "unknown": { "es": "Desconocido", "en": "Unknown" }
   },
   "investiture": {
@@ -52,6 +53,9 @@
     "sand-mastery": { "es": "Maestría de la arena", "en": "Sand mastery" },
     "aether": { "es": "Éter", "en": "Aether" },
     "yoki-hijo": { "es": "Yoki-hijo", "en": "Yoki-hijo" },
+    "dakhor": { "es": "Dakhor", "en": "Dakhor" },
+    "dawnshard": { "es": "Esquirla del amanecer", "en": "Dawnshard" },
+    "vessel": { "es": "Recipiente de una Esquirla", "en": "Shard Vessel" },
     "none": { "es": "Ninguno", "en": "None" },
     "unknown": { "es": "Desconocido", "en": "Unknown" }
   },
