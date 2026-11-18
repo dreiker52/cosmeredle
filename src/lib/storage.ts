@@ -37,7 +37,13 @@ export function load(): SaveData {
     if (!raw) return empty();
     const data = JSON.parse(raw) as Partial<SaveData>;
     if (data.version !== VERSION) return migrate(data);
-    return { ...empty(), ...data } as SaveData;
+    const base = empty();
+    return {
+      ...base,
+      ...data,
+      settings: { ...base.settings, ...data.settings },
+      stats: { ...base.stats, ...data.stats },
+    } as SaveData;
   } catch {
     return empty();
   }

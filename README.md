@@ -18,7 +18,10 @@ npm run dev          # servidor de desarrollo en http://localhost:5173/cosmeredl
 npm test             # tests (Vitest)
 npm run validate-data
 npm run data:fetch   # descarga el volcado de la Coppermind (archive.org) a data/raw/
-npm run data:build   # regenera data/characters.json y data/report.md
+npm run data:build   # regenera data/characters.json, data/report.md y el calendario
+npm run schedule:build    # actualiza data/schedule.json (nunca toca días ya publicados)
+npm run schedule:check    # comprueba el calendario (se ejecuta en el CI)
+npm run schedule:preview  # lista los próximos 30 personajes del día
 npm run build        # build de producción en dist/
 npm run preview      # previsualizar el build
 ```

@@ -12,7 +12,10 @@
     "typecheck": "tsc --noEmit",
     "validate-data": "tsx scripts/validate.ts",
     "data:fetch": "tsx scripts/coppermind/fetch-dump.ts",
-    "data:build": "tsx scripts/coppermind/build.ts"
+    "data:build": "tsx scripts/coppermind/build.ts && tsx scripts/build-schedule.ts build",
+    "schedule:build": "tsx scripts/build-schedule.ts build",
+    "schedule:check": "tsx scripts/build-schedule.ts check",
+    "schedule:preview": "tsx scripts/build-schedule.ts preview"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",
@@ -21,11 +24,15 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.12",
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^6.3.0",
     "autoprefixer": "^10.4.20",
+    "jsdom": "^31.0.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.23.15",

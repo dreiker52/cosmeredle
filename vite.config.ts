@@ -9,6 +9,6 @@ export default defineConfig({
   base: "/cosmeredle/",
   test: {
     environment: "node",
-    include: ["tests/**/*.test.ts"],
+    include: ["tests/**/*.test.{ts,tsx}"],
   },
 });

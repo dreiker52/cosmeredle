@@ -17,7 +17,8 @@ export function detectLang(saved: Lang | undefined, navigatorLang: string | unde
 interface I18nValue {
   lang: Lang;
   setLang: (l: Lang) => void;
-  t: (key: MessageKey) => string;
+  /** Traduce una clave; `{n}` y similares se sustituyen con `vars`. */
+  t: (key: MessageKey, vars?: Record<string, string | number>) => string;
 }
 
 const I18nContext = createContext<I18nValue | null>(null);
@@ -38,7 +39,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo<I18nValue>(
-    () => ({ lang, setLang, t: (key) => dictionaries[lang][key] ?? key }),
+    () => ({
+      lang,
+      setLang,
+      t: (key, vars) =>
+        (dictionaries[lang][key] ?? key).replace(/\{(\w+)\}/g, (m, k: string) => (vars && k in vars ? String(vars[k]) : m)),
+    }),
     [lang, setLang],
   );
 

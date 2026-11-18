@@ -581,12 +581,13 @@ Estimación con ~5–8 h/semana.
 - [ ] Personajes de *Islas de la Ascuaoscura* (posteriores al volcado).
 
 ### Fase 2 — Juego (2 semanas)
-- [ ] `rng.ts`, `daily.ts`, `build-schedule.ts` con tests.
-- [ ] `compare.ts` con tests.
-- [ ] Buscador con Fuse.js.
-- [ ] Tabla de 5 columnas con colores, flechas y tooltips.
-- [ ] Pantalla de victoria + cuenta atrás.
-- [ ] Persistencia en `localStorage`.
+- [x] `rng.ts`, `daily.ts`, `build-schedule.ts` con tests. El calendario guarda ids (no índices, que cambiarían al regenerar `characters.json`); los días publicados (hasta mañana) no cambian nunca, los personajes nuevos se insertan en el ciclo en curso y el CI lo comprueba con `npm run schedule:check`.
+- [x] `compare.ts` con tests.
+- [x] Buscador con Fuse.js (prefijo de cualquier palabra primero, luego difuso; alias en ambos idiomas; ↑ ↓ Enter Esc).
+- [x] Tabla de 5 columnas con colores, iconos ✓ ~ ✗, flechas, tooltips y animación de volteo.
+- [x] Pantalla de victoria (detalles ocultos, cuenta atrás, personaje de ayer).
+- [x] Persistencia en `localStorage` (partida del día y estadísticas); tests de UI con Testing Library.
+- Antes del lanzamiento se juega el día 0; en desarrollo se puede forzar un día con `?day=N`.
 
 ### Fase 3 — Idioma, pulido y lanzamiento (1–2 semanas)
 - [ ] `I18nProvider`, diccionarios ES/EN y toggle en la cabecera.
