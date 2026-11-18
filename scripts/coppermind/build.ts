@@ -22,21 +22,24 @@ import {
   splitList,
   stripDisambiguation,
   stripNoise,
-  linkTargets,
-  tags,
   templateFields,
   unlink,
 } from "./wikitext";
 import {
-  ABILITIES,
-  ABILITY_LINKS,
   ABILITY_SPECIES,
-  HERALDS,
-  IGNORED_ABILITIES,
+  ETHNICITIES,
+  HOMEWORLD_PEOPLE,
+  NATIONS,
+  ORDER_SPREN,
   SPECIES,
   SPECIES_INVESTITURE,
   WORLDS,
 } from "./mappings";
+import { parseAbilities } from "./abilities";
+import taxonomy from "../../data/taxonomy.json";
+
+const investitureTax = taxonomy.investiture as Record<string, { system?: string }>;
+const systemOf = (id: string) => investitureTax[id]?.system ?? id;
 import { RELEVANCE, inboundLinks, isRelevant, relevanceOf, type Relevance } from "./relevance";
 
 export const DUMP_PATH = process.env.COPPERMIND_DUMP ?? "data/raw/coppermind-20250225/current.xml";
@@ -139,38 +142,48 @@ export function extractCharacters(
       continue;
     }
 
-    // Poderes / Investidura y especies implícitas
-    const investiture = new Set<string>();
+    // Poderes / Investidura (tal como los lista la ficha) y especies implícitas
+    const abilities = parseAbilities(`${f.abilities ?? ""}, ${f.powers ?? ""}`);
+    abilities.unknown.forEach((u) => push(report.unknownAbilities, u, page.title));
+    const investiture = [...abilities.ids];
     const species = new Set<string>();
-    const abilitiesText = `${f.abilities ?? ""} ${f.powers ?? ""}`;
-    const abilityTags = tags(abilitiesText);
-    for (const tag of abilityTags) {
-      if (ABILITY_SPECIES[tag]) species.add(ABILITY_SPECIES[tag]);
-      if (ABILITIES[tag]) ABILITIES[tag].forEach((i) => investiture.add(i));
-      else if (!IGNORED_ABILITIES.has(tag)) push(report.unknownAbilities, tag, page.title);
-    }
-    for (const link of linkTargets(abilitiesText)) ABILITY_LINKS[link]?.forEach((i) => investiture.add(i));
-    // Los Deshechos y demás astillas de Odium usan su Vacío.
-    if (/splinter\s*\}?\}?\s*of\s*\[\[\s*odium/i.test(abilitiesText)) investiture.add("voidbinding");
-    // Recipientes de Esquirla: solo si es su único poder (en otros, como Vin, es un giro de trama).
-    if (abilityTags.includes("shard") && investiture.size === 0) investiture.add("vessel");
+    for (const id of investiture) if (ABILITY_SPECIES[id]) species.add(ABILITY_SPECIES[id]);
 
     // Especie
     for (const raw of splitList(f.species ?? "")) {
       const mapped = SPECIES[raw.toLowerCase()];
-      if (mapped) mapped.forEach((s) => species.add(s));
+      if (mapped) species.add(mapped);
       else {
         species.add("unknown");
         push(report.unknownSpecies, raw.toLowerCase(), page.title);
       }
     }
     if (species.size === 0) species.add("human");
-    if (HERALDS.has(page.title)) {
-      species.clear();
-      species.add("cognitive-shadow");
-      investiture.add("surgebinding");
+    // Humanos: pueblo por etnia, nación o mundo de origen.
+    if (species.has("human")) {
+      const people =
+        ETHNICITIES[unlink(stripNoise(f.ethnicity ?? "")).toLowerCase().trim()] ??
+        NATIONS[unlink(stripNoise(f.nation ?? "")).toLowerCase().trim()] ??
+        HOMEWORLD_PEOPLE[homeworld];
+      if (people) {
+        species.delete("human");
+        species.add(people);
+      }
     }
-    for (const s of species) SPECIES_INVESTITURE[s]?.forEach((i) => investiture.add(i));
+    // Spren genéricos: Deshechos (astillas de Odium) o el tipo de la Orden a la que se vinculan.
+    if (species.has("spren")) {
+      const subtype = investiture.includes("splinter-odium")
+        ? "unmade"
+        : investiture.map((i) => ORDER_SPREN[i]).find(Boolean);
+      if (subtype) {
+        species.delete("spren");
+        species.add(subtype);
+      }
+    }
+    for (const s of species) {
+      const implied = SPECIES_INVESTITURE[s];
+      if (implied && !investiture.some((i) => i === implied || systemOf(i) === systemOf(implied))) investiture.push(implied);
+    }
 
     const name = stripDisambiguation(page.title);
     const es = spanishTitle(page.text);
@@ -189,7 +202,8 @@ export function extractCharacters(
       homeworld,
       firstAppearance: book.id,
       species: [...species].sort(),
-      investiture: investiture.size ? [...investiture].sort() : ["none"],
+      investiture: investiture.length ? investiture : ["none"],
+      ...(abilities.former.length ? { former: abilities.former } : {}),
       coppermindUrl: `https://coppermind.net/wiki/${encodeURI(page.title.replace(/ /g, "_"))}`,
       ...(esName && normName(esName) !== normName(name) ? { i18n: { es: { name: esName } } } : {}),
     });
@@ -329,6 +343,15 @@ function renderReport(r: BuildReport, final: Character[], books: Book[]): string
     mapSection("Mundos no reconocidos → unknown", r.unknownWorlds),
     mapSection("Especies no reconocidas → unknown", r.unknownSpecies),
     mapSection("Etiquetas de habilidad sin clasificar (ignoradas)", r.unknownAbilities),
+    `## Traducciones de la taxonomía por verificar\n`,
+    "Marcadas con `verify` en data/taxonomy.json: comprobar con las ediciones en español y quitar la marca.\n",
+    ...Object.entries(taxonomy as Record<string, Record<string, { es: string; en: string; verify?: boolean }>>).flatMap(
+      ([cat, entries]) =>
+        Object.entries(entries)
+          .filter(([, e]) => e.verify)
+          .map(([id, e]) => `- ${cat}.${id}: ${e.en} → **${e.es}**`),
+    ),
+    "",
     `## Descartados por relevancia más cercanos al corte (top 60)\n`,
     "| id | nombre | primera aparición | enlaces | capítulos | longitud |",
     "|---|---|---|---|---|---|",

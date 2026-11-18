@@ -72,9 +72,9 @@ Cinco columnas:
   - Se compara por un **índice de orden de publicación** dentro del Cosmere, no por el año, porque hay años con varios libros.
   - En la celda se muestran el título (en el idioma activo) y el año.
   - Las novelas cortas y relatos (*Brazales de Duelo*, *El alma del emperador*, *Arcanum Ilimitado*...) tienen su propio índice y pertenecen a su saga o a "Relatos / Arcanum".
-- **Granularidad de los poderes**: se compara a nivel de **sistema** (Alomancia, Feruquimia...), no de habilidad concreta (Nacido de la Bruma, Corredor del Viento...). La habilidad concreta aparece en el tooltip y en la tarjeta final, pero no cuenta para el color. Así la columna no es casi siempre roja.
+- **Granularidad de especie y poderes** (cambiado en la Fase 2, a petición): se guardan valores **concretos**, casi como en la Coppermind. Especie: pueblo o tipo ("Humano (Alezi)", "Humano (Ashyn)", "Spren (Deshecho)"), deducido de la especie, la etnia, la nación o el mundo de origen. Poderes: habilidades concretas ("Nacido de la bruma", "Astilla de Honor", "Bendición de Potencia"), con la marca "(antes)" si ya no las tiene. En la taxonomía cada valor concreto apunta a su grupo (`group`) o sistema (`system`). **Colores**: 🟩 mismos valores concretos; 🟨 comparten algún valor **o algún grupo/sistema** (Nacido de la bruma frente a Lanzamonedas → Alomancia); 🟥 nada en común. Así la columna sigue sin ser casi siempre roja.
 - **Valores desconocidos**: en muchos personajes menores la especie o los poderes no se conocen. Se usa el valor explícito `Desconocido`, que solo se pone en verde contra otro `Desconocido`. `Ninguno` (se sabe que no tiene poderes) es distinto de `Desconocido`.
-- **Momento de referencia**: los atributos se fijan **según lo que se sabe del personaje en su primera aparición**, salvo los poderes que obtenga más adelante y que sean ampliamente conocidos. Ante la duda, se toma el valor menos revelador (ver sección 3).
+- **Momento de referencia** (cambiado en la Fase 2): los poderes se toman **completos, como en la Coppermind**, incluidos los que se revelan más adelante (Hemalurgia de Kelsier, Potenciación de Venli…). Se quitaron los overrides que los ocultaban. La especie sigue sin revelar identidades ocultas.
 
 ### Ejemplos de filas
 Objetivo: **Vin**

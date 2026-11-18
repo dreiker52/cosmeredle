@@ -11,11 +11,16 @@ export const Book = z.object({
   coppermindPage: z.string().optional(), // título de la página del libro en la Coppermind
 });
 
+/** `verify`: traducción al español pendiente de comprobar con las ediciones publicadas. */
+const TaxonomyEntry = Localized.extend({ verify: z.boolean().optional() });
+
 export const Taxonomy = z.object({
-  worlds: z.record(z.string(), Localized),
-  species: z.record(z.string(), Localized),
-  investiture: z.record(z.string(), Localized),
-  series: z.record(z.string(), Localized),
+  worlds: z.record(z.string(), TaxonomyEntry),
+  // Especie concreta; `group` es la especie general (p. ej. "alethi" -> "human", "unmade" -> "spren").
+  species: z.record(z.string(), TaxonomyEntry.extend({ group: z.string().optional() })),
+  // Habilidad concreta; `system` es el sistema de Investidura (p. ej. "mistborn" -> "allomancy").
+  investiture: z.record(z.string(), TaxonomyEntry.extend({ system: z.string().optional() })),
+  series: z.record(z.string(), TaxonomyEntry),
 });
 
 const LocalizedNames = z.object({
@@ -31,7 +36,7 @@ export const Character = z.object({
   firstAppearance: z.string().min(1), // id de books.json
   species: z.array(z.string()).min(1), // ids de taxonomy.species; ["unknown"] si no se sabe
   investiture: z.array(z.string()).min(1), // ids de taxonomy.investiture; ["none"] / ["unknown"]
-  investitureDetail: z.array(z.string()).optional(),
+  former: z.array(z.string()).optional(), // poderes de `investiture` que ya no tiene ("antes")
   coppermindUrl: z.string().url(),
   i18n: z.object({ es: LocalizedNames.optional(), en: LocalizedNames.optional() }).optional(),
   spoilerNotes: z.string().optional(), // interno, nunca se muestra

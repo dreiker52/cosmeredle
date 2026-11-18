@@ -6,7 +6,7 @@
     "homeworld": "taldain",
     "firstAppearance": "white-sand",
     "species": [
-      "human"
+      "daysider"
     ],
     "investiture": [
       "none"
@@ -23,7 +23,7 @@
       "singer"
     ],
     "investiture": [
-      "voidbinding"
+      "fused"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Abidi"
   },
@@ -36,7 +36,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -52,7 +52,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "kharbranthian"
     ],
     "investiture": [
       "none"
@@ -68,7 +68,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -82,7 +82,7 @@
     "homeworld": "taldain",
     "firstAppearance": "white-sand",
     "species": [
-      "human"
+      "kerztian"
     ],
     "investiture": [
       "none"
@@ -96,7 +96,7 @@
     "homeworld": "komashi",
     "firstAppearance": "yumi",
     "species": [
-      "human"
+      "nagadan"
     ],
     "investiture": [
       "none"
@@ -110,7 +110,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -124,11 +124,11 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "khlennium"
     ],
     "investiture": [
-      "allomancy",
-      "hemalurgy"
+      "seeker",
+      "hemalurgist"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Alendi"
   },
@@ -141,7 +141,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-6",
     "species": [
-      "human"
+      "southern-scadrian"
     ],
     "investiture": [
       "none"
@@ -162,10 +162,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-2",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
-      "allomancy"
+      "rioter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Allrianne_Cett"
   },
@@ -192,10 +192,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-3",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
-      "none"
+      "seer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Aradan_Yomen"
   },
@@ -209,7 +209,7 @@
       "human"
     ],
     "investiture": [
-      "allomancy"
+      "rioter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Armal"
   },
@@ -225,7 +225,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "truthwatcher"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Arshqqam"
   },
@@ -239,7 +239,7 @@
       "seon"
     ],
     "investiture": [
-      "none"
+      "splinter-devotion"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ashe"
   },
@@ -250,10 +250,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "unmade"
     ],
     "investiture": [
-      "voidbinding"
+      "splinter-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ashertmarn"
   },
@@ -264,7 +264,7 @@
     "homeworld": "sel",
     "firstAppearance": "emperors-soul",
     "species": [
-      "human"
+      "grand"
     ],
     "investiture": [
       "none"
@@ -280,7 +280,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-2",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
       "none"
@@ -299,7 +299,7 @@
       "human"
     ],
     "investiture": [
-      "vessel"
+      "vessel-ruin"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ati"
   },
@@ -313,10 +313,13 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-4",
     "species": [
-      "spren"
+      "highspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "skybreaker",
+      "splinter",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Auxiliary"
   },
@@ -327,7 +330,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "aimian"
+      "siah-aimian"
     ],
     "investiture": [
       "none"
@@ -341,10 +344,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "spren"
+      "unmade"
     ],
     "investiture": [
-      "voidbinding"
+      "splinter-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ba-Ado-Mishram"
   },
@@ -357,7 +360,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "veden"
     ],
     "investiture": [
       "none"
@@ -374,10 +377,11 @@
     "homeworld": "taldain",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "darksider"
     ],
     "investiture": [
-      "sand-mastery"
+      "sandmaster",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Baon"
   },
@@ -392,11 +396,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Battar"
   },
@@ -412,7 +416,7 @@
       "human"
     ],
     "investiture": [
-      "vessel"
+      "vessel-autonomy"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Bavadin"
   },
@@ -423,10 +427,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-4",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "surgebinding"
+      "lightweaver"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Beryl"
   },
@@ -440,7 +444,8 @@
       "returned"
     ],
     "investiture": [
-      "awakening"
+      "returned",
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Blushweaver",
     "i18n": {
@@ -456,7 +461,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
       "none"
@@ -474,11 +479,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-2",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Chanarach"
   },
@@ -538,10 +543,10 @@
     "homeworld": "canticle",
     "firstAppearance": "sunlit-man",
     "species": [
-      "human"
+      "threnodite"
     ],
     "investiture": [
-      "none"
+      "charred"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Cinder_King"
   },
@@ -555,10 +560,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
-      "allomancy"
+      "smoker"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Cladent"
   },
@@ -585,9 +590,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "unkalaki"
     ],
     "investiture": [
+      "sighted",
       "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Cord",
@@ -607,7 +613,7 @@
       "human"
     ],
     "investiture": [
-      "aether"
+      "spore-eater"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Crow",
     "i18n": {
@@ -625,10 +631,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "surgebinding"
+      "windrunner"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Dabbid"
   },
@@ -642,12 +648,18 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
+      "bondsmith",
       "old-magic",
       "shardbearer",
-      "surgebinding"
+      "vessel-honor",
+      "sliver"
+    ],
+    "former": [
+      "shardbearer",
+      "vessel-honor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Dalinar_Kholin"
   },
@@ -660,7 +672,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -674,10 +686,10 @@
     "homeworld": "nalthis",
     "firstAppearance": "warbreaker",
     "species": [
-      "human"
+      "idrian"
     ],
     "investiture": [
-      "none"
+      "royal-locks"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Dedelin"
   },
@@ -688,7 +700,7 @@
     "homeworld": "taldain",
     "firstAppearance": "white-sand",
     "species": [
-      "human"
+      "daysider"
     ],
     "investiture": [
       "none"
@@ -704,10 +716,11 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
-      "none"
+      "seer",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Demoux"
   },
@@ -723,7 +736,11 @@
       "returned"
     ],
     "investiture": [
-      "awakening"
+      "returned",
+      "awakener",
+      "worldhopping",
+      "cognitive-shadow",
+      "royal-locks"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Denth"
   },
@@ -734,10 +751,13 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "cryptic"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "lightweaver",
+      "splinter",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Design",
     "i18n": {
@@ -755,7 +775,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "herdazian"
     ],
     "investiture": [
       "none"
@@ -769,7 +789,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "fjordell"
     ],
     "investiture": [
       "dakhor"
@@ -785,7 +805,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
       "none"
@@ -802,8 +822,8 @@
       "human"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "windrunner",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Drehy"
   },
@@ -814,10 +834,10 @@
     "homeworld": "taldain",
     "firstAppearance": "white-sand",
     "species": [
-      "human"
+      "daysider"
     ],
     "investiture": [
-      "sand-mastery"
+      "sandmaster"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Drile"
   },
@@ -832,10 +852,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
-      "allomancy"
+      "soother"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Edgard_Ladrian"
   },
@@ -852,7 +872,7 @@
       "human"
     ],
     "investiture": [
-      "hemalurgy"
+      "hemalurgist"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Edwarn_Ladrian"
   },
@@ -865,10 +885,10 @@
     "homeworld": "canticle",
     "firstAppearance": "sunlit-man",
     "species": [
-      "human"
+      "threnodite"
     ],
     "investiture": [
-      "none"
+      "charred"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Elegy_Salvage"
   },
@@ -881,10 +901,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
-      "allomancy"
+      "mistborn"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Elend_Venture"
   },
@@ -897,11 +917,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer",
-      "surgebinding"
+      "lightweaver"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Elhokar_Kholin"
   },
@@ -915,8 +935,9 @@
       "singer"
     ],
     "investiture": [
+      "forms-of-power",
       "shardbearer",
-      "surgebinding"
+      "willshaper"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Eshonai"
   },
@@ -930,7 +951,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "squire"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Eth"
   },
@@ -941,7 +962,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "teo"
     ],
     "investiture": [
       "none"
@@ -957,7 +978,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "riran"
     ],
     "investiture": [
       "none"
@@ -973,7 +994,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "veden"
     ],
     "investiture": [
       "none"
@@ -987,10 +1008,11 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
-      "awakening"
+      "awakener",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Felt"
   },
@@ -1003,7 +1025,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "thaylen"
     ],
     "investiture": [
       "none"
@@ -1019,7 +1041,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-2",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
       "none"
@@ -1055,10 +1077,11 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "duladen"
     ],
     "investiture": [
-      "aondor"
+      "elantrian",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Galladon"
   },
@@ -1083,7 +1106,7 @@
     "homeworld": "sel",
     "firstAppearance": "emperors-soul",
     "species": [
-      "human"
+      "rose-empire"
     ],
     "investiture": [
       "none"
@@ -1102,7 +1125,7 @@
       "human"
     ],
     "investiture": [
-      "hemalurgy"
+      "hemalurgist"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Gave_Entrone"
   },
@@ -1115,7 +1138,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -1131,7 +1154,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -1148,7 +1171,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "lightweaver"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Gaz"
   },
@@ -1161,7 +1184,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -1178,7 +1201,7 @@
     "homeworld": "taldain",
     "firstAppearance": "white-sand",
     "species": [
-      "human"
+      "darksider"
     ],
     "investiture": [
       "none"
@@ -1192,10 +1215,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "mistspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "truthwatcher",
+      "splinter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Glys"
   },
@@ -1209,8 +1234,8 @@
       "human"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "edgedancer",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Godeke"
   },
@@ -1221,7 +1246,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
       "none"
@@ -1235,7 +1260,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -1249,10 +1274,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
-      "allomancy"
+      "thug"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Hammond"
   },
@@ -1263,7 +1288,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -1279,7 +1304,7 @@
     "homeworld": "nalthis",
     "firstAppearance": "warbreaker",
     "species": [
-      "human"
+      "pahn-kahl"
     ],
     "investiture": [
       "none"
@@ -1295,7 +1320,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "veden"
     ],
     "investiture": [
       "shardbearer"
@@ -1309,7 +1334,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -1340,7 +1365,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "windrunner"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Hobber"
   },
@@ -1359,12 +1384,17 @@
       "human"
     ],
     "investiture": [
-      "allomancy",
-      "aondor",
-      "awakening",
-      "dawnshard",
+      "yolish-lightweaving",
+      "mistborn",
+      "awakener",
+      "lightweaver",
       "shardbearer",
-      "surgebinding"
+      "elantrian",
+      "worldhopping",
+      "dawnshard"
+    ],
+    "former": [
+      "dawnshard"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Hoid"
   },
@@ -1375,7 +1405,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "fjordell"
     ],
     "investiture": [
       "dakhor"
@@ -1389,11 +1419,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "herdazian"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "windrunner",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Huio"
   },
@@ -1404,7 +1434,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "arelene"
     ],
     "investiture": [
       "none"
@@ -1420,7 +1450,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -1440,11 +1470,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ishar"
   },
@@ -1455,7 +1485,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "selay"
     ],
     "investiture": [
       "none"
@@ -1469,11 +1499,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "lightweaver",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ishnah"
   },
@@ -1484,10 +1514,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "spren"
+      "inkspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "elsecaller",
+      "splinter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ivory",
     "i18n": {
@@ -1503,10 +1535,11 @@
     "homeworld": "unknown",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "southern-scadrian"
     ],
     "investiture": [
-      "surgebinding"
+      "elsecaller",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Iyatil"
   },
@@ -1536,7 +1569,7 @@
       "human"
     ],
     "investiture": [
-      "allomancy"
+      "tineye"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Jak"
   },
@@ -1547,9 +1580,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
+      "shardbearer"
+    ],
+    "former": [
       "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Jakamav"
@@ -1563,11 +1599,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "elsecaller",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Jasnah_Kholin"
   },
@@ -1580,7 +1616,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
       "none"
@@ -1597,7 +1633,7 @@
       "singer"
     ],
     "investiture": [
-      "surgebinding"
+      "willshaper"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Jaxlim"
   },
@@ -1613,11 +1649,14 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
+    ],
+    "former": [
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Jezrien"
   },
@@ -1630,7 +1669,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "veden"
     ],
     "investiture": [
       "none"
@@ -1644,7 +1683,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "herdazian"
     ],
     "investiture": [
       "none"
@@ -1658,7 +1697,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -1674,10 +1713,10 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "arelene"
     ],
     "investiture": [
-      "none"
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kaise"
   },
@@ -1693,11 +1732,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
+      "windrunner",
       "shardbearer",
-      "surgebinding"
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kaladin"
   },
@@ -1711,11 +1751,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kalak"
   },
@@ -1726,7 +1766,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -1740,10 +1780,10 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "aonic"
     ],
     "investiture": [
-      "aondor"
+      "elantrian"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Karata"
   },
@@ -1770,11 +1810,18 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
-      "allomancy",
-      "hemalurgy"
+      "mistborn",
+      "sliver",
+      "cognitive-shadow",
+      "vessel-preservation",
+      "hemalurgist"
+    ],
+    "former": [
+      "mistborn",
+      "vessel-preservation"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kelsier"
   },
@@ -1785,10 +1832,10 @@
     "homeworld": "taldain",
     "firstAppearance": "white-sand",
     "species": [
-      "human"
+      "daysider"
     ],
     "investiture": [
-      "sand-mastery"
+      "sandmaster"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kenton"
   },
@@ -1813,10 +1860,10 @@
     "homeworld": "taldain",
     "firstAppearance": "mistborn-6",
     "species": [
-      "human"
+      "darksider"
     ],
     "investiture": [
-      "none"
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Khrissalla"
   },
@@ -1829,7 +1876,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "teo"
     ],
     "investiture": [
       "none"
@@ -1850,7 +1897,7 @@
       "dragon"
     ],
     "investiture": [
-      "vessel"
+      "vessel-cultivation"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Koravellium_Avast"
   },
@@ -1861,10 +1908,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
-      "feruchemy"
+      "feruchemist"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kwaan"
   },
@@ -1891,7 +1938,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -1913,7 +1960,7 @@
       "human"
     ],
     "investiture": [
-      "vessel"
+      "vessel-preservation"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Leras"
   },
@@ -1927,7 +1974,7 @@
       "singer"
     ],
     "investiture": [
-      "voidbinding"
+      "fused"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Leshwi"
   },
@@ -1941,7 +1988,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "windrunner"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Leyten"
   },
@@ -1955,7 +2002,7 @@
       "singer"
     ],
     "investiture": [
-      "voidbinding"
+      "fused"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Lezian"
   },
@@ -1966,12 +2013,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "reshi"
     ],
     "investiture": [
-      "old-magic",
+      "edgedancer",
       "shardbearer",
-      "surgebinding"
+      "old-magic"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Lift"
   },
@@ -1987,7 +2034,8 @@
       "returned"
     ],
     "investiture": [
-      "awakening"
+      "returned",
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Lightsong",
     "i18n": {
@@ -2005,7 +2053,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "veden"
     ],
     "investiture": [
       "none"
@@ -2019,7 +2067,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -2036,7 +2084,7 @@
       "nightmare"
     ],
     "investiture": [
-      "none"
+      "nightmare"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Liyun"
   },
@@ -2049,7 +2097,7 @@
     "homeworld": "nalthis",
     "firstAppearance": "warbreaker",
     "species": [
-      "human"
+      "hallandren"
     ],
     "investiture": [
       "none"
@@ -2063,11 +2111,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "herdazian"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "windrunner",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Lopen"
   },
@@ -2080,7 +2128,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -2094,7 +2142,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "arelene"
     ],
     "investiture": [
       "none"
@@ -2110,10 +2158,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "unkalaki"
     ],
     "investiture": [
-      "surgebinding"
+      "squire",
+      "sighted"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Lunamor"
   },
@@ -2124,10 +2173,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "surgebinding"
+      "windrunner"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Lyn"
   },
@@ -2141,8 +2190,8 @@
       "human"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "dustbringer",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Malata"
   },
@@ -2158,7 +2207,7 @@
       "human"
     ],
     "investiture": [
-      "allomancy"
+      "pulser"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Marasi_Colms"
   },
@@ -2169,10 +2218,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
-      "allomancy"
+      "tineye"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Mare"
   },
@@ -2186,7 +2235,7 @@
       "human"
     ],
     "investiture": [
-      "allomancy"
+      "coinshot"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Marksman"
   },
@@ -2200,11 +2249,11 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "inquisitor"
     ],
     "investiture": [
-      "allomancy",
-      "hemalurgy"
+      "seeker",
+      "hemalurgist"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Marsh"
   },
@@ -2217,7 +2266,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-7",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
       "none"
@@ -2249,10 +2298,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "spren"
+      "cultivationspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "edgedancer",
+      "splinter-cultivation"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Mayalaran"
   },
@@ -2268,7 +2319,8 @@
       "kandra"
     ],
     "investiture": [
-      "hemalurgy"
+      "worldhopping",
+      "blessing"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/MeLaan"
   },
@@ -2282,7 +2334,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "bondsmith"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Melishi"
   },
@@ -2295,7 +2347,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -2312,12 +2364,14 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-4",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
-      "allomancy",
-      "feruchemy",
-      "hemalurgy"
+      "augur",
+      "bloodmaker",
+      "twinborn",
+      "hemalurgist",
+      "savant"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Miles_Dagouter"
   },
@@ -2328,7 +2382,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -2342,10 +2396,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "spren"
+      "unmade"
     ],
     "investiture": [
-      "voidbinding"
+      "splinter-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Moelach"
   },
@@ -2358,10 +2412,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "thaylen"
     ],
     "investiture": [
-      "surgebinding"
+      "lightweaver"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Mraize"
   },
@@ -2378,11 +2432,12 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "skybreaker",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nale"
   },
@@ -2395,10 +2450,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "surgebinding"
+      "bondsmith"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Navani_Kholin"
   },
@@ -2415,7 +2470,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nazrilof"
   },
@@ -2428,10 +2483,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "unmade"
     ],
     "investiture": [
-      "voidbinding"
+      "splinter-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nergaoul"
   },
@@ -2442,10 +2497,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "shin"
     ],
     "investiture": [
-      "shardbearer"
+      "shardbearer",
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Neturo-son-Vallano"
   },
@@ -2461,7 +2517,8 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "surgebinder",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nightblood",
     "i18n": {
@@ -2477,11 +2534,13 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "bondsmith-spren"
     ],
     "investiture": [
-      "old-magic",
-      "surgebinding"
+      "nahel-bond",
+      "bondsmith",
+      "splinter-cultivation",
+      "old-magic"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nightwatcher"
   },
@@ -2494,10 +2553,13 @@
     "homeworld": "komashi",
     "firstAppearance": "yumi",
     "species": [
-      "human"
+      "nagadan"
     ],
     "investiture": [
-      "none"
+      "cognitive-shadow"
+    ],
+    "former": [
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nikaro"
   },
@@ -2510,7 +2572,7 @@
     "homeworld": "roshar",
     "firstAppearance": "dawnshard",
     "species": [
-      "aimian"
+      "dysian-aimian"
     ],
     "investiture": [
       "none"
@@ -2530,7 +2592,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "surgebinder"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nohadon"
   },
@@ -2541,10 +2603,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "honorspren"
     ],
     "investiture": [
-      "none"
+      "splinter-honor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Notum"
   },
@@ -2555,7 +2617,7 @@
     "homeworld": "roshar",
     "firstAppearance": "edgedancer",
     "species": [
-      "human"
+      "azish"
     ],
     "investiture": [
       "none"
@@ -2574,7 +2636,7 @@
       "kandra"
     ],
     "investiture": [
-      "hemalurgy"
+      "blessing-of-potency"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/OreSeur"
   },
@@ -2585,7 +2647,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -2605,7 +2667,7 @@
       "kandra"
     ],
     "investiture": [
-      "hemalurgy"
+      "hemalurgist"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Paalm"
   },
@@ -2630,10 +2692,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "spren"
+      "cryptic"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "lightweaver",
+      "splinter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Pattern",
     "i18n": {
@@ -2649,10 +2713,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "honorspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "windrunner",
+      "splinter-honor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Phendorana"
   },
@@ -2666,11 +2732,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-2",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Pralla",
     "i18n": {
@@ -2693,7 +2759,8 @@
       "human"
     ],
     "investiture": [
-      "aether"
+      "aetherbound",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Prasanva"
   },
@@ -2707,7 +2774,7 @@
       "singer"
     ],
     "investiture": [
-      "voidbinding"
+      "fused"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Raboniel",
     "i18n": {
@@ -2726,7 +2793,7 @@
       "human"
     ],
     "investiture": [
-      "allomancy"
+      "lurcher"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ranette"
   },
@@ -2740,10 +2807,10 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "aonic"
     ],
     "investiture": [
-      "aondor"
+      "elantrian"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Raoden"
   },
@@ -2754,12 +2821,15 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
-      "allomancy",
-      "feruchemy",
-      "hemalurgy"
+      "feruchemist",
+      "sliver",
+      "mistborn",
+      "twinborn",
+      "hemalurgist",
+      "savant"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Rashek"
   },
@@ -2776,7 +2846,7 @@
       "human"
     ],
     "investiture": [
-      "vessel"
+      "vessel-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Rayse"
   },
@@ -2787,10 +2857,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "spren"
+      "unmade"
     ],
     "investiture": [
-      "voidbinding"
+      "splinter-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Re-Shephir"
   },
@@ -2804,7 +2874,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "lightweaver"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Red_(Roshar)"
   },
@@ -2836,6 +2906,9 @@
     "investiture": [
       "shardbearer"
     ],
+    "former": [
+      "shardbearer"
+    ],
     "coppermindUrl": "https://coppermind.net/wiki/Relis_Ruthar"
   },
   {
@@ -2847,11 +2920,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "truthwatcher",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Renarin_Kholin"
   },
@@ -2881,8 +2954,9 @@
       "human"
     ],
     "investiture": [
-      "aondor",
-      "awakening"
+      "elantrian",
+      "awakener",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Riina"
   },
@@ -2898,7 +2972,7 @@
       "singer"
     ],
     "investiture": [
-      "surgebinding"
+      "truthwatcher"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Rlain"
   },
@@ -2909,7 +2983,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "arelene"
     ],
     "investiture": [
       "none"
@@ -2923,7 +2997,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -2939,10 +3013,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "honorspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "windrunner",
+      "splinter-honor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Rua"
   },
@@ -2953,7 +3029,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -2967,7 +3043,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -2983,7 +3059,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "thaylen"
     ],
     "investiture": [
       "dawnshard"
@@ -2997,7 +3073,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -3031,7 +3107,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "avatar-autonomy"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sand_Lord"
   },
@@ -3045,7 +3121,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "teo"
     ],
     "investiture": [
       "none"
@@ -3061,10 +3137,11 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
-      "feruchemy"
+      "feruchemist",
+      "vessel-harmony"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sazed"
   },
@@ -3080,11 +3157,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Shalash"
   },
@@ -3105,11 +3182,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "veden"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "lightweaver",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Shallan_Davar"
   },
@@ -3122,10 +3199,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
-      "allomancy"
+      "mistborn"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Shan_Elariel"
   },
@@ -3139,7 +3216,14 @@
       "returned"
     ],
     "investiture": [
-      "awakening",
+      "returned",
+      "awakener",
+      "worldhopping",
+      "cognitive-shadow",
+      "shardbearer",
+      "royal-locks"
+    ],
+    "former": [
       "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Shashara"
@@ -3151,10 +3235,13 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "bondsmith-spren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "bondsmith",
+      "splinter-honor",
+      "splinter-cultivation"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sibling"
   },
@@ -3170,12 +3257,19 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "makabaki"
     ],
     "investiture": [
+      "windrunner",
+      "skybreaker",
       "dawnshard",
       "shardbearer",
-      "surgebinding"
+      "worldhopping"
+    ],
+    "former": [
+      "windrunner",
+      "skybreaker",
+      "dawnshard"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sigzil"
   },
@@ -3210,10 +3304,10 @@
     "homeworld": "nalthis",
     "firstAppearance": "warbreaker",
     "species": [
-      "human"
+      "idrian"
     ],
     "investiture": [
-      "none"
+      "royal-locks"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sisirinah"
   },
@@ -3226,7 +3320,7 @@
     "homeworld": "first-of-the-sun",
     "firstAppearance": "sixth-of-the-dusk",
     "species": [
-      "human"
+      "eelakin"
     ],
     "investiture": [
       "none"
@@ -3245,10 +3339,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "unmade"
     ],
     "investiture": [
-      "voidbinding"
+      "splinter-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sja-anat"
   },
@@ -3262,7 +3356,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "windrunner"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Skar"
   },
@@ -3273,10 +3367,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "ashspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "dustbringer",
+      "splinter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Spark"
   },
@@ -3290,11 +3386,16 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
-      "allomancy",
-      "hemalurgy"
+      "tineye",
+      "savant",
+      "mistborn",
+      "hemalurgist"
+    ],
+    "former": [
+      "savant"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Spook",
     "i18n": {
@@ -3326,10 +3427,14 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "spren"
+      "bondsmith-spren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "bondsmith",
+      "sliver",
+      "splinter-honor",
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Stormfather"
   },
@@ -3342,10 +3447,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
-      "allomancy"
+      "tineye"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Straff_Venture"
   },
@@ -3359,7 +3464,9 @@
       "returned"
     ],
     "investiture": [
-      "awakening"
+      "returned",
+      "awakener",
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Susebron"
   },
@@ -3370,10 +3477,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "spren"
+      "honorspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "windrunner",
+      "splinter-honor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Sylphrena"
   },
@@ -3389,11 +3498,14 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "shin"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "skybreaker",
+      "shardbearer"
+    ],
+    "former": [
+      "skybreaker"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Szeth"
   },
@@ -3412,11 +3524,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "cognitive-shadow"
+      "human"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Talenel"
   },
@@ -3427,7 +3539,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -3448,7 +3560,11 @@
       "human"
     ],
     "investiture": [
-      "vessel"
+      "vessel-honor",
+      "sliver"
+    ],
+    "former": [
+      "vessel-honor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Tanavast"
   },
@@ -3461,10 +3577,15 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "kharbranthian"
     ],
     "investiture": [
-      "old-magic"
+      "old-magic",
+      "vessel-odium",
+      "vessel-retribution"
+    ],
+    "former": [
+      "vessel-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Taravangian"
   },
@@ -3475,11 +3596,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "windrunner",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Teft"
   },
@@ -3490,7 +3611,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -3504,7 +3625,7 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "arelene"
     ],
     "investiture": [
       "none"
@@ -3520,11 +3641,12 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-6",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
-      "feruchemy",
-      "hemalurgy"
+      "windwhisperer",
+      "hemalurgist",
+      "avatar-autonomy"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Telsin_Ladrian"
   },
@@ -3540,7 +3662,8 @@
       "kandra"
     ],
     "investiture": [
-      "hemalurgy"
+      "blessing-of-presence",
+      "blessing-of-potency"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/TenSoon"
   },
@@ -3553,7 +3676,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -3567,7 +3690,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -3581,10 +3704,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
-      "surgebinding"
+      "lightweaver"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Tien"
   },
@@ -3595,10 +3718,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "spren"
+      "reacher"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "willshaper",
+      "splinter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Timbre"
   },
@@ -3611,10 +3736,10 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-2",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
-      "feruchemy"
+      "feruchemist"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Tindwyl"
   },
@@ -3625,7 +3750,7 @@
     "homeworld": "komashi",
     "firstAppearance": "yumi",
     "species": [
-      "human"
+      "nagadan"
     ],
     "investiture": [
       "none"
@@ -3641,7 +3766,7 @@
     "homeworld": "nalthis",
     "firstAppearance": "warbreaker",
     "species": [
-      "human"
+      "pahn-kahl"
     ],
     "investiture": [
       "none"
@@ -3657,7 +3782,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -3673,7 +3798,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "shardbearer"
@@ -3687,7 +3812,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "thaylen"
     ],
     "investiture": [
       "none"
@@ -3704,7 +3829,7 @@
       "human"
     ],
     "investiture": [
-      "none"
+      "avatar-autonomy"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Trell_(Trellism)"
   },
@@ -3738,7 +3863,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -3752,7 +3877,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "thaylen"
     ],
     "investiture": [
       "none"
@@ -3783,7 +3908,8 @@
       "kandra"
     ],
     "investiture": [
-      "hemalurgy"
+      "worldhopping",
+      "blessing"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ulaam"
   },
@@ -3794,10 +3920,10 @@
     "homeworld": "braize",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "voidspren"
     ],
     "investiture": [
-      "voidbinding"
+      "splinter-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ulim"
   },
@@ -3808,7 +3934,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "veden"
     ],
     "investiture": [
       "shardbearer"
@@ -3830,7 +3956,13 @@
       "returned"
     ],
     "investiture": [
-      "awakening",
+      "returned",
+      "awakener",
+      "worldhopping",
+      "cognitive-shadow",
+      "shardbearer"
+    ],
+    "former": [
       "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vasher"
@@ -3845,7 +3977,7 @@
       "human"
     ],
     "investiture": [
-      "surgebinding"
+      "lightweaver"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vathah"
   },
@@ -3856,7 +3988,7 @@
     "homeworld": "first-of-the-sun",
     "firstAppearance": "sixth-of-the-dusk",
     "species": [
-      "human"
+      "eelakin"
     ],
     "investiture": [
       "none"
@@ -3873,11 +4005,11 @@
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-1",
     "species": [
-      "cognitive-shadow"
+      "ashyn"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "cognitive-shadow",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vedel"
   },
@@ -3891,7 +4023,8 @@
       "singer"
     ],
     "investiture": [
-      "surgebinding"
+      "forms-of-power",
+      "willshaper"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Venli"
   },
@@ -3923,10 +4056,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-4",
     "species": [
-      "spren"
+      "honorspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "windrunner",
+      "splinter-honor"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vienta"
   },
@@ -3939,11 +4074,13 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
-      "allomancy",
-      "hemalurgy"
+      "mistborn",
+      "hemalurgist",
+      "sliver",
+      "vessel-preservation"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vin"
   },
@@ -3956,10 +4093,12 @@
     "homeworld": "nalthis",
     "firstAppearance": "warbreaker",
     "species": [
-      "human"
+      "idrian"
     ],
     "investiture": [
-      "awakening",
+      "royal-locks",
+      "awakener",
+      "worldhopping",
       "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vivenna"
@@ -3974,7 +4113,8 @@
       "returned"
     ],
     "investiture": [
-      "awakening"
+      "returned",
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vo"
   },
@@ -3985,7 +4125,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "thaylen"
     ],
     "investiture": [
       "none"
@@ -4005,10 +4145,11 @@
     "homeworld": "sel",
     "firstAppearance": "emperors-soul",
     "species": [
-      "human"
+      "maipon"
     ],
     "investiture": [
-      "forgery"
+      "forger",
+      "worldhopping"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Wan_ShaiLu"
   },
@@ -4026,12 +4167,14 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-4",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
-      "allomancy",
-      "feruchemy",
-      "hemalurgy"
+      "skimmer",
+      "coinshot",
+      "twinborn",
+      "hemalurgist",
+      "mistborn"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Waxillium_Ladrian"
   },
@@ -4045,12 +4188,14 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-4",
     "species": [
-      "human"
+      "terris"
     ],
     "investiture": [
-      "allomancy",
-      "feruchemy",
-      "hemalurgy"
+      "bloodmaker",
+      "slider",
+      "twinborn",
+      "hemalurgist",
+      "mistborn"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Wayne"
   },
@@ -4063,7 +4208,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "veden"
     ],
     "investiture": [
       "none"
@@ -4093,10 +4238,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-5",
     "species": [
-      "spren"
+      "bondsmith-spren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "bondsmith"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Wind"
   },
@@ -4112,7 +4258,7 @@
       "human"
     ],
     "investiture": [
-      "allomancy"
+      "rioter"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Winsting_Innate"
   },
@@ -4123,7 +4269,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "alethi"
     ],
     "investiture": [
       "none"
@@ -4139,10 +4285,10 @@
     "homeworld": "sel",
     "firstAppearance": "elantris",
     "species": [
-      "human"
+      "fjordell"
     ],
     "investiture": [
-      "none"
+      "precognition"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Wulfden_the_Fourth"
   },
@@ -4153,10 +4299,12 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "spren"
+      "cultivationspren"
     ],
     "investiture": [
-      "surgebinding"
+      "nahel-bond",
+      "edgedancer",
+      "splinter-cultivation"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Wyndle"
   },
@@ -4172,7 +4320,8 @@
       "dragon"
     ],
     "investiture": [
-      "awakening"
+      "worldhopping",
+      "awakener"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Xisisrefliel",
     "i18n": {
@@ -4188,7 +4337,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-1",
     "species": [
-      "human"
+      "thaylen"
     ],
     "investiture": [
       "none"
@@ -4204,7 +4353,7 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-2",
     "species": [
-      "human"
+      "azish"
     ],
     "investiture": [
       "none"
@@ -4218,7 +4367,7 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-1",
     "species": [
-      "human"
+      "skaa"
     ],
     "investiture": [
       "none"
@@ -4232,10 +4381,10 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-3",
     "species": [
-      "spren"
+      "unmade"
     ],
     "investiture": [
-      "voidbinding"
+      "splinter-odium"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Yelig-nar"
   },
@@ -4249,7 +4398,8 @@
       "returned"
     ],
     "investiture": [
-      "awakening"
+      "returned",
+      "awakener"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Yesteel"
   },
@@ -4260,10 +4410,11 @@
     "homeworld": "komashi",
     "firstAppearance": "yumi",
     "species": [
-      "human"
+      "torio"
     ],
     "investiture": [
-      "yoki-hijo"
+      "yoki-hijo",
+      "cognitive-shadow"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Yumi"
   },
@@ -4277,11 +4428,11 @@
     "homeworld": "scadrial",
     "firstAppearance": "mistborn-2",
     "species": [
-      "human"
+      "noble"
     ],
     "investiture": [
-      "allomancy",
-      "hemalurgy"
+      "mistborn",
+      "hemalurgist"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Zane_Venture"
   },
@@ -4292,7 +4443,7 @@
     "homeworld": "canticle",
     "firstAppearance": "sunlit-man",
     "species": [
-      "human"
+      "threnodite"
     ],
     "investiture": [
       "none"
@@ -4306,11 +4457,11 @@
     "homeworld": "roshar",
     "firstAppearance": "stormlight-4",
     "species": [
-      "human"
+      "iriali"
     ],
     "investiture": [
-      "shardbearer",
-      "surgebinding"
+      "stoneward",
+      "shardbearer"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Zu_(Roshar)"
   }

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { bookById, displayAliases, displayName, label } from "../data/index";
+import { bookById, displayAliases, displayName, investitureLabels, investitureLabelsWithSystem, label, roots, speciesLabel } from "../data/index";
 import type { Character } from "../data/schema";
 import { useI18n, type MessageKey } from "../i18n/I18nProvider";
 import { compareCharacters, type Arrow, type Color } from "./compare";
@@ -68,13 +68,12 @@ interface Props {
 
 export function GuessRow({ guess, target, animate }: Props) {
   const { lang, t } = useI18n();
-  const r = compareCharacters(guess, target, bookById);
+  const r = compareCharacters(guess, target, bookById, roots);
   const book = bookById.get(guess.firstAppearance)!;
   const name = displayName(guess, lang);
   const aliases = displayAliases(guess, lang);
-  const list = (cat: "species" | "investiture", ids: string[]) => ids.map((id) => label(cat, id, lang)).join(", ");
-  const species = list("species", guess.species);
-  const powers = list("investiture", guess.investiture);
+  const species = guess.species.map((id) => speciesLabel(id, lang)).join(", ");
+  const powers = investitureLabels(guess, lang).join(", ");
   const bookTitle = book.title[lang];
 
   return (
@@ -97,7 +96,7 @@ export function GuessRow({ guess, target, animate }: Props) {
         column={COLUMNS[4]}
         index={4}
         animate={animate}
-        tooltip={guess.investitureDetail?.length ? `${powers}\n${guess.investitureDetail.join(", ")}` : powers}
+        tooltip={investitureLabelsWithSystem(guess, lang).join("\n")}
       >
         {powers}
       </Cell>

@@ -80,3 +80,21 @@ describe("compareCharacters (ejemplos del PLAN, objetivo Vin)", () => {
     expect(() => compareCharacters({ ...vin, firstAppearance: "nope" }, vin, bookMap)).toThrow();
   });
 });
+
+describe("compareMulti jerárquico", () => {
+  const roots: Record<string, string> = { mistborn: "allomancy", coinshot: "allomancy", windrunner: "surgebinding", alethi: "human", veden: "human" };
+  const rootOf = (id: string) => roots[id] ?? id;
+  it("amarillo si comparten sistema aunque no la habilidad concreta", () => {
+    expect(compareMulti(["mistborn"], ["coinshot"], rootOf)).toBe("partial");
+    expect(compareMulti(["alethi"], ["veden"], rootOf)).toBe("partial");
+    expect(compareMulti(["alethi"], ["human"], rootOf)).toBe("partial");
+  });
+  it("verde solo con las mismas habilidades concretas", () => {
+    expect(compareMulti(["coinshot", "windrunner"], ["windrunner", "coinshot"], rootOf)).toBe("correct");
+  });
+  it("rojo si no comparten sistema", () => {
+    expect(compareMulti(["mistborn"], ["windrunner"], rootOf)).toBe("wrong");
+    expect(compareMulti(["none"], ["unknown"], rootOf)).toBe("wrong");
+  });
+});
+

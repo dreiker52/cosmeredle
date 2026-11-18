@@ -89,11 +89,6 @@ export function tags(value: string): string[] {
   return [...value.matchAll(/\{\{\s*(?:cat )?tag\+?\s*\|\s*([^}|]+)/gi)].map((m) => m[1].trim().toLowerCase());
 }
 
-/** Destinos de los enlaces `[[Destino]]` / `[[Destino|texto]]`, en minúsculas y sin anclas. */
-export function linkTargets(value: string): string[] {
-  return [...value.matchAll(/\[\[\s*([^\]|#]+)/g)].map((m) => m[1].replace(/_/g, " ").trim().toLowerCase());
-}
-
 /** Códigos de libro citados con `{{book ref|código|...}}` en una página. */
 export function bookRefCodes(text: string): string[] {
   return [...text.matchAll(/\{\{\s*book ref\s*\|\s*([^}|]+)/gi)].map((m) => m[1].trim().toLowerCase());

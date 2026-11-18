@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { bookById, displayAliases, displayName, label } from "../data/index";
+import { bookById, displayAliases, displayName, investitureLabelsWithSystem, label, speciesLabel } from "../data/index";
 import type { Character } from "../data/schema";
 import { useI18n } from "../i18n/I18nProvider";
 import { Countdown } from "../components/Countdown";
@@ -50,11 +50,14 @@ export function VictoryCard({ target, guessCount, streak, yesterday }: Props) {
             {book.title[lang]} ({book.year})
           </dd>
           <dt className="text-mist-500">{t("columns.species")}</dt>
-          <dd>{target.species.map((s) => label("species", s, lang)).join(", ")}</dd>
+          <dd>{target.species.map((s) => speciesLabel(s, lang)).join(", ")}</dd>
           <dt className="text-mist-500">{t("columns.investiture")}</dt>
           <dd>
-            {target.investiture.map((s) => label("investiture", s, lang)).join(", ")}
-            {target.investitureDetail?.length ? ` (${target.investitureDetail.join(", ")})` : ""}
+            {investitureLabelsWithSystem(target, lang).map((p) => (
+              <span key={p} className="block">
+                {p}
+              </span>
+            ))}
           </dd>
           <dd className="col-span-2 mt-2 text-center">
             <a href={target.coppermindUrl} target="_blank" rel="noreferrer" className="text-storm-400 underline hover:text-storm-50">

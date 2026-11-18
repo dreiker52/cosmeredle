@@ -57,23 +57,80 @@ Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cit
 
 ## Por Investidura
 
-- none: 108
-- surgebinding: 63
-- shardbearer: 51
-- allomancy: 25
-- awakening: 13
-- voidbinding: 12
-- hemalurgy: 12
-- feruchemy: 8
-- vessel: 6
-- aondor: 5
-- sand-mastery: 3
-- old-magic: 3
-- aether: 2
+- none: 89
+- shardbearer: 52
+- worldhopping: 23
+- cognitive-shadow: 23
+- nahel-bond: 17
+- windrunner: 15
+- hemalurgist: 14
+- lightweaver: 12
+- awakener: 10
+- mistborn: 10
+- splinter-odium: 8
+- returned: 8
+- splinter: 7
+- bondsmith: 7
+- splinter-honor: 7
+- sliver: 6
+- royal-locks: 5
+- elantrian: 5
+- fused: 4
+- truthwatcher: 4
+- skybreaker: 4
+- old-magic: 4
+- willshaper: 4
+- edgedancer: 4
+- tineye: 4
+- feruchemist: 4
+- splinter-cultivation: 4
+- twinborn: 4
+- rioter: 3
+- sandmaster: 3
+- dawnshard: 3
+- elsecaller: 3
+- vessel-preservation: 3
+- savant: 3
+- avatar-autonomy: 3
+- seeker: 2
+- seer: 2
+- charred: 2
+- sighted: 2
+- vessel-honor: 2
 - dakhor: 2
-- dawnshard: 1
-- forgery: 1
+- forms-of-power: 2
+- squire: 2
+- dustbringer: 2
+- coinshot: 2
+- blessing: 2
+- bloodmaker: 2
+- surgebinder: 2
+- blessing-of-potency: 2
+- vessel-odium: 2
+- splinter-devotion: 1
+- vessel-ruin: 1
+- vessel-autonomy: 1
+- smoker: 1
+- spore-eater: 1
+- soother: 1
+- thug: 1
+- yolish-lightweaving: 1
+- vessel-cultivation: 1
+- nightmare: 1
+- pulser: 1
+- augur: 1
+- aetherbound: 1
+- lurcher: 1
+- vessel-harmony: 1
+- vessel-retribution: 1
+- windwhisperer: 1
+- blessing-of-presence: 1
+- forger: 1
+- skimmer: 1
+- slider: 1
+- precognition: 1
 - yoki-hijo: 1
+- stoneward: 1
 
 ## Mundos no reconocidos → unknown (4)
 
@@ -87,9 +144,83 @@ Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cit
 - `thunderclast` (3): Kai-garnis, Terushal, Yushah
 - `(streamer)` (1): Mirris
 
-## Etiquetas de habilidad sin clasificar (ignoradas) (0)
+## Etiquetas de habilidad sin clasificar (ignoradas) (3)
 
-_Ninguno._
+- `[[sunheart]]` (1): Compassion
+- `[[starmarks]]` (1): Khrissalla
+- `[[roseite]]` (1): Silajana
+
+## Traducciones de la taxonomía por verificar
+
+Marcadas con `verify` en data/taxonomy.json: comprobar con las ediciones en español y quitar la marca.
+
+- species.awakened-object: Awakened object → **Objeto despertado**
+- species.thaylen: Thaylen → **Thayleño**
+- species.azish: Azish → **Azishiano**
+- species.kharbranthian: Kharbranthian → **Kharbranthiano**
+- species.riran: Riran → **Riran**
+- species.selay: Selay → **Selayano**
+- species.southern-scadrian: Southern Scadrian → **Escadriano del sur**
+- species.khlennium: Khlenni → **Khlenni**
+- species.aonic: Aonic → **Aónico**
+- species.arelene: Arelene → **Areleno**
+- species.duladen: Duladen → **Duladen**
+- species.grand: Grand (Rose Empire) → **Grande (Imperio de la Rosa)**
+- species.rose-empire: Rose Empire → **Imperio de la Rosa**
+- species.hallandren: Hallandren → **Hallandrenita**
+- species.daysider: Daysider → **Diurno**
+- species.darksider: Darksider → **Nocturno**
+- species.kerztian: Kerztian → **Kerztiano**
+- species.threnodite: Threnodite → **Trenita**
+- species.nagadan: Nagadan → **Nagadano**
+- species.torio: Torio → **Toriano**
+- species.honorspren: Honorspren → **Spren de honor**
+- species.highspren: Highspren → **Altospren**
+- species.inkspren: Inkspren → **Spren de tinta**
+- species.cultivationspren: Cultivationspren → **Spren de cultivación**
+- species.mistspren: Mistspren → **Spren de bruma**
+- species.peakspren: Peakspren → **Spren de cumbre**
+- species.ashspren: Ashspren → **Spren de ceniza**
+- species.reacher: Reacher → **Alcanzador**
+- species.voidspren: Voidspren → **Spren del vacío**
+- species.bondsmith-spren: Bondsmith spren → **Spren de Forjador de Vínculos**
+- species.dysian-aimian: Dysian → **Dysiano**
+- investiture.twinborn: Twinborn → **Nacido gemelo**
+- investiture.yolish-lightweaving: Yolish Lightweaving → **Tejido de luz yolish**
+- investiture.shard: Shard Investiture → **Investidura de Esquirla**
+- investiture.worldhopping: Worldhopper → **Saltamundos**
+- investiture.savant: Savant → **Savant**
+- investiture.seer: Seer → **Vidente**
+- investiture.sighted: Sighted → **Visión de spren**
+- investiture.charred: Charred → **Calcinado**
+- investiture.lurcher: Lurcher → **Atraedor**
+- investiture.smoker: Smoker → **Humo**
+- investiture.rioter: Rioter → **Encendedor**
+- investiture.thug: Thug → **Violento**
+- investiture.leecher: Leecher → **Sanguijuela**
+- investiture.pulser: Pulser → **Pulsador**
+- investiture.slider: Slider → **Deslizador**
+- investiture.augur: Augur → **Augur**
+- investiture.oracle: Oracle → **Oráculo**
+- investiture.nicroburst: Nicroburst → **Nicrostallido**
+- investiture.ferring: Ferring → **Ferrin**
+- investiture.brute: Brute → **Bruto**
+- investiture.skimmer: Skimmer → **Desnatador**
+- investiture.windwhisperer: Windwhisperer → **Susurravientos**
+- investiture.steelrunner: Steelrunner → **Corredor de acero**
+- investiture.sparker: Sparker → **Chispeador**
+- investiture.bloodmaker: Bloodmaker → **Hacedor de sangre**
+- investiture.connector: Connector → **Conector**
+- investiture.surgebinder: Surgebinder → **Potenciador**
+- investiture.soulcaster: Soulcaster → **Moldeador de almas**
+- investiture.forms-of-power: Forms of Power → **Formas de poder**
+- investiture.awakener: Awakener → **Despertador**
+- investiture.royal-locks: Royal Locks → **Cabellos reales**
+- investiture.spore-eater: Spore eater → **Comedor de esporas**
+- investiture.aetherbound: Aetherbound → **Vinculado al éter**
+- investiture.nightmare: Nightmare → **Pesadilla**
+- investiture.sliver: Sliver → **Fragmento**
+- investiture.avatar-autonomy: Avatar of Autonomy → **Avatar de Autonomía**
 
 ## Descartados por relevancia más cercanos al corte (top 60)
 

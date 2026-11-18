@@ -14,6 +14,16 @@ export function validateData(raw: { taxonomy: unknown; books: unknown; character
   if (!tax.success || !books.success || !chars.success) return errors;
 
   const t = tax.data;
+  for (const [id, e] of Object.entries(t.species)) {
+    if (e.group && (!t.species[e.group] || t.species[e.group].group)) {
+      errors.push(`taxonomy: la especie "${id}" tiene un grupo inválido "${e.group}"`);
+    }
+  }
+  for (const [id, e] of Object.entries(t.investiture)) {
+    if (e.system && (!t.investiture[e.system] || t.investiture[e.system].system)) {
+      errors.push(`taxonomy: el poder "${id}" tiene un sistema inválido "${e.system}"`);
+    }
+  }
   const bookIds = new Set<string>();
   const orders = new Set<number>();
   for (const b of books.data) {
@@ -37,6 +47,9 @@ export function validateData(raw: { taxonomy: unknown; books: unknown; character
     c.investiture
       .filter((s) => !t.investiture[s])
       .forEach((s) => errors.push(`${c.id}: investidura desconocida "${s}"`));
+    (c.former ?? [])
+      .filter((s) => !c.investiture.includes(s))
+      .forEach((s) => errors.push(`${c.id}: "former" incluye "${s}", que no está en investiture`));
     if (c.investiture.length > 1 && c.investiture.some((s) => s === "none" || s === "unknown")) {
       errors.push(`${c.id}: "none"/"unknown" no se pueden combinar con otros poderes`);
     }
