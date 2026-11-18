@@ -564,7 +564,7 @@ Estimación con ~5–8 h/semana.
 - [x] `git init`, repositorio público `cosmeredle` en GitHub, licencia MIT.
 - [x] Vite + React + TS + Tailwind, Vitest. (ESLint y Prettier pendientes.)
 - [x] Workflow de deploy a GitHub Pages; la URL https://dreiker52.github.io/cosmeredle/ funciona.
-- [ ] Leer la política de fans de Dragonsteel y la licencia de la Coppermind.
+- [x] Leer la política de fans de Dragonsteel y la licencia de la Coppermind (sin problemas para el proyecto).
 - [x] Fijar la zona horaria de reinicio: Europe/Madrid.
 - [x] Adelantado de la Fase 2: `rng.ts`, `daily.ts`, `compare.ts`, `storage.ts` con tests; toggle ES/EN.
 
