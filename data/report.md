@@ -23,8 +23,9 @@ Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cit
 - komashi: 5
 - threnody: 4
 - canticle: 3
-- unknown: 2
 - first-of-the-sun: 2
+- silverlight: 1
+- dhatri: 1
 - braize: 1
 
 ## Por libro de primera aparición
@@ -133,12 +134,10 @@ Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cit
 - yoki-hijo: 1
 - stoneward: 1
 
-## Mundos no reconocidos → unknown (4)
+## Mundos no reconocidos → unknown (2)
 
 - `unknown` (7): Aleen, Gereh, Icy Tongue, Lieke, Masaka, Shade (character), Yelamaiszin
 - `(vacío)` (4): Guyn, Jan Ven, Suna, Vishwadhar
-- `silverlight` (2): Dlavil, Iyatil
-- `dhatri` (2): Prasanva, Silajana
 
 ## Especies no reconocidas → unknown (2)
 

@@ -106,7 +106,8 @@ export function extractCharacters(
     const f = templateFields(tpl);
 
     const universe = unlink(stripNoise(f.universe ?? "")).toLowerCase();
-    const worldRaw = unlink(stripNoise(f.world ?? "")).toLowerCase().trim();
+    // `'world` cubre una errata de la ficha de Prasanva en la Coppermind.
+    const worldRaw = unlink(stripNoise(f.world ?? f["'world"] ?? "")).toLowerCase().trim();
     if (!universe.includes("cosmere") && !WORLDS[worldRaw]) {
       report.nonCosmere++;
       continue;

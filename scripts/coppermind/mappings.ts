@@ -18,6 +18,8 @@ export const WORLDS: Record<string, string> = {
   yolen: "yolen",
   braize: "braize",
   ashyn: "ashyn",
+  silverlight: "silverlight", // ciudad del Reino Cognitivo; origen de Iyatil
+  dhatri: "dhatri",
 };
 
 /** Valor del campo `species` (en minúsculas) -> id de especie concreta de taxonomy.species. */
