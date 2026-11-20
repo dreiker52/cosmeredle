@@ -577,7 +577,8 @@ Estimación con ~5–8 h/semana.
 - [x] `validate.ts` en el CI.
 - [x] Filtro de relevancia: de ~1 800 a ~270 personajes, con inclusiones manuales.
 - [ ] Revisar las 13 primeras apariciones deducidas y más spoilers de poderes (ver `data/report.md`).
-- [ ] Verificar las traducciones de la taxonomía marcadas como dudosas y añadir nombres en español de personajes.
+- [x] Verificar las traducciones de la taxonomía marcadas como dudosas.
+- [ ] Añadir nombres en español de personajes.
 - [ ] Personajes de *Islas de la Ascuaoscura* (posteriores al volcado).
 
 ### Fase 2 — Juego (2 semanas)

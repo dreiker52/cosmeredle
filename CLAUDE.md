@@ -4,6 +4,7 @@
 - **Hazlo tú.** Ejecuta tú mismo todo lo necesario (instalar herramientas, dependencias, ejecutar tests, builds, scripts, etc.) sin pedir al usuario que lo haga.
 - **Solo pregunta** por cosas que no puedes hacer tú, y únicamente si estás 100 % seguro de que no puedes (p. ej. contraseñas, `sudo`, credenciales de GitHub, acciones en la web de GitHub, decisiones personales como el nombre del autor).
 - Responde en español.
+- **Commits sin coautor:** no añadir nunca la línea `Co-Authored-By` (ni ninguna otra atribución a Claude) en los mensajes de commit ni en los PR. El usuario debe aparecer como único autor. Antes de hacer push, comprobar que ningún commit pendiente la contiene.
 
 ## Proyecto
 - Plan completo: [PLAN.md](PLAN.md). Solo modo clásico; columnas: nombre, mundo de origen, libro de primera aparición, especie, poderes/Investidura.
