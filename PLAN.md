@@ -591,9 +591,9 @@ Estimación con ~5–8 h/semana.
 - Antes del lanzamiento se juega el día 0; en desarrollo se puede forzar un día con `?day=N`.
 
 ### Fase 3 — Idioma, pulido y lanzamiento (1–2 semanas)
-- [ ] `I18nProvider`, diccionarios ES/EN y toggle en la cabecera.
-- [ ] Compartir resultados (en el idioma activo).
-- [ ] Estadísticas, "Cómo jugar", "Acerca de", aviso de spoilers.
+- [x] `I18nProvider`, diccionarios ES/EN y toggle en la cabecera.
+- [x] Compartir resultados (en el idioma activo): `navigator.share` en móvil, portapapeles en escritorio.
+- [x] Estadísticas, "Cómo jugar", "Acerca de", aviso de spoilers (dentro de "Cómo jugar", que se abre solo en la primera visita).
 - [ ] Responsive, accesibilidad, modo oscuro/claro.
 - [ ] Favicon e imagen OG propios.
 - [ ] Beta privada con amigos lectores (1 semana) para corregir datos.

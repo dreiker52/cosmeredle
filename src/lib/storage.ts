@@ -14,7 +14,8 @@ export interface Stats {
 
 export interface SaveData {
   version: number;
-  settings: { lang?: Lang };
+  /** `seenHelp`: ya se mostró "Cómo jugar" (con el aviso de spoilers) en la primera visita. */
+  settings: { lang?: Lang; seenHelp?: boolean };
   game: { dayIndex: number; guesses: string[]; solved: boolean } | null;
   stats: Stats;
 }
@@ -61,6 +62,14 @@ export function save(data: SaveData): void {
 function migrate(_old: Partial<SaveData>): SaveData {
   return empty();
 }
+
+/** Racha vigente el día `today`: se pierde si no se resolvió ni hoy ni ayer. */
+export function effectiveStreak(stats: Stats, today: number): number {
+  return stats.lastWonDay !== null && stats.lastWonDay >= today - 1 ? stats.currentStreak : 0;
+}
+
+/** Media de intentos por partida ganada (0 si no hay ninguna). */
+export const averageGuesses = (stats: Stats): number => (stats.won ? stats.totalGuesses / stats.won : 0);
 
 /** Actualiza las estadísticas al resolver el día `day` con `guesses` intentos. */
 export function recordWin(stats: Stats, day: number, guesses: number): Stats {

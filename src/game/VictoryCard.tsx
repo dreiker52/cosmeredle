@@ -3,19 +3,28 @@ import { bookById, displayAliases, displayName, investitureLabelsWithSystem, lab
 import type { Character } from "../data/schema";
 import { useI18n } from "../i18n/I18nProvider";
 import { Countdown } from "../components/Countdown";
+import { shareResult, shareText, type ShareOutcome } from "./share";
 
 interface Props {
+  day: number;
   target: Character;
-  guessCount: number;
+  guesses: Character[];
   streak: number;
   yesterday: Character | undefined;
 }
 
-export function VictoryCard({ target, guessCount, streak, yesterday }: Props) {
+export function VictoryCard({ day, target, guesses, streak, yesterday }: Props) {
+  const guessCount = guesses.length;
   const { t, lang } = useI18n();
   const [showDetails, setShowDetails] = useState(false);
   const aliases = displayAliases(target, lang);
   const book = bookById.get(target.firstAppearance)!;
+  const [shareStatus, setShareStatus] = useState<ShareOutcome | null>(null);
+
+  const onShare = async () => {
+    const header = t(guesses.length === 1 ? "share.headerOne" : "share.header", { day, n: guesses.length });
+    setShareStatus(await shareResult(shareText(header, guesses, target)));
+  };
 
   return (
     <section aria-live="polite" className="rounded-xl border border-brass-700 bg-storm-900 p-5 text-center shadow-lg">
@@ -27,11 +36,24 @@ export function VictoryCard({ target, guessCount, streak, yesterday }: Props) {
         {t("victory.streak", { n: streak })}
       </p>
 
+      <div className="mt-4">
+        <button
+          type="button"
+          onClick={onShare}
+          className="rounded-md bg-brass-500 px-5 py-2 font-semibold text-storm-950 hover:bg-brass-300"
+        >
+          {t("share.button")}
+        </button>
+        <p aria-live="polite" className="mt-1 min-h-5 text-xs text-mist-300">
+          {shareStatus === "copied" ? t("share.copied") : shareStatus === "failed" ? t("share.failed") : ""}
+        </p>
+      </div>
+
       <button
         type="button"
         onClick={() => setShowDetails((s) => !s)}
         aria-expanded={showDetails}
-        className="mt-4 text-sm text-storm-400 underline hover:text-storm-50"
+        className="mt-2 block w-full text-sm text-storm-400 underline hover:text-storm-50"
       >
         {showDetails ? t("victory.hideDetails") : t("victory.showDetails")}
       </button>

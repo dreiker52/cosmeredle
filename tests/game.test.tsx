@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { cleanup, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../src/App";
@@ -28,7 +28,7 @@ async function guess(user: ReturnType<typeof userEvent.setup>, name: string) {
 
 beforeEach(() => {
   localStorage.clear();
-  localStorage.setItem("cosmeredle", JSON.stringify({ version: 1, settings: { lang: "es" }, game: null, stats: {} }));
+  localStorage.setItem("cosmeredle", JSON.stringify({ version: 1, settings: { lang: "es", seenHelp: true }, game: null, stats: {} }));
 });
 afterEach(cleanup);
 
@@ -75,5 +75,53 @@ describe("partida", () => {
     expect(screen.getByText("Guesses: 1")).toBeTruthy();
     expect(screen.getAllByRole("row")).toHaveLength(2);
     expect(document.documentElement.lang).toBe("en");
+  });
+
+  it("comparte el resultado sin nombres copiándolo al portapapeles", async () => {
+    const user = userEvent.setup();
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, "clipboard", { value: { writeText }, configurable: true });
+    renderApp();
+    await guess(user, wrong.name);
+    await guess(user, target.name);
+    await user.click(screen.getByRole("button", { name: "Compartir resultado" }));
+
+    const text = writeText.mock.calls[0][0] as string;
+    const lines = text.split("\n");
+    expect(lines[0]).toBe(`Cosmeredle #${currentDay()} — 2 intentos`);
+    expect(lines[2]).toBe("🟩🟩🟩🟩🟩");
+    expect(lines.at(-1)).toBe("https://dreiker52.github.io/cosmeredle/");
+    expect(text).not.toContain(target.name);
+    expect(await screen.findByText("¡Copiado al portapapeles!")).toBeTruthy();
+  });
+});
+
+describe("diálogos", () => {
+  it("abre 'Cómo jugar' con el aviso de spoilers solo en la primera visita", async () => {
+    localStorage.setItem("cosmeredle", JSON.stringify({ version: 1, settings: { lang: "es" }, game: null, stats: {} }));
+    const user = userEvent.setup();
+    const { unmount } = renderApp();
+    const dialog = screen.getByRole("dialog", { name: "Cómo jugar" });
+    expect(within(dialog).getByText(/Aviso de spoilers/)).toBeTruthy();
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).toBeNull();
+    unmount();
+
+    renderApp();
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
+
+  it("muestra las estadísticas y 'Acerca de' desde la cabecera", async () => {
+    const user = userEvent.setup();
+    renderApp();
+    await guess(user, target.name);
+    await user.click(screen.getByRole("button", { name: "Estadísticas" }));
+    const stats = screen.getByRole("dialog", { name: "Estadísticas" });
+    expect(within(stats).getByText("Racha actual").parentElement?.querySelector("dd")?.textContent).toBe("1");
+    await user.click(within(stats).getByRole("button", { name: "Cerrar" }));
+
+    await user.click(screen.getByRole("button", { name: "Acerca de" }));
+    const about = screen.getByRole("dialog", { name: "Acerca de" });
+    expect(within(about).getByRole("link", { name: "Informar de un error" }).getAttribute("href")).toContain("/issues");
   });
 });

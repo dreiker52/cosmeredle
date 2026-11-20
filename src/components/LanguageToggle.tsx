@@ -17,7 +17,7 @@ export function LanguageToggle() {
           onClick={() => setLang(l)}
           aria-pressed={lang === l}
           className={
-            "px-3 py-1 uppercase transition-colors " +
+            "px-2 py-1 uppercase sm:px-3 transition-colors " +
             (lang === l ? "bg-brass-500 text-storm-950" : "text-mist-300 hover:bg-storm-800")
           }
         >

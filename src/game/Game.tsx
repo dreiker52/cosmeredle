@@ -22,8 +22,9 @@ export function Game() {
       </div>
       {game.solved ? (
         <VictoryCard
+          day={game.day}
           target={game.target}
-          guessCount={game.guesses.length}
+          guesses={game.guesses}
           streak={game.stats.currentStreak}
           yesterday={game.day > 0 ? targetForDay(game.day - 1) : undefined}
         />

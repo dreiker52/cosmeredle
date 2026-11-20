@@ -55,7 +55,7 @@ function Cell({ color, column, index, animate, tooltip, arrow, dense, children }
       aria-label={`${t(column)}: ${tooltip ?? ""} (${status})${arrowText ? `. ${arrowText}` : ""}`}
       style={animate ? { animationDelay: `${index * 250}ms` } : undefined}
       className={
-        "relative flex min-h-16 flex-col items-center justify-center rounded-md border-2 px-1 py-1.5 text-center font-medium leading-tight " +
+        "relative flex min-h-16 flex-col items-center justify-center rounded-md border-2 px-1 pb-1.5 pt-3.5 text-center font-medium leading-tight " +
         (dense ? "text-[10px] sm:text-xs " : "text-[11px] sm:text-sm ") +
         COLOR_CLASS[color] +
         (animate ? " animate-flip" : "")
