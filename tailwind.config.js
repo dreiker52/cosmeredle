@@ -1,16 +1,21 @@
+const v = (name) => `rgb(var(--${name}) / <alpha-value>)`;
+const tokens = (name, steps) => Object.fromEntries(steps.map((n) => [n, v(`${name}-${n}`)]));
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
-  darkMode: "class",
   theme: {
     extend: {
+      // Colores con variables CSS (src/index.css) para el modo claro/oscuro y el alto contraste.
       colors: {
-        storm: { 50: "#eef4fb", 400: "#5b8fc7", 600: "#2f5f94", 800: "#1b3554", 900: "#122338", 950: "#0b1522" },
-        mist: { 100: "#e7e9ec", 300: "#b9bec6", 500: "#7c838f", 700: "#454b55" },
-        brass: { 300: "#e6c77d", 500: "#c49a3a", 700: "#8a6a22" },
-        hit: "#2f8f4e",
-        partial: "#c9a227",
-        miss: "#a63d3d",
+        storm: tokens("storm", [50, 400, 600, 800, 900, 950]),
+        mist: tokens("mist", [100, 300, 500, 700]),
+        brass: { ...tokens("brass", [300, 500, 700]), 400: "#d8b45a" },
+        hit: v("hit"),
+        partial: v("partial"),
+        miss: v("miss"),
+        // Texto oscuro fijo sobre fondos claros (botones de latón, celdas amarillas) en ambos temas.
+        ink: "#0b1522",
       },
       keyframes: {
         flip: {

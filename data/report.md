@@ -30,9 +30,9 @@ Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cit
 
 ## Por libro de primera aparición
 
-- El camino de los reyes: 76
+- El camino de los reyes: 75
 - Palabras radiantes: 31
-- Juramentada: 30
+- Juramentada: 31
 - El Imperio Final: 25
 - Elantris: 16
 - El aliento de los dioses: 15

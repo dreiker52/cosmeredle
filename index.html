@@ -1,10 +1,21 @@
 <!doctype html>
-<html lang="es" class="dark">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Adivina el personaje del Cosmere del día. / Guess the daily Cosmere character." />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- Vista previa al compartir el enlace. Imagen generada con scripts/og/render.sh -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cosmeredle" />
+    <meta property="og:title" content="Cosmeredle" />
+    <meta property="og:description" content="Adivina el personaje del Cosmere del día. / Guess the daily Cosmere character." />
+    <meta property="og:url" content="https://dreiker52.github.io/cosmeredle/" />
+    <meta property="og:image" content="https://dreiker52.github.io/cosmeredle/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cosmeredle: adivina el personaje del Cosmere del día" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,6 +23,15 @@
       rel="stylesheet"
     />
     <title>Cosmeredle</title>
+    <script>
+      // Aplica el tema guardado antes del primer pintado para evitar un parpadeo (ver src/lib/theme.ts).
+      try {
+        var s = (JSON.parse(localStorage.getItem("cosmeredle") || "{}").settings) || {};
+        var dark = s.theme === "dark" || (s.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        if (s.highContrast) document.documentElement.dataset.contrast = "high";
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

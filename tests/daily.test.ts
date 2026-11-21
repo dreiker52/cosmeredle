@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { characterIdForDay, dayIndex, gameDate, msUntilNextDay } from "../src/lib/daily";
+import { LAUNCH_DATE, characterIdForDay, dayIndex, gameDate, msUntilNextDay } from "../src/lib/daily";
 import { mulberry32, seededShuffle } from "../src/lib/rng";
 
 describe("rng", () => {
@@ -20,16 +20,18 @@ describe("rng", () => {
 
 describe("daily", () => {
   it("el día de lanzamiento es el 0", () => {
-    // 2027-01-01 10:00 en Madrid (UTC+1 en invierno)
-    expect(dayIndex(new Date("2027-01-01T09:00:00Z"))).toBe(0);
-    expect(dayIndex(new Date("2027-01-02T09:00:00Z"))).toBe(1);
+    // Mediodía UTC del día de lanzamiento (y del siguiente): es ese mismo día en Madrid todo el año.
+    const next = new Date(Date.parse(`${LAUNCH_DATE}T12:00:00Z`) + 86_400_000);
+    expect(dayIndex(new Date(`${LAUNCH_DATE}T12:00:00Z`))).toBe(0);
+    expect(dayIndex(next)).toBe(1);
   });
 
   it("cambia a medianoche de Madrid, no a medianoche UTC (invierno)", () => {
     // 23:30 UTC del 1 de enero = 00:30 del 2 de enero en Madrid
     expect(gameDate(new Date("2027-01-01T23:30:00Z"))).toBe("2027-01-02");
-    expect(dayIndex(new Date("2027-01-01T22:59:00Z"))).toBe(0);
-    expect(dayIndex(new Date("2027-01-01T23:00:00Z"))).toBe(1);
+    const before = dayIndex(new Date("2027-01-01T22:59:00Z"));
+    expect(dayIndex(new Date("2027-01-01T12:00:00Z"))).toBe(before);
+    expect(dayIndex(new Date("2027-01-01T23:00:00Z"))).toBe(before + 1);
   });
 
   it("respeta el horario de verano (UTC+2)", () => {

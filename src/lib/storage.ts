@@ -1,5 +1,7 @@
 import type { Lang } from "../i18n/I18nProvider";
 
+export type Theme = "system" | "light" | "dark";
+
 const KEY = "cosmeredle";
 const VERSION = 1;
 
@@ -14,8 +16,11 @@ export interface Stats {
 
 export interface SaveData {
   version: number;
-  /** `seenHelp`: ya se mostró "Cómo jugar" (con el aviso de spoilers) en la primera visita. */
-  settings: { lang?: Lang; seenHelp?: boolean };
+  /**
+   * `seenHelp`: ya se mostró "Cómo jugar" (con el aviso de spoilers) en la primera visita.
+   * `theme`: "system" (o sin definir) sigue al sistema operativo. `highContrast`: colores aptos para daltonismo.
+   */
+  settings: { lang?: Lang; seenHelp?: boolean; theme?: Theme; highContrast?: boolean };
   game: { dayIndex: number; guesses: string[]; solved: boolean } | null;
   stats: Stats;
 }

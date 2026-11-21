@@ -130,7 +130,8 @@
       "seeker",
       "hemalurgist"
     ],
-    "coppermindUrl": "https://coppermind.net/wiki/Alendi"
+    "coppermindUrl": "https://coppermind.net/wiki/Alendi",
+    "spoilerNotes": "Primera aparición revisada a mano: El Imperio Final (diario en los epígrafes)."
   },
   {
     "id": "allik-neverfar",
@@ -343,14 +344,15 @@
     "name": "Ba-Ado-Mishram",
     "aliases": [],
     "homeworld": "roshar",
-    "firstAppearance": "stormlight-1",
+    "firstAppearance": "stormlight-3",
     "species": [
       "unmade"
     ],
     "investiture": [
       "splinter-odium"
     ],
-    "coppermindUrl": "https://coppermind.net/wiki/Ba-Ado-Mishram"
+    "coppermindUrl": "https://coppermind.net/wiki/Ba-Ado-Mishram",
+    "spoilerNotes": "Primera aparición revisada a mano: Juramentada (se deducía El camino de los reyes)."
   },
   {
     "id": "balat-davar",
@@ -2398,7 +2400,8 @@
     "investiture": [
       "splinter-odium"
     ],
-    "coppermindUrl": "https://coppermind.net/wiki/Moelach"
+    "coppermindUrl": "https://coppermind.net/wiki/Moelach",
+    "spoilerNotes": "Primera aparición revisada a mano: El camino de los reyes (palabras de la muerte)."
   },
   {
     "id": "mraize",

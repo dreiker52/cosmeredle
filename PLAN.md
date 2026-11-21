@@ -594,7 +594,7 @@ Estimación con ~5–8 h/semana.
 - [x] `I18nProvider`, diccionarios ES/EN y toggle en la cabecera.
 - [x] Compartir resultados (en el idioma activo): `navigator.share` en móvil, portapapeles en escritorio.
 - [x] Estadísticas, "Cómo jugar", "Acerca de", aviso de spoilers (dentro de "Cómo jugar", que se abre solo en la primera visita).
-- [ ] Responsive, accesibilidad, modo oscuro/claro.
+- [x] Responsive (desde 320 px), accesibilidad (WCAG 2.1 AA comprobado con axe-core, anuncios para lectores de pantalla, alto contraste apto para daltonismo) y tema claro/oscuro/sistema en Ajustes.
 - [ ] Favicon e imagen OG propios.
 - [ ] Beta privada con amigos lectores (1 semana) para corregir datos.
 - [ ] **Lanzamiento**: compartir en comunidades de fans (r/Cosmere y grupos hispanohablantes), leyendo antes sus normas de autopromoción.

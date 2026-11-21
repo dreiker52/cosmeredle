@@ -48,7 +48,7 @@
   "help.partial": "Partial match.",
   "help.wrong": "No match.",
   "help.arrows": "Today's character first appeared in a later (⬆) or earlier (⬇) book.",
-  "help.daily": "There's a new character every day at midnight (Madrid time), the same for everyone.",
+  "help.daily": "There's a new character every day at midnight (Madrid time), the same for everyone. If the colors are hard to tell apart, turn on high contrast in Settings.",
   "help.play": "Let's play!",
   "spoilers.title": "Spoiler warning",
   "spoilers.body": "The game includes characters from every published Cosmere book. The worlds, species and powers shown for each guess may reveal plot twists from books you haven't read yet.",
@@ -68,5 +68,15 @@
   "share.copied": "Copied to clipboard!",
   "share.failed": "Couldn't copy the result.",
   "share.header": "Cosmeredle #{day} — {n} guesses",
-  "share.headerOne": "Cosmeredle #{day} — first try!"
+  "share.headerOne": "Cosmeredle #{day} — first try!",
+  "header.settings": "Settings",
+  "settings.title": "Settings",
+  "settings.theme": "Theme",
+  "settings.themeSystem": "System",
+  "settings.themeLight": "Light",
+  "settings.themeDark": "Dark",
+  "settings.highContrast": "High contrast",
+  "settings.highContrastHint": "Colorblind-friendly colors: blue (match), orange (partial) and gray (no match).",
+  "game.announceWin": "{name}: correct! That's today's character.",
+  "game.announce": "{name}: {details}."
 }

@@ -120,8 +120,29 @@ describe("diálogos", () => {
     expect(within(stats).getByText("Racha actual").parentElement?.querySelector("dd")?.textContent).toBe("1");
     await user.click(within(stats).getByRole("button", { name: "Cerrar" }));
 
-    await user.click(screen.getByRole("button", { name: "Acerca de" }));
+    await user.click(screen.getByRole("button", { name: "Acerca de" })); // enlace del pie
     const about = screen.getByRole("dialog", { name: "Acerca de" });
     expect(within(about).getByRole("link", { name: "Informar de un error" }).getAttribute("href")).toContain("/issues");
+  });
+
+  it("los ajustes cambian el tema y el alto contraste y se recuerdan", async () => {
+    const user = userEvent.setup();
+    renderApp();
+    await user.click(screen.getByRole("button", { name: "Ajustes" }));
+    const dialog = screen.getByRole("dialog", { name: "Ajustes" });
+    await user.click(within(dialog).getByRole("radio", { name: "Claro" }));
+    expect(document.documentElement.dataset.theme).toBe("light");
+    await user.click(within(dialog).getByRole("checkbox", { name: /Alto contraste/ }));
+    expect(document.documentElement.dataset.contrast).toBe("high");
+    expect(load().settings).toMatchObject({ theme: "light", highContrast: true });
+  });
+
+  it("con un diálogo abierto el resto de la página queda inerte", async () => {
+    const user = userEvent.setup();
+    renderApp();
+    await user.click(screen.getByRole("button", { name: "Estadísticas" }));
+    expect(screen.getByRole("banner").closest("[inert]")).not.toBeNull();
+    await user.keyboard("{Escape}");
+    expect(screen.getByRole("banner").closest("[inert]")).toBeNull();
   });
 });

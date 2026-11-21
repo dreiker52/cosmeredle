@@ -14,9 +14,9 @@ export function GuessTable({ guesses, target, lastGuessId }: Props) {
   if (!guesses.length) return null;
   return (
     <div role="table" aria-label={t("game.guessCount", { n: guesses.length })} className="space-y-1.5">
-      <div role="row" className="grid grid-cols-5 gap-1.5 text-center text-[10px] font-semibold uppercase text-mist-500 sm:text-xs">
+      <div role="row" className="grid grid-cols-5 gap-1 text-center text-[9px] font-semibold uppercase text-mist-500 min-[360px]:gap-1.5 min-[360px]:text-[10px] sm:text-xs">
         {COLUMNS.map((key) => (
-          <div role="columnheader" key={key} className="border-b border-mist-700 pb-1">
+          <div role="columnheader" key={key} className="hyphens-auto break-words border-b border-mist-700 pb-1">
             {t(key)}
           </div>
         ))}

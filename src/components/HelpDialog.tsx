@@ -21,15 +21,15 @@ export function HelpDialog({ onClose }: { onClose: () => void }) {
       <h3 className="pt-1 font-semibold text-mist-100">{t("help.colorsTitle")}</h3>
       <ul className="space-y-2">
         <li className="flex items-center gap-2">
-          <span className={`${SWATCH} border-hit bg-hit`}>✓</span>
+          <span className={`${SWATCH} border-hit bg-hit text-white`}>✓</span>
           {t("help.correct")}
         </li>
         <li className="flex items-center gap-2">
-          <span className={`${SWATCH} border-partial bg-partial text-storm-950`}>~</span>
+          <span className={`${SWATCH} border-partial bg-partial text-ink`}>~</span>
           {t("help.partial")}
         </li>
         <li className="flex items-center gap-2">
-          <span className={`${SWATCH} border-miss bg-miss`}>✗</span>
+          <span className={`${SWATCH} border-miss bg-miss text-white`}>✗</span>
           {t("help.wrong")}
         </li>
         <li className="flex items-center gap-2">
@@ -49,7 +49,7 @@ export function HelpDialog({ onClose }: { onClose: () => void }) {
         <button
           type="button"
           onClick={onClose}
-          className="rounded-md bg-brass-500 px-5 py-2 font-semibold text-storm-950 hover:bg-brass-300"
+          className="rounded-md bg-brass-500 px-5 py-2 font-semibold text-ink hover:bg-brass-400"
         >
           {t("help.play")}
         </button>

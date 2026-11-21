@@ -13,9 +13,9 @@ export const COLUMNS: MessageKey[] = [
 ];
 
 const COLOR_CLASS: Record<Color, string> = {
-  correct: "bg-hit border-hit",
-  partial: "bg-partial border-partial text-storm-950",
-  wrong: "bg-miss border-miss",
+  correct: "bg-hit border-hit text-white",
+  partial: "bg-partial border-partial text-ink",
+  wrong: "bg-miss border-miss text-white",
 };
 const ICON: Record<Color, string> = { correct: "✓", partial: "~", wrong: "✗" };
 
@@ -55,7 +55,7 @@ function Cell({ color, column, index, animate, tooltip, arrow, dense, children }
       aria-label={`${t(column)}: ${tooltip ?? ""} (${status})${arrowText ? `. ${arrowText}` : ""}`}
       style={animate ? { animationDelay: `${index * 250}ms` } : undefined}
       className={
-        "relative flex min-h-16 flex-col items-center justify-center rounded-md border-2 px-1 pb-1.5 pt-3.5 text-center font-medium leading-tight " +
+        "relative flex min-h-16 flex-col items-center justify-center rounded-md border-2 px-0.5 pb-1.5 pt-3.5 min-[360px]:px-1 text-center font-medium leading-tight " +
         (dense ? "text-[10px] sm:text-xs " : "text-[11px] sm:text-sm ") +
         COLOR_CLASS[color] +
         (animate ? " animate-flip" : "")
@@ -64,7 +64,7 @@ function Cell({ color, column, index, animate, tooltip, arrow, dense, children }
       <span aria-hidden className="absolute right-1 top-0.5 text-[10px] opacity-80">
         {ICON[color]}
       </span>
-      <span aria-hidden className="w-full hyphens-auto break-words [overflow-wrap:anywhere]">
+      <span aria-hidden className="w-full hyphens-auto break-words">
         {children}
       </span>
       {arrow && (
@@ -93,7 +93,7 @@ export function GuessRow({ guess, target, animate }: Props) {
   const bookTitle = book.title[lang];
 
   return (
-    <div role="row" className="grid grid-cols-5 gap-1.5">
+    <div role="row" className="grid grid-cols-5 gap-1 min-[360px]:gap-1.5">
       <Cell color={r.name} column={COLUMNS[0]} index={0} animate={animate} tooltip={aliases.length ? `${name}\n${t("cell.aliases")}: ${aliases.join(", ")}` : name}>
         {name}
       </Cell>
@@ -101,8 +101,15 @@ export function GuessRow({ guess, target, animate }: Props) {
         {label("worlds", guess.homeworld, lang)}
       </Cell>
       <Cell color={r.book.color} column={COLUMNS[2]} index={2} animate={animate} arrow={r.book.arrow} tooltip={`${bookTitle} (${book.year})`}>
-        {bookTitle}
-        <span className="block text-[10px] opacity-80">{book.year}</span>
+        {book.short ? (
+          <>
+            <span className="sm:hidden">{book.short[lang]}</span>
+            <span className="hidden sm:inline">{bookTitle}</span>
+          </>
+        ) : (
+          bookTitle
+        )}
+        <span className="block text-[10px]">{book.year}</span>
       </Cell>
       <Cell color={r.species} column={COLUMNS[3]} index={3} animate={animate} tooltip={species.join(", ")} dense={species.length > 1}>
         <Lines values={species} />

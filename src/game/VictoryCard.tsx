@@ -40,7 +40,7 @@ export function VictoryCard({ day, target, guesses, streak, yesterday }: Props) 
         <button
           type="button"
           onClick={onShare}
-          className="rounded-md bg-brass-500 px-5 py-2 font-semibold text-storm-950 hover:bg-brass-300"
+          className="rounded-md bg-brass-500 px-5 py-2 font-semibold text-ink hover:bg-brass-400"
         >
           {t("share.button")}
         </button>

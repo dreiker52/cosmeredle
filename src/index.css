@@ -2,8 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Paleta en variables (canales RGB) para que Tailwind admita opacidad (p. ej. ring-brass-500/40).
+ * Tema oscuro por defecto; data-theme="light" y data-contrast="high" los pone src/lib/theme.ts
+ * (y un script en index.html antes del primer pintado, para que no parpadee).
+ * Contrastes comprobados con WCAG AA (≥ 4,5:1 para texto normal).
+ */
 :root {
   color-scheme: dark;
+  --storm-50: 238 244 251;
+  --storm-400: 108 157 211;
+  --storm-600: 47 95 148;
+  --storm-800: 27 53 84;
+  --storm-900: 18 35 56;
+  --storm-950: 11 21 34;
+  --mist-100: 231 233 236;
+  --mist-300: 185 190 198;
+  --mist-500: 144 150 161;
+  --mist-700: 69 75 85;
+  --brass-300: 230 199 125;
+  --brass-500: 196 154 58;
+  --brass-700: 138 106 34;
+  --hit: 39 122 66;
+  --partial: 201 162 39;
+  --miss: 166 61 61;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --storm-50: 11 21 34;
+  --storm-400: 31 90 153;
+  --storm-600: 47 95 148;
+  --storm-800: 221 227 234;
+  --storm-900: 255 255 255;
+  --storm-950: 244 246 249;
+  --mist-100: 20 26 34;
+  --mist-300: 58 65 75;
+  --mist-500: 91 99 110;
+  --mist-700: 185 192 201;
+  --brass-300: 122 90 18;
+  --brass-500: 196 154 58;
+  --brass-700: 184 144 47;
+}
+
+/* Alto contraste: paleta apta para daltonismo (Okabe-Ito): azul, naranja y gris. */
+:root[data-contrast="high"] {
+  --hit: 0 114 178;
+  --partial: 230 159 0;
+  --miss: 90 95 102;
+}
+
+body {
+  background-color: rgb(var(--storm-950));
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--brass-500));
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

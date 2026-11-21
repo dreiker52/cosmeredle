@@ -48,7 +48,7 @@
   "help.partial": "Coincide en parte.",
   "help.wrong": "No coincide.",
   "help.arrows": "El personaje del día apareció en un libro posterior (⬆) o anterior (⬇).",
-  "help.daily": "Hay un personaje nuevo cada día a medianoche (hora de Madrid), el mismo para todo el mundo.",
+  "help.daily": "Hay un personaje nuevo cada día a medianoche (hora de Madrid), el mismo para todo el mundo. Si te cuesta distinguir los colores, activa el alto contraste en Ajustes.",
   "help.play": "¡A jugar!",
   "spoilers.title": "Aviso de spoilers",
   "spoilers.body": "El juego incluye personajes de todos los libros publicados del Cosmere. Los mundos, especies y poderes de cada intento pueden revelar giros de la trama de libros que aún no hayas leído.",
@@ -68,5 +68,15 @@
   "share.copied": "¡Copiado al portapapeles!",
   "share.failed": "No se pudo copiar el resultado.",
   "share.header": "Cosmeredle #{day} — {n} intentos",
-  "share.headerOne": "Cosmeredle #{day} — ¡al primer intento!"
+  "share.headerOne": "Cosmeredle #{day} — ¡al primer intento!",
+  "header.settings": "Ajustes",
+  "settings.title": "Ajustes",
+  "settings.theme": "Tema",
+  "settings.themeSystem": "Sistema",
+  "settings.themeLight": "Claro",
+  "settings.themeDark": "Oscuro",
+  "settings.highContrast": "Alto contraste",
+  "settings.highContrastHint": "Colores aptos para daltonismo: azul (coincide), naranja (en parte) y gris (no coincide).",
+  "game.announceWin": "{name}: ¡correcto! Era el personaje del día.",
+  "game.announce": "{name}: {details}."
 }

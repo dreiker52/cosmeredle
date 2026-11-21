@@ -1,5 +1,5 @@
 /** Fecha de lanzamiento: el día 0 del calendario. Ajustar antes de publicar. */
-export const LAUNCH_DATE = "2027-01-01";
+export const LAUNCH_DATE = "2026-11-21";
 
 /** Zona horaria en la que cambia el personaje del día, igual para todos los jugadores. */
 export const GAME_TZ = "Europe/Madrid";
