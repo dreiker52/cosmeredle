@@ -188,6 +188,7 @@ export const ABILITY_TAGS: Record<string, string> = {
   aetherbound: "aetherbound",
   "yoki-hijo": "yoki-hijo",
   "cognitive shadow": "cognitive-shadow",
+  herald: "herald",
   worldhopping: "worldhopping",
   worldhopper: "worldhopping",
   savant: "savant",
@@ -200,7 +201,7 @@ export const ABILITY_TAGS: Record<string, string> = {
 };
 
 /** Etiquetas que se ignoran a propósito (no son un poder). */
-export const IGNORED_TAGS = new Set(["honorbearer", "herald"]);
+export const IGNORED_TAGS = new Set(["honorbearer"]);
 
 /** Enlace `[[X]]` / `[[X|texto]]` (destino en minúsculas) -> id de poder. */
 export const ABILITY_LINKS: Record<string, string> = {

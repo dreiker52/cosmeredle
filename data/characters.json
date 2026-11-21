@@ -403,7 +403,8 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Battar"
   },
@@ -487,7 +488,8 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Chanarach"
   },
@@ -1476,7 +1478,8 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Ishar"
   },
@@ -1652,7 +1655,8 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Jezrien"
   },
@@ -1733,7 +1737,8 @@
     "investiture": [
       "windrunner",
       "shardbearer",
-      "cognitive-shadow"
+      "cognitive-shadow",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kaladin"
   },
@@ -1751,7 +1756,8 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Kalak"
   },
@@ -2437,7 +2443,8 @@
     "investiture": [
       "cognitive-shadow",
       "skybreaker",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Nale"
   },
@@ -2727,7 +2734,8 @@
     "name": "Pralla",
     "aliases": [
       "Pailiah",
-      "Pali"
+      "Pali",
+      "Paliah"
     ],
     "homeworld": "ashyn",
     "firstAppearance": "stormlight-2",
@@ -2736,14 +2744,16 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Pralla",
     "i18n": {
       "es": {
         "name": "Pailiah"
       }
-    }
+    },
+    "spoilerNotes": "Paliah es la grafía antigua del nombre (la Coppermind redirige Paliah a Pralla)."
   },
   {
     "id": "prasanva",
@@ -3166,7 +3176,8 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Shalash"
   },
@@ -3523,7 +3534,8 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Talenel"
   },
@@ -3998,7 +4010,8 @@
     ],
     "investiture": [
       "cognitive-shadow",
-      "shardbearer"
+      "shardbearer",
+      "herald"
     ],
     "coppermindUrl": "https://coppermind.net/wiki/Vedel"
   },

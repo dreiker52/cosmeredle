@@ -25,5 +25,6 @@
   "glys": {"species": ["spren"], "spoilerNotes": "Tipo de spren no confirmado (corrompido por Sja-anat); no deducirlo de su Orden."},
   "alendi": {"firstAppearance": "mistborn-1", "spoilerNotes": "Primera aparición revisada a mano: El Imperio Final (diario en los epígrafes)."},
   "ba-ado-mishram": {"firstAppearance": "stormlight-3", "spoilerNotes": "Primera aparición revisada a mano: Juramentada (se deducía El camino de los reyes)."},
-  "moelach": {"firstAppearance": "stormlight-1", "spoilerNotes": "Primera aparición revisada a mano: El camino de los reyes (palabras de la muerte)."}
+  "moelach": {"firstAppearance": "stormlight-1", "spoilerNotes": "Primera aparición revisada a mano: El camino de los reyes (palabras de la muerte)."},
+  "pralla": {"aliases": ["Pailiah", "Pali", "Paliah"], "spoilerNotes": "Paliah es la grafía antigua del nombre (la Coppermind redirige Paliah a Pralla)."}
 }

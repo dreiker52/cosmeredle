@@ -148,6 +148,8 @@ export function extractCharacters(
     const abilities = parseAbilities(`${f.abilities ?? ""}, ${f.powers ?? ""}`);
     abilities.unknown.forEach((u) => push(report.unknownAbilities, u, page.title));
     const investiture = [...abilities.ids];
+    // Los Heraldos llevan la etiqueta en "titles", no en "abilities".
+    if (/\{\{tag\+\|herald\}\}/i.test(f.titles ?? "") && !investiture.includes("herald")) investiture.push("herald");
     const species = new Set<string>();
     for (const id of investiture) if (ABILITY_SPECIES[id]) species.add(ABILITY_SPECIES[id]);
 

@@ -66,6 +66,7 @@ Regla de relevancia: lo enlazan ≥ 20 páginas, o ≥ 10 páginas y además cit
 - windrunner: 15
 - hemalurgist: 14
 - lightweaver: 12
+- herald: 11
 - awakener: 10
 - mistborn: 10
 - splinter-odium: 8
